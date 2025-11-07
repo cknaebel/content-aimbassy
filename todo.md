@@ -19,5 +19,10 @@
 - [x] Import first blog article
 - [x] Import second blog article
 - [x] Test blog functionality
-- [ ] Create checkpoint with blog section
+- [x] Create checkpoint with blog section
 - [x] Update color scheme to exact brand colors (#5a0e19 and #d7b899)
+
+## Logo Update
+- [x] Replace header logo with burgundy background version
+- [x] Test logo display
+- [ ] Create checkpoint with updated logo
