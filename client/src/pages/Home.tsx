@@ -169,14 +169,14 @@ export default function Home() {
                 What We're Looking For
               </h2>
               <p className="text-lg text-muted-foreground">
-                AI companies are seeking diverse, high-quality video content across multiple categories.
+                AI companies are seeking diverse, high-quality video and audio content across almost all genre categories.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               <Card>
                 <CardHeader>
-                  <CardTitle>Technical Requirements</CardTitle>
+                  <CardTitle>Technical Requirements for Video</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-start gap-3">
@@ -203,6 +203,12 @@ export default function Home() {
                       <span className="font-medium">No subtitles, watermarks, or overlays</span>
                     </div>
                   </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2" />
+                    <div>
+                      <span className="font-medium">Different language tracks and Dubbed versions welcomed</span>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -213,23 +219,43 @@ export default function Home() {
                 <CardContent className="space-y-3">
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                    <div>Films & Series</div>
+                    <div>Film, Series, Fiction</div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                    <div>Documentaries</div>
+                    <div>TV Shows & Magazines</div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                    <div>Music Performances & Concerts</div>
+                    <div>News & Documentaries</div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                    <div>Sports & Children's Programming</div>
+                    <div>Sports</div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                    <div>Instructional Videos & Historical Archives</div>
+                    <div>Children Programming & Animation</div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2" />
+                    <div>Music, Concerts & Performances</div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2" />
+                    <div>Instructional & Educational Videos</div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2" />
+                    <div>User Generated Content & Videocasts</div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2" />
+                    <div>Podcast, Radio, Audio Shows</div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2" />
+                    <div>Footage Material</div>
                   </div>
                 </CardContent>
               </Card>

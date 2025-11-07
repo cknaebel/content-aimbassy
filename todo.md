@@ -25,4 +25,10 @@
 ## Logo Update
 - [x] Replace header logo with burgundy background version
 - [x] Test logo display
-- [ ] Create checkpoint with updated logo
+- [x] Create checkpoint with updated logo
+
+## Home Page Content Update
+- [x] Update "What We're Looking For" introductory text
+- [x] Modify technical requirements section
+- [x] Update content categories list
+- [ ] Create checkpoint with updated content
