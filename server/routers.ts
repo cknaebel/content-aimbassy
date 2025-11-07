@@ -2,7 +2,7 @@ import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
-import { createContentSubmission, getAllContentSubmissions } from "./db";
+import { createContentSubmission, getAllContentSubmissions, getAllBlogPosts, getBlogPostBySlug } from "./db";
 import { notifyOwner } from "./_core/notification";
 import { z } from "zod";
 
@@ -21,6 +21,18 @@ export const appRouter = router({
   }),
 
   // Content submission router
+  blog: router({
+    list: publicProcedure.query(async () => {
+      return await getAllBlogPosts();
+    }),
+    
+    getBySlug: publicProcedure
+      .input(z.object({ slug: z.string() }))
+      .query(async ({ input }) => {
+        return await getBlogPostBySlug(input.slug);
+      }),
+  }),
+
   contentSubmissions: router({
     submit: publicProcedure
       .input(z.object({

@@ -9,4 +9,15 @@
 - [x] Build Contact page
 - [x] Build Imprint page
 - [x] Test all features and pages
-- [ ] Create checkpoint for deployment
+- [x] Create checkpoint for deployment
+
+## Blog Section
+- [x] Create database schema for blog posts
+- [x] Add blog navigation link to header
+- [x] Build blog listing page
+- [x] Build individual blog post page
+- [x] Import first blog article
+- [x] Import second blog article
+- [x] Test blog functionality
+- [ ] Create checkpoint with blog section
+- [x] Update color scheme to exact brand colors (#5a0e19 and #d7b899)

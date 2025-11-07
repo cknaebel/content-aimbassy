@@ -44,8 +44,9 @@
 
 :root {
   /* Content Aimbassy - Burgundy and Beige color palette */
-  --primary: oklch(0.35 0.08 15); /* Deep burgundy */
-  --primary-foreground: oklch(0.97 0.01 40); /* Light beige */
+  /* Brand colors: #5a0e19 (burgundy) and #d7b899 (beige) */
+  --primary: oklch(0.28 0.10 15); /* Brand burgundy #5a0e19 */
+  --primary-foreground: oklch(0.80 0.04 40); /* Brand beige #d7b899 */
   --sidebar-primary: oklch(0.40 0.08 15);
   --sidebar-primary-foreground: oklch(0.97 0.01 40);
   --chart-1: oklch(0.35 0.08 15);
@@ -64,8 +65,8 @@
   --secondary-foreground: oklch(0.25 0.08 15);
   --muted: oklch(0.90 0.02 40);
   --muted-foreground: oklch(0.45 0.05 20);
-  --accent: oklch(0.68 0.05 38); /* Warm beige accent */
-  --accent-foreground: oklch(0.25 0.08 15);
+  --accent: oklch(0.80 0.04 40); /* Brand beige #d7b899 */
+  --accent-foreground: oklch(0.28 0.10 15); /* Brand burgundy #5a0e19 */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.88 0.02 40);

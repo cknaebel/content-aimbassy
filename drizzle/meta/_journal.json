@@ -15,6 +15,13 @@
       "when": 1762501048382,
       "tag": "0001_elite_dexter_bennett",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1762501466429,
+      "tag": "0002_peaceful_rafael_vega",
+      "breakpoints": true
     }
   ]
 }

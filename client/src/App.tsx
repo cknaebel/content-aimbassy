@@ -12,6 +12,8 @@ import HowItWorks from "./pages/HowItWorks";
 import Questionnaire from "./pages/Questionnaire";
 import Contact from "./pages/Contact";
 import Imprint from "./pages/Imprint";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 function Router() {
   return (
@@ -22,9 +24,11 @@ function Router() {
           <Route path={"/"} component={Home} />
           <Route path="/about" component={About} />
           <Route path="/how-it-works" component={HowItWorks} />
-          <Route path="/questionnaire" component={Questionnaire} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/imprint" component={Imprint} />
+          <Route path={"/questionnaire"} component={Questionnaire} />
+          <Route path={"/blog"} component={Blog} />
+          <Route path={"/blog/:slug"} component={BlogPost} />
+          <Route path={"/contact"} component={Contact} />
+          <Route path={"/imprint"} component={Imprint} />
           <Route path={"/404"} component={NotFound} />
           <Route component={NotFound} />
         </Switch>

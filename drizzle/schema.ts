@@ -60,3 +60,21 @@ export const contentSubmissions = mysqlTable("content_submissions", {
 
 export type ContentSubmission = typeof contentSubmissions.$inferSelect;
 export type InsertContentSubmission = typeof contentSubmissions.$inferInsert;
+
+/**
+ * Blog posts table for storing articles and insights
+ */
+export const blogPosts = mysqlTable("blog_posts", {
+  id: int("id").autoincrement().primaryKey(),
+  title: varchar("title", { length: 255 }).notNull(),
+  slug: varchar("slug", { length: 255 }).notNull().unique(),
+  excerpt: text("excerpt").notNull(),
+  content: text("content").notNull(),
+  categories: text("categories").notNull(), // JSON array of categories
+  publishedAt: timestamp("publishedAt").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type BlogPost = typeof blogPosts.$inferSelect;
+export type InsertBlogPost = typeof blogPosts.$inferInsert;
