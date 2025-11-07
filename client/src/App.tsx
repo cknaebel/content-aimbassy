@@ -4,17 +4,33 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import HowItWorks from "./pages/HowItWorks";
+import Questionnaire from "./pages/Questionnaire";
+import Contact from "./pages/Contact";
+import Imprint from "./pages/Imprint";
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        <Switch>
+          <Route path={"/"} component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/how-it-works" component={HowItWorks} />
+          <Route path="/questionnaire" component={Questionnaire} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/imprint" component={Imprint} />
+          <Route path={"/404"} component={NotFound} />
+          <Route component={NotFound} />
+        </Switch>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

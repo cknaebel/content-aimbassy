@@ -25,4 +25,38 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Content submissions from potential content partners
+ */
+export const contentSubmissions = mysqlTable("content_submissions", {
+  id: int("id").autoincrement().primaryKey(),
+  
+  // Contact Information
+  contactName: varchar("contactName", { length: 255 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  phone: varchar("phone", { length: 50 }),
+  company: varchar("company", { length: 255 }),
+  
+  // Content Details
+  contentGenres: text("contentGenres").notNull(), // JSON array of genres
+  totalHours: int("totalHours").notNull(),
+  contentDescription: text("contentDescription").notNull(),
+  
+  // Technical Details
+  hasHD1080p: mysqlEnum("hasHD1080p", ["yes", "no", "partial"]).notNull(),
+  hasMP4Format: mysqlEnum("hasMP4Format", ["yes", "no", "partial"]).notNull(),
+  hasWatermarks: mysqlEnum("hasWatermarks", ["yes", "no", "some"]).notNull(),
+  
+  // Rights and Additional Info
+  rightsConfirmation: mysqlEnum("rightsConfirmation", ["yes", "no"]).notNull(),
+  additionalNotes: text("additionalNotes"),
+  
+  // Status tracking
+  status: mysqlEnum("status", ["new", "reviewing", "contacted", "accepted", "rejected"]).default("new").notNull(),
+  
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type ContentSubmission = typeof contentSubmissions.$inferSelect;
+export type InsertContentSubmission = typeof contentSubmissions.$inferInsert;
