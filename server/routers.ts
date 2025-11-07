@@ -4,6 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { createContentSubmission, getAllContentSubmissions, getAllBlogPosts, getBlogPostBySlug } from "./db";
 import { notifyOwner } from "./_core/notification";
+import { sendEmail } from "./email";
 import { z } from "zod";
 
 export const appRouter = router({
@@ -61,6 +62,58 @@ export const appRouter = router({
           title: "New Content Submission",
           content: `New content submission from ${input.contactName} (${input.email}). Total hours: ${input.totalHours}. Genres: ${contentGenres.join(", ")}.`,
         });
+        
+        // Send email notification
+        try {
+          const genresList = contentGenres.join(", ");
+          await sendEmail({
+            to: "info@content-aimbassy.com",
+            subject: `New Content Submission: ${input.contactName}`,
+            html: `
+              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <h2 style="color: #5a0e19;">New Content Submission Received</h2>
+                
+                <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                  <h3 style="color: #5a0e19; margin-top: 0;">Contact Information</h3>
+                  <p><strong>Name:</strong> ${input.contactName}</p>
+                  <p><strong>Email:</strong> <a href="mailto:${input.email}">${input.email}</a></p>
+                  ${input.phone ? `<p><strong>Phone:</strong> ${input.phone}</p>` : ''}
+                  ${input.company ? `<p><strong>Company:</strong> ${input.company}</p>` : ''}
+                </div>
+
+                <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                  <h3 style="color: #5a0e19; margin-top: 0;">Content Details</h3>
+                  <p><strong>Total Hours:</strong> ${input.totalHours}</p>
+                  <p><strong>Content Genres:</strong> ${genresList}</p>
+                  <p><strong>Description:</strong> ${input.contentDescription}</p>
+                </div>
+
+                <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                  <h3 style="color: #5a0e19; margin-top: 0;">Technical Specifications</h3>
+                  <p><strong>HD 1080p:</strong> ${input.hasHD1080p}</p>
+                  <p><strong>MP4 Format:</strong> ${input.hasMP4Format}</p>
+                  <p><strong>Watermarks:</strong> ${input.hasWatermarks}</p>
+                  <p><strong>Rights Confirmation:</strong> ${input.rightsConfirmation}</p>
+                </div>
+
+                ${input.additionalNotes ? `
+                  <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="color: #5a0e19; margin-top: 0;">Additional Notes</h3>
+                    <p>${input.additionalNotes}</p>
+                  </div>
+                ` : ''}
+
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #d7b899; text-align: center; color: #666;">
+                  <p>This notification was sent from Content Aimbassy</p>
+                  <p><a href="https://content-aimbassy.com" style="color: #5a0e19;">content-aimbassy.com</a></p>
+                </div>
+              </div>
+            `,
+          });
+        } catch (error) {
+          console.error('[Content Submission] Failed to send email notification:', error);
+          // Don't fail the submission if email fails
+        }
         
         return { success: true };
       }),
