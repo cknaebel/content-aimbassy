@@ -64,4 +64,8 @@
 - [x] Update logo in const.ts
 - [x] Update gradient backgrounds to use new colors
 - [x] Test all pages with new branding
-- [ ] Create checkpoint with new color scheme and logo
+- [x] Create checkpoint with new color scheme and logo
+
+## Header Logo Update
+- [x] Replace header logo with new purple/orange design
+- [ ] Create checkpoint with updated header logo

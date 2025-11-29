@@ -28,7 +28,7 @@ export default function Header() {
         <Link href="/">
           <div className="flex items-center gap-3 cursor-pointer">
             <img 
-              src="/logo-burgundy.png" 
+              src="/logo-header.png" 
               alt="Content Aimbassy" 
               className="h-10 w-auto"
             />
