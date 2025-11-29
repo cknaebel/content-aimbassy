@@ -157,7 +157,7 @@ export default function Home() {
             <div className="glass-card p-12 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
               <img
                 ref={heroLogoRef}
-                src="/logo-sand.png"
+                src="/logo-header.png"
                 alt="Content Aimbassy"
                 className="w-full h-auto transition-transform duration-300 ease-out"
                 style={{ transformStyle: "preserve-3d" }}
