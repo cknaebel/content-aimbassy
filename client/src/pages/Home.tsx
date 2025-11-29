@@ -104,7 +104,7 @@ export default function Home() {
       {/* Animated Gradient Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5a0e19] via-[#7a1625] to-[#5a0e19] animate-gradient-shift"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#5d3fd3] via-[#7d5fd3] to-[#e67e22] animate-gradient-shift"></div>
         
         {/* Particle effect overlay */}
         <div className="absolute inset-0 opacity-30">
