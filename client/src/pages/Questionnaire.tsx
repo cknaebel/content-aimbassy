@@ -116,7 +116,7 @@ export default function Questionnaire() {
                   <li>• If suitable, we'll request sample videos for quality assessment</li>
                 </ul>
               </div>
-              <Button onClick={() => window.location.href = "/"}>
+              <Button onClick={() => window.location.href = "/"} className="bg-secondary hover:bg-secondary/90 text-white">
                 Return to Home
               </Button>
             </CardContent>
@@ -132,7 +132,7 @@ export default function Questionnaire() {
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/10 py-16">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">
               Content Submission
             </h1>
             <p className="text-xl text-muted-foreground">
@@ -411,7 +411,7 @@ export default function Questionnaire() {
                 type="submit" 
                 size="lg" 
                 disabled={submitMutation.isPending}
-                className="min-w-[200px]"
+                className="min-w-[200px] bg-secondary hover:bg-secondary/90 text-white"
               >
                 {submitMutation.isPending ? (
                   <>

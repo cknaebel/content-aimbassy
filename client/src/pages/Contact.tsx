@@ -10,7 +10,7 @@ export default function Contact() {
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/10 py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">
               Get in Touch
             </h1>
             <p className="text-xl text-muted-foreground">
@@ -27,7 +27,7 @@ export default function Contact() {
             {/* Contact Details */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">
+                <h2 className="text-3xl font-bold text-primary mb-6">
                   Contact Information
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
@@ -46,7 +46,7 @@ export default function Contact() {
                         <CardTitle className="mb-2">Email</CardTitle>
                         <a 
                           href="mailto:info@contentaimbassy.com" 
-                          className="text-muted-foreground hover:text-primary transition-colors"
+                          className="text-muted-foreground hover:text-accent transition-colors"
                         >
                           info@contentaimbassy.com
                         </a>
@@ -100,7 +100,7 @@ export default function Contact() {
                     If you have video content ready for licensing, start by filling out our content questionnaire. We'll review your submission and get back to you within 1-2 business days.
                   </p>
                   <Link href="/questionnaire">
-                    <Button className="w-full">
+                    <Button className="w-full bg-secondary hover:bg-secondary/90 text-white">
                       Go to Content Questionnaire
                     </Button>
                   </Link>
@@ -115,7 +115,7 @@ export default function Contact() {
                   <p className="text-muted-foreground">
                     Not sure if your content is suitable? Want to understand the process better? Send us an email and we'll be happy to discuss your specific situation.
                   </p>
-                  <Button variant="outline" className="w-full" asChild>
+                  <Button variant="outline" className="w-full border-2 border-primary text-primary hover:bg-primary/5" asChild>
                     <a href="mailto:info@contentaimbassy.com">
                       Send Us an Email
                     </a>
@@ -132,7 +132,7 @@ export default function Contact() {
                     Explore our detailed process overview and understand how AI content licensing works.
                   </p>
                   <Link href="/how-it-works">
-                    <Button variant="outline" className="w-full">
+                    <Button variant="outline" className="w-full border-2 border-primary text-primary hover:bg-primary/5">
                       View How It Works
                     </Button>
                   </Link>
@@ -147,7 +147,7 @@ export default function Contact() {
       <section className="py-20 bg-muted/30">
         <div className="container max-w-4xl">
           <div className="text-center mb-12 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-muted-foreground">

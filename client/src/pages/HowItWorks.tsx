@@ -21,7 +21,7 @@ export default function HowItWorks() {
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/10 py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">
               How It Works
             </h1>
             <p className="text-xl text-muted-foreground">
@@ -36,7 +36,7 @@ export default function HowItWorks() {
         <div className="container">
           <div className="max-w-5xl mx-auto space-y-12">
             <div className="text-center mb-16 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">
                 The Licensing Process
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -317,7 +317,7 @@ export default function HowItWorks() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">
                 Typical Timeline
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -370,7 +370,7 @@ export default function HowItWorks() {
       <section className="py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-8 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
               Ready to Get Started?
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -378,13 +378,13 @@ export default function HowItWorks() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/questionnaire">
-                <Button size="lg" className="group">
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white group">
                   Submit Content Questionnaire
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary/5">
                   Contact Us First
                 </Button>
               </Link>

@@ -8,7 +8,7 @@ export default function About() {
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/10 py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">
               About Content Aimbassy
             </h1>
             <p className="text-xl text-muted-foreground">
@@ -23,7 +23,7 @@ export default function About() {
         <div className="container">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">
                 Our Mission
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -72,7 +72,7 @@ export default function About() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">
                 Why Trust Us?
               </h2>
             </div>
@@ -121,7 +121,7 @@ export default function About() {
         <div className="container">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">
                 What Sets Us Apart
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -183,7 +183,7 @@ export default function About() {
         <div className="container">
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">
                 The AI Content Licensing Opportunity
               </h2>
             </div>
