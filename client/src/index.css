@@ -44,17 +44,17 @@
 
 :root {
   /* Content Aimbassy - Refined color strategy */
-  /* Pure white background, purple for headlines/frames, orange for CTAs, green/grey for accents */
-  /* Brand colors: #5d3fd3 (deep purple), #e67e22 (orange), #1e8449 (emerald), #708090 (slate) */
-  --primary: oklch(0.50 0.20 285); /* Deep purple #5d3fd3 - for headlines, frames, highlights */
-  --primary-foreground: oklch(1 0 0); /* White text on purple */
-  --sidebar-primary: oklch(0.50 0.20 285);
+  /* Pure white background, indigo for headlines/frames, orange for CTAs, green/grey for accents */
+  /* Brand colors: #4b0082 (indigo), #e67e22 (orange), #1e8449 (emerald), #708090 (slate) */
+  --primary: oklch(0.35 0.20 295); /* Indigo #4b0082 - for headlines, frames, highlights */
+  --primary-foreground: oklch(1 0 0); /* White text on indigo */
+  --sidebar-primary: oklch(0.35 0.20 295);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --chart-1: oklch(0.50 0.20 285); /* Purple */
+  --chart-1: oklch(0.35 0.20 295); /* Indigo */
   --chart-2: oklch(0.65 0.18 45); /* Orange */
   --chart-3: oklch(0.48 0.13 160); /* Emerald */
   --chart-4: oklch(0.55 0.02 240); /* Slate */
-  --chart-5: oklch(0.60 0.15 285); /* Light purple */
+  --chart-5: oklch(0.50 0.15 295); /* Light indigo */
   --radius: 0.75rem;
   --background: oklch(1 0 0); /* Pure white background */
   --foreground: oklch(0.20 0 0); /* Dark grey text for body content */
@@ -72,13 +72,13 @@
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.92 0 0); /* Light grey borders */
   --input: oklch(0.96 0 0); /* Very light grey input backgrounds */
-  --ring: oklch(0.50 0.20 285); /* Purple ring for focus states */
+  --ring: oklch(0.35 0.20 295); /* Indigo ring for focus states */
   --sidebar: oklch(0.98 0 0);
   --sidebar-foreground: oklch(0.20 0 0);
   --sidebar-accent: oklch(0.96 0 0);
   --sidebar-accent-foreground: oklch(0.20 0 0);
   --sidebar-border: oklch(0.92 0 0);
-  --sidebar-ring: oklch(0.50 0.20 285);
+  --sidebar-ring: oklch(0.35 0.20 295);
 }
 
 .dark {
