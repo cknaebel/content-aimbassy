@@ -46,7 +46,7 @@ export default function Questionnaire() {
     hasHD1080p: "yes" as "yes" | "no" | "partial",
     hasMP4Format: "yes" as "yes" | "no" | "partial",
     hasWatermarks: "no" as "yes" | "no" | "some",
-    hasTranscript: "no" as "yes" | "no" | "partial",
+    hasTranscript: "no" as "yes" | "no",
     rightsConfirmation: "yes" as "yes" | "no",
     additionalNotes: "",
   });
@@ -315,7 +315,7 @@ export default function Questionnaire() {
                     <Label>Is your content in HD 1080p quality? *</Label>
                   <RadioGroup
                     value={formData.hasHD1080p}
-                    onValueChange={(value: "yes" | "no" | "partial") => 
+                    onValueChange={(value: "yes" | "no") => 
                       setFormData({ ...formData, hasHD1080p: value })
                     }
                   >
@@ -342,29 +342,23 @@ export default function Questionnaire() {
                 )}
 
                 <div className="space-y-3">
-                  <Label>Is your content in {formData.contentType === "video" ? "MP4" : "MP3/WAV"} format? *</Label>
+                  <Label>Do you have transcripts or subtitles for your content?</Label>
                   <RadioGroup
-                    value={formData.hasMP4Format}
-                    onValueChange={(value: "yes" | "no" | "partial") => 
-                      setFormData({ ...formData, hasMP4Format: value })
+                    value={formData.hasTranscript}
+                    onValueChange={(value: "yes" | "no") => 
+                      setFormData({ ...formData, hasTranscript: value })
                     }
                   >
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="yes" id="mp4-yes" />
-                      <Label htmlFor="mp4-yes" className="font-normal cursor-pointer">
-                        Yes, all content is in {formData.contentType === "video" ? "MP4" : "MP3/WAV"} format
+                      <RadioGroupItem value="yes" id="transcript-yes" />
+                      <Label htmlFor="transcript-yes" className="font-normal cursor-pointer">
+                        Yes, transcripts/subtitles available
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="partial" id="mp4-partial" />
-                      <Label htmlFor="mp4-partial" className="font-normal cursor-pointer">
-                        Partially, some content is in this format
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="no" id="mp4-no" />
-                      <Label htmlFor="mp4-no" className="font-normal cursor-pointer">
-                        No, content is in other formats
+                      <RadioGroupItem value="no" id="transcript-no" />
+                      <Label htmlFor="transcript-no" className="font-normal cursor-pointer">
+                        No transcripts/subtitles available
                       </Label>
                     </div>
                   </RadioGroup>
@@ -403,20 +397,14 @@ export default function Questionnaire() {
                   <Label>Do you have transcripts or subtitles for your content?</Label>
                   <RadioGroup
                     value={formData.hasTranscript}
-                    onValueChange={(value: "yes" | "no" | "partial") => 
+                    onValueChange={(value: "yes" | "no") => 
                       setFormData({ ...formData, hasTranscript: value })
                     }
                   >
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="yes" id="transcript-yes" />
                       <Label htmlFor="transcript-yes" className="font-normal cursor-pointer">
-                        Yes, all content has transcripts/subtitles
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="partial" id="transcript-partial" />
-                      <Label htmlFor="transcript-partial" className="font-normal cursor-pointer">
-                        Partially, some content has transcripts/subtitles
+                        Yes, transcripts/subtitles available
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2">

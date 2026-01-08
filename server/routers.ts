@@ -4,7 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { createContentSubmission, getAllContentSubmissions, getAllBlogPosts, getBlogPostBySlug } from "./db";
 import { notifyOwner } from "./_core/notification";
-import { sendEmail } from "./email";
+import { sendAdminNotification, sendSubmitterConfirmation } from "./email";
 import { z } from "zod";
 
 export const appRouter = router({
@@ -41,79 +41,50 @@ export const appRouter = router({
         email: z.string().email("Valid email is required"),
         phone: z.string().optional(),
         company: z.string().optional(),
+        contentType: z.enum(["video", "audio"]),
         contentGenres: z.array(z.string()).min(1, "At least one genre is required"),
-        totalHours: z.number().min(100, "Minimum 100 hours required"),
+        totalHours: z.number().positive("Total hours must be positive"),
         contentDescription: z.string().min(10, "Please provide a description"),
-        hasHD1080p: z.enum(["yes", "no", "partial"]),
-        hasMP4Format: z.enum(["yes", "no", "partial"]),
-        hasWatermarks: z.enum(["yes", "no", "some"]),
+        // Video-specific fields
+        hasHD1080p: z.enum(["yes", "no", "partial"]).optional(),
+        hasMP4Format: z.enum(["yes", "no", "partial"]).optional(),
+        hasWatermarks: z.enum(["yes", "no", "some"]).optional(),
+        // Audio-specific fields
+        audioFormat: z.string().optional(),
+        hasTranscript: z.enum(["yes", "no"]).optional(),
+        // Common fields
         rightsConfirmation: z.enum(["yes", "no"]),
         additionalNotes: z.string().optional(),
       }))
       .mutation(async ({ input }) => {
         const { contentGenres, ...rest } = input;
+        
+        // Save to database
         await createContentSubmission({
           ...rest,
           contentGenres: JSON.stringify(contentGenres),
         });
         
-        // Notify owner about new submission
-        await notifyOwner({
-          title: "New Content Submission",
-          content: `New content submission from ${input.contactName} (${input.email}). Total hours: ${input.totalHours}. Genres: ${contentGenres.join(", ")}.`,
-        });
-        
-        // Send email notification
+        // Send email notifications
         try {
-          const genresList = contentGenres.join(", ");
-          await sendEmail({
-            to: "info@content-aimbassy.com",
-            subject: `New Content Submission: ${input.contactName}`,
-            html: `
-              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                <h2 style="color: #5a0e19;">New Content Submission Received</h2>
-                
-                <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-                  <h3 style="color: #5a0e19; margin-top: 0;">Contact Information</h3>
-                  <p><strong>Name:</strong> ${input.contactName}</p>
-                  <p><strong>Email:</strong> <a href="mailto:${input.email}">${input.email}</a></p>
-                  ${input.phone ? `<p><strong>Phone:</strong> ${input.phone}</p>` : ''}
-                  ${input.company ? `<p><strong>Company:</strong> ${input.company}</p>` : ''}
-                </div>
-
-                <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-                  <h3 style="color: #5a0e19; margin-top: 0;">Content Details</h3>
-                  <p><strong>Total Hours:</strong> ${input.totalHours}</p>
-                  <p><strong>Content Genres:</strong> ${genresList}</p>
-                  <p><strong>Description:</strong> ${input.contentDescription}</p>
-                </div>
-
-                <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-                  <h3 style="color: #5a0e19; margin-top: 0;">Technical Specifications</h3>
-                  <p><strong>HD 1080p:</strong> ${input.hasHD1080p}</p>
-                  <p><strong>MP4 Format:</strong> ${input.hasMP4Format}</p>
-                  <p><strong>Watermarks:</strong> ${input.hasWatermarks}</p>
-                  <p><strong>Rights Confirmation:</strong> ${input.rightsConfirmation}</p>
-                </div>
-
-                ${input.additionalNotes ? `
-                  <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-                    <h3 style="color: #5a0e19; margin-top: 0;">Additional Notes</h3>
-                    <p>${input.additionalNotes}</p>
-                  </div>
-                ` : ''}
-
-                <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #d7b899; text-align: center; color: #666;">
-                  <p>This notification was sent from Content Aimbassy</p>
-                  <p><a href="https://content-aimbassy.com" style="color: #5a0e19;">content-aimbassy.com</a></p>
-                </div>
-              </div>
-            `,
+          // Send to admin
+          await sendAdminNotification({
+            ...input,
+            contentGenres: JSON.stringify(contentGenres),
           });
+          
+          // Send confirmation to submitter
+          await sendSubmitterConfirmation(input.contactName, input.email);
         } catch (error) {
-          console.error('[Content Submission] Failed to send email notification:', error);
+          console.error('[Content Submission] Failed to send email notifications:', error);
           // Don't fail the submission if email fails
         }
+        
+        // Notify owner via Manus notification system
+        await notifyOwner({
+          title: `New ${input.contentType.toUpperCase()} Content Submission`,
+          content: `New ${input.contentType} content submission from ${input.contactName} (${input.email}). Total hours: ${input.totalHours}. Genres: ${contentGenres.join(", ")}.`,
+        });
         
         return { success: true };
       }),

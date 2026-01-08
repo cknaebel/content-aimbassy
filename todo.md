@@ -169,4 +169,14 @@
 
 ## Update Hero Text for Audio and Video
 - [x] Update hero paragraph to mention "audio or video libraries"
-- [ ] Create checkpoint with updated hero text
+- [x] Create checkpoint with updated hero text
+
+## Form Submission Email Functionality
+- [x] Create database schema for storing form submissions
+- [x] Implement email sending helper function
+- [x] Create tRPC procedure for form submission
+- [x] Send email to ck@globalmediaconsult.com with form data
+- [x] Send confirmation email copy to submitter
+- [x] Update frontend form to use new submission endpoint
+- [x] Test form submission and email delivery
+- [ ] Create checkpoint with working form submission

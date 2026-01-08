@@ -38,14 +38,19 @@ export const contentSubmissions = mysqlTable("content_submissions", {
   company: varchar("company", { length: 255 }),
   
   // Content Details
+  contentType: mysqlEnum("contentType", ["video", "audio"]).notNull(),
   contentGenres: text("contentGenres").notNull(), // JSON array of genres
   totalHours: int("totalHours").notNull(),
   contentDescription: text("contentDescription").notNull(),
   
-  // Technical Details
-  hasHD1080p: mysqlEnum("hasHD1080p", ["yes", "no", "partial"]).notNull(),
-  hasMP4Format: mysqlEnum("hasMP4Format", ["yes", "no", "partial"]).notNull(),
-  hasWatermarks: mysqlEnum("hasWatermarks", ["yes", "no", "some"]).notNull(),
+  // Technical Details - Video
+  hasHD1080p: mysqlEnum("hasHD1080p", ["yes", "no", "partial"]),
+  hasMP4Format: mysqlEnum("hasMP4Format", ["yes", "no", "partial"]),
+  hasWatermarks: mysqlEnum("hasWatermarks", ["yes", "no", "some"]),
+  
+  // Technical Details - Audio
+  audioFormat: varchar("audioFormat", { length: 50 }), // mp3, wav, etc.
+  hasTranscript: mysqlEnum("hasTranscript", ["yes", "no"]),
   
   // Rights and Additional Info
   rightsConfirmation: mysqlEnum("rightsConfirmation", ["yes", "no"]).notNull(),
