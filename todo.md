@@ -127,4 +127,12 @@
 - [x] Update Privacy Policy with Christian Knaebel contact details
 - [x] Update Imprint with Christian Knaebel contact details
 - [x] Update Terms of Service with Christian Knaebel contact details
-- [ ] Create checkpoint with updated legal information
+- [x] Create checkpoint with updated legal information
+
+## Video Content Page + Form Updates
+- [x] Create dedicated Video Content page (similar to Audio Content page)
+- [x] Add Video Content to navigation menu
+- [x] Update questionnaire form to include content type selection (Video/Audio)
+- [x] Update form fields to be relevant for both video and audio content
+- [x] Test all changes
+- [ ] Create checkpoint with video page and updated form

@@ -15,6 +15,7 @@ import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import AudioContent from "./pages/AudioContent";
+import VideoContent from "./pages/VideoContent";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 
@@ -32,6 +33,7 @@ function Router() {
           <Route path={"/blog/:slug"} component={BlogPost} />
            <Route path="/contact" component={Contact} />
           <Route path="/audio-content" component={AudioContent} />
+          <Route path="/video-content" component={VideoContent} />
           <Route path="/imprint" component={Imprint} />
           <Route path="/privacy" component={Privacy} />
           <Route path="/terms" component={Terms} />

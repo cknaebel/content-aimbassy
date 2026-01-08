@@ -36,6 +36,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/video-content">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                    Video Content
+                  </span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/audio-content">
                   <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                     Audio Content

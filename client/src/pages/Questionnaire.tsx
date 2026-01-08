@@ -10,7 +10,7 @@ import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { CheckCircle, Loader2 } from "lucide-react";
 
-const GENRE_OPTIONS = [
+const VIDEO_GENRE_OPTIONS = [
   "Films & Series",
   "Documentaries",
   "Music Performances & Concerts",
@@ -21,9 +21,21 @@ const GENRE_OPTIONS = [
   "Other",
 ];
 
+const AUDIO_GENRE_OPTIONS = [
+  "Radio Shows & Broadcasts",
+  "Podcasts & Interviews",
+  "Audiobooks & Audio Plays",
+  "Call Center Recordings",
+  "Music Recordings",
+  "Educational Audio",
+  "Language Learning Content",
+  "Other",
+];
+
 export default function Questionnaire() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
+    contentType: "video" as "video" | "audio",
     contactName: "",
     email: "",
     phone: "",
@@ -34,9 +46,13 @@ export default function Questionnaire() {
     hasHD1080p: "yes" as "yes" | "no" | "partial",
     hasMP4Format: "yes" as "yes" | "no" | "partial",
     hasWatermarks: "no" as "yes" | "no" | "some",
+    hasTranscript: "no" as "yes" | "no" | "partial",
     rightsConfirmation: "yes" as "yes" | "no",
     additionalNotes: "",
   });
+
+  const genreOptions = formData.contentType === "video" ? VIDEO_GENRE_OPTIONS : AUDIO_GENRE_OPTIONS;
+  const minHours = formData.contentType === "video" ? 100 : 1000;
 
   const submitMutation = trpc.contentSubmissions.submit.useMutation({
     onSuccess: () => {
@@ -65,9 +81,9 @@ export default function Questionnaire() {
     e.preventDefault();
     
     const totalHours = parseInt(formData.totalHours);
-    if (isNaN(totalHours) || totalHours < 100) {
+    if (isNaN(totalHours) || totalHours < minHours) {
       toast.error("Invalid hours", {
-        description: "Minimum 100 hours required",
+        description: `Minimum ${minHours} hours required for ${formData.contentType} content`,
       });
       return;
     }
@@ -136,7 +152,7 @@ export default function Questionnaire() {
               Content Submission
             </h1>
             <p className="text-xl text-muted-foreground">
-              Share details about your video content library and discover its licensing potential.
+              Share details about your video or audio content library and discover its licensing potential.
             </p>
           </div>
         </div>
@@ -207,14 +223,37 @@ export default function Questionnaire() {
               <CardHeader>
                 <CardTitle>Content Details</CardTitle>
                 <CardDescription>
-                  Tell us about your video content library
+                  Tell us about your {formData.contentType} content library
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-3">
+                  <Label>Content Type *</Label>
+                  <RadioGroup
+                    value={formData.contentType}
+                    onValueChange={(value: "video" | "audio") => {
+                      setFormData({ ...formData, contentType: value, contentGenres: [] });
+                    }}
+                  >
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="video" id="video" />
+                      <Label htmlFor="video" className="font-normal cursor-pointer">
+                        Video Content (Minimum 100 hours)
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="audio" id="audio" />
+                      <Label htmlFor="audio" className="font-normal cursor-pointer">
+                        Audio Content (Minimum 1,000 hours)
+                      </Label>
+                    </div>
+                  </RadioGroup>
+                </div>
+
+                <div className="space-y-3">
                   <Label>Content Genres * (Select all that apply)</Label>
                   <div className="grid md:grid-cols-2 gap-3">
-                    {GENRE_OPTIONS.map((genre) => (
+                    {genreOptions.map((genre: string) => (
                       <div key={genre} className="flex items-center space-x-2">
                         <Checkbox
                           id={genre}
@@ -244,7 +283,7 @@ export default function Questionnaire() {
                     placeholder="e.g., 500"
                   />
                   <p className="text-sm text-muted-foreground">
-                    Minimum 100 hours required (500+ hours ideal)
+                    Minimum {minHours} hours required for {formData.contentType} content
                   </p>
                 </div>
 
@@ -267,12 +306,13 @@ export default function Questionnaire() {
               <CardHeader>
                 <CardTitle>Technical Specifications</CardTitle>
                 <CardDescription>
-                  Technical details about your content
+                  Technical details about your {formData.contentType} content
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="space-y-3">
-                  <Label>Is your content in HD 1080p quality? *</Label>
+                {formData.contentType === "video" && (
+                  <div className="space-y-3">
+                    <Label>Is your content in HD 1080p quality? *</Label>
                   <RadioGroup
                     value={formData.hasHD1080p}
                     onValueChange={(value: "yes" | "no" | "partial") => 
@@ -298,10 +338,11 @@ export default function Questionnaire() {
                       </Label>
                     </div>
                   </RadioGroup>
-                </div>
+                  </div>
+                )}
 
                 <div className="space-y-3">
-                  <Label>Is your content in MP4 format? *</Label>
+                  <Label>Is your content in {formData.contentType === "video" ? "MP4" : "MP3/WAV"} format? *</Label>
                   <RadioGroup
                     value={formData.hasMP4Format}
                     onValueChange={(value: "yes" | "no" | "partial") => 
@@ -311,13 +352,13 @@ export default function Questionnaire() {
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="yes" id="mp4-yes" />
                       <Label htmlFor="mp4-yes" className="font-normal cursor-pointer">
-                        Yes, all content is MP4
+                        Yes, all content is in {formData.contentType === "video" ? "MP4" : "MP3/WAV"} format
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="partial" id="mp4-partial" />
                       <Label htmlFor="mp4-partial" className="font-normal cursor-pointer">
-                        Partially, some content is MP4
+                        Partially, some content is in this format
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2">
@@ -356,6 +397,38 @@ export default function Questionnaire() {
                       </Label>
                     </div>
                   </RadioGroup>
+                </div>
+
+                <div className="space-y-3">
+                  <Label>Do you have transcripts or subtitles for your content?</Label>
+                  <RadioGroup
+                    value={formData.hasTranscript}
+                    onValueChange={(value: "yes" | "no" | "partial") => 
+                      setFormData({ ...formData, hasTranscript: value })
+                    }
+                  >
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="yes" id="transcript-yes" />
+                      <Label htmlFor="transcript-yes" className="font-normal cursor-pointer">
+                        Yes, all content has transcripts/subtitles
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="partial" id="transcript-partial" />
+                      <Label htmlFor="transcript-partial" className="font-normal cursor-pointer">
+                        Partially, some content has transcripts/subtitles
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="no" id="transcript-no" />
+                      <Label htmlFor="transcript-no" className="font-normal cursor-pointer">
+                        No transcripts/subtitles available
+                      </Label>
+                    </div>
+                  </RadioGroup>
+                  <p className="text-sm text-muted-foreground">
+                    Transcripts significantly increase content value for AI training
+                  </p>
                 </div>
               </CardContent>
             </Card>
