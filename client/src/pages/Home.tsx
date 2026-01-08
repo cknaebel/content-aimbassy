@@ -114,6 +114,10 @@ export default function Home() {
               AI Content Licensing Experts
             </div>
             
+            <div className="text-2xl md:text-3xl font-semibold text-secondary mb-2">
+              A Global Gateway for AI Training Content
+            </div>
+            
             <h1 className="text-5xl md:text-6xl font-bold leading-tight text-primary">
               Monetize Your Video Content Through{" "}
               <span className="text-secondary animate-text-shimmer">AI Training</span>

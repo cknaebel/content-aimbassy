@@ -161,3 +161,8 @@
 - [x] Enhance hover shadow effects for more dramatic lift
 - [x] Test enhanced shadows across all pages
 - [x] Create checkpoint with enhanced Notion-style shadows
+
+## Add New Catchphrase
+- [x] Add "A Global Gateway for AI Training Content" to homepage hero section
+- [x] Test catchphrase placement and styling
+- [x] Create checkpoint with new catchphrase
