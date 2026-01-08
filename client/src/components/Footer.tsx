@@ -36,6 +36,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/audio-content">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                    Audio Content
+                  </span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/questionnaire">
                   <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                     Submit Content
@@ -52,7 +59,21 @@ export default function Footer() {
               <li>
                 <Link href="/imprint">
                   <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Imprint
+                    Impressum
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                    Privacy Policy
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                    Terms of Service
                   </span>
                 </Link>
               </li>
@@ -68,7 +89,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Content Aimbassy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Content Aimbassy. A service by Global Media Consult. All rights reserved.</p>
         </div>
       </div>
     </footer>

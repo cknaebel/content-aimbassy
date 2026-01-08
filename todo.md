@@ -109,3 +109,16 @@
 - [x] Replace logo-header.png with transparent background version
 - [x] Test logo on different background colors
 - [x] Create checkpoint with transparent logo
+
+## Audio Content Aggregation + Legal Updates
+- [x] Add audio content section to Home page
+- [x] Create dedicated Audio Content page with full details
+- [x] Update navigation to include Audio Content link
+- [x] Add Global Media Consult attribution to Home page
+- [x] Add Global Media Consult logo to website
+- [x] Create Imprint (Impressum) page with German legal requirements
+- [x] Create Privacy Policy (Datenschutzerklärung) page
+- [x] Create Terms of Service page
+- [x] Add footer with legal links
+- [x] Test all new pages and navigation
+- [ ] Create checkpoint with all updates

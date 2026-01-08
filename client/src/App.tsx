@@ -12,6 +12,9 @@ import HowItWorks from "./pages/HowItWorks";
 import Questionnaire from "./pages/Questionnaire";
 import Contact from "./pages/Contact";
 import Imprint from "./pages/Imprint";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import AudioContent from "./pages/AudioContent";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 
@@ -27,8 +30,11 @@ function Router() {
           <Route path={"/questionnaire"} component={Questionnaire} />
           <Route path={"/blog"} component={Blog} />
           <Route path={"/blog/:slug"} component={BlogPost} />
-          <Route path={"/contact"} component={Contact} />
-          <Route path={"/imprint"} component={Imprint} />
+           <Route path="/contact" component={Contact} />
+          <Route path="/audio-content" component={AudioContent} />
+          <Route path="/imprint" component={Imprint} />
+          <Route path="/privacy" component={Privacy} />
+          <Route path="/terms" component={Terms} />
           <Route path={"/404"} component={NotFound} />
           <Route component={NotFound} />
         </Switch>

@@ -7,11 +7,11 @@ export default function Imprint() {
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/10 py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-              Imprint
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">
+              Impressum
             </h1>
             <p className="text-xl text-muted-foreground">
-              Legal information and contact details
+              Legal information according to § 5 TMG (German Telemedia Act)
             </p>
           </div>
         </div>
@@ -27,14 +27,17 @@ export default function Imprint() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <p className="font-semibold text-foreground mb-1">Business Name</p>
-                  <p className="text-muted-foreground">Content Aimbassy</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground mb-1">Address</p>
+                  <h3 className="font-semibold text-lg mb-2 text-primary">Global Media Consult</h3>
                   <p className="text-muted-foreground">
-                    Stuttgart<br />
+                    Represented by: [Owner Name]<br />
+                    [Street Address]<br />
+                    [Postal Code] Stuttgart<br />
                     Germany
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p className="text-sm text-muted-foreground italic">
+                    Content Aimbassy is a service of Global Media Consult
                   </p>
                 </div>
               </CardContent>
@@ -53,6 +56,14 @@ export default function Imprint() {
                     </a>
                   </p>
                 </div>
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Phone</p>
+                  <p className="text-muted-foreground">[Phone Number]</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Website</p>
+                  <p className="text-muted-foreground">www.contentaimbassy.com</p>
+                </div>
               </CardContent>
             </Card>
 
@@ -62,7 +73,10 @@ export default function Imprint() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Content Aimbassy<br />
+                  According to § 55 Abs. 2 RStV (German Interstate Broadcasting Treaty):<br />
+                  [Responsible Person Name]<br />
+                  Global Media Consult<br />
+                  [Address]<br />
                   Stuttgart, Germany
                 </p>
               </CardContent>

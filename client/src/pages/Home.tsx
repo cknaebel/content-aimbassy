@@ -169,6 +169,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Global Media Consult Attribution */}
+      <section className="py-8 bg-muted/30 border-t border-b border-muted">
+        <div className="container">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+            <p className="text-sm text-muted-foreground">A service by</p>
+            <img 
+              src="/gmc-logo.png" 
+              alt="Global Media Consult" 
+              className="h-12 md:h-16 w-auto"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Animated Statistics Section */}
       <section ref={statsRef} className="py-20 bg-background">
         <div className="container">
@@ -277,7 +291,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-primary">What We're Looking For</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              AI companies are seeking diverse, high-quality video and audio content across almost all genre categories.
+              AI companies are seeking diverse, high-quality video and audio content across almost all genre categories. We specialize in both video content licensing and large-scale audio content aggregation.
             </p>
           </div>
 
@@ -326,6 +340,81 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Audio Content Aggregation Section */}
+      <section className="py-20 bg-gradient-to-br from-accent/5 to-accent/10">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4 text-primary">Large-Scale Audio Content Aggregation</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Beyond video, we specialize in aggregating audio content at scale for AI foundational model development—helping preserve linguistic diversity while creating new revenue streams.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-6 text-primary">What We Aggregate</h3>
+                  <ul className="space-y-3">
+                    {[
+                      "Radio shows and broadcasts",
+                      "Podcasts and audio interviews",
+                      "Audiobooks and audio plays",
+                      "Call center recordings",
+                      "Conversational content in any language",
+                      "Rare languages, local dialects, ethnic languages",
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start gap-3 group">
+                        <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform" />
+                        <span className="text-muted-foreground group-hover:text-foreground transition-colors">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-6 text-primary">Technical Requirements for Audio</h3>
+                  <ul className="space-y-3">
+                    {[
+                      "Minimum 1,000 hours of audio content",
+                      "MP3 or WAV format",
+                      "Any language, including rare and regional dialects",
+                      "Transcript included (ideal but not required)",
+                      "Conversational or narrative content preferred",
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start gap-3 group">
+                        <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform" />
+                        <span className="text-muted-foreground group-hover:text-foreground transition-colors">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-accent/20">
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-bold mb-4 text-primary">Preserving Linguistic Diversity Through AI</h3>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
+                  We actively seek rare languages, local dialects, and ethnic languages from around the world. This helps preserve these languages by bringing them into the digital world, while making AI more diverse, inclusive, and reflective of humanity's rich linguistic variety. Your audio content helps AI companies develop foundational models that learn languages from scratch.
+                </p>
+                <Link href="/audio-content">
+                  <Button 
+                    size="lg" 
+                    className="bg-accent hover:bg-accent/90 text-white font-semibold"
+                  >
+                    Learn More About Audio Aggregation
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
