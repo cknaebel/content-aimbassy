@@ -135,4 +135,11 @@
 - [x] Update questionnaire form to include content type selection (Video/Audio)
 - [x] Update form fields to be relevant for both video and audio content
 - [x] Test all changes
-- [ ] Create checkpoint with video page and updated form
+- [x] Create checkpoint with video page and updated form
+
+## Typography Update - Noto Sans & Montserrat
+- [x] Add Google Fonts import for Noto Sans and Montserrat in index.html
+- [x] Update CSS font variables to use Noto Sans for headings
+- [x] Update CSS font variables to use Montserrat for body text
+- [x] Test typography across all pages
+- [x] Create checkpoint with new typography

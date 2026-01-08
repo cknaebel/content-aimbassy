@@ -43,6 +43,10 @@
 }
 
 :root {
+  /* Typography */
+  --font-heading: 'Noto Sans', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  
   /* Content Aimbassy - Refined color strategy */
   /* Pure white background, indigo for headlines/frames, orange for CTAs, green/grey for accents */
   /* Brand colors: #4b0082 (indigo), #e67e22 (orange), #1e8449 (emerald), #708090 (slate) */
@@ -123,6 +127,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
