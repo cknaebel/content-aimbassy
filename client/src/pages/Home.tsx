@@ -124,7 +124,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl text-foreground/80 leading-relaxed">
-              Transform your archival and underutilized video libraries into valuable revenue streams. 
+              Transform your audio or video libraries into valuable revenue streams. 
               We connect content rights holders with leading AI companies seeking high-quality training material.
             </p>
 

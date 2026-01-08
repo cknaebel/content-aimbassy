@@ -166,3 +166,7 @@
 - [x] Add "A Global Gateway for AI Training Content" to homepage hero section
 - [x] Test catchphrase placement and styling
 - [x] Create checkpoint with new catchphrase
+
+## Update Hero Text for Audio and Video
+- [x] Update hero paragraph to mention "audio or video libraries"
+- [ ] Create checkpoint with updated hero text
