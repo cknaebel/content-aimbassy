@@ -47,14 +47,15 @@
   --font-heading: 'Noto Sans', sans-serif;
   --font-body: 'Montserrat', sans-serif;
   
-  /* Modern Shadow System (Notion-style) */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --shadow-glow: 0 0 20px rgb(75 0 130 / 0.15);
+  /* Enhanced Notion-Style Shadow System */
+  /* Notion uses multiple layered shadows for depth - more prominent and visible */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.06), 0 1px 3px 0 rgb(0 0 0 / 0.04);
+  --shadow: 0 2px 4px 0 rgb(0 0 0 / 0.08), 0 3px 6px 0 rgb(0 0 0 / 0.06);
+  --shadow-md: 0 4px 8px -2px rgb(0 0 0 / 0.12), 0 6px 12px -4px rgb(0 0 0 / 0.08);
+  --shadow-lg: 0 12px 24px -4px rgb(0 0 0 / 0.12), 0 8px 16px -8px rgb(0 0 0 / 0.08);
+  --shadow-xl: 0 20px 40px -8px rgb(0 0 0 / 0.14), 0 12px 24px -12px rgb(0 0 0 / 0.10);
+  --shadow-2xl: 0 32px 64px -12px rgb(0 0 0 / 0.18), 0 20px 40px -16px rgb(0 0 0 / 0.12);
+  --shadow-glow: 0 0 24px rgb(75 0 130 / 0.20), 0 0 12px rgb(75 0 130 / 0.10);
   
   /* Content Aimbassy - Refined color strategy */
   /* Pure white background, indigo for headlines/frames, orange for CTAs, green/grey for accents */
@@ -196,32 +197,33 @@
     }
   }
 
-  /* Modern Button Enhancements */
+  /* Enhanced Notion-Style Button */
   .btn-modern {
     @apply transition-all duration-300 ease-out;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
   }
   
   .btn-modern:hover {
-    @apply -translate-y-0.5;
-    box-shadow: var(--shadow-lg);
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-xl);
   }
   
   .btn-modern:active {
     @apply translate-y-0;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-md);
   }
 
-  /* Modern Card Enhancements */
+  /* Enhanced Notion-Style Card */
   .card-modern {
     @apply transition-all duration-300 ease-out;
-    box-shadow: var(--shadow-md);
-    border: 1px solid rgb(0 0 0 / 0.05);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgb(0 0 0 / 0.08);
   }
   
   .card-modern:hover {
-    @apply -translate-y-1;
-    box-shadow: var(--shadow-xl);
+    @apply -translate-y-2;
+    box-shadow: var(--shadow-2xl);
+    border-color: rgb(0 0 0 / 0.12);
   }
 
   /* Glassmorphism Effect */
