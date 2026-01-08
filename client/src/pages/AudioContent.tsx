@@ -56,7 +56,7 @@ export default function AudioContent() {
                 bgColor: "bg-secondary/10",
               },
             ].map((item, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Card key={index} className="card-modern">
                 <CardContent className="p-8 text-center">
                   <div className={`${item.bgColor} ${item.color} w-16 h-16 rounded-2xl flex items-center justify-center mb-4 mx-auto`}>
                     <item.icon className="h-8 w-8" />
@@ -115,7 +115,7 @@ export default function AudioContent() {
                 description: "Any audio featuring natural human speech, dialogue, and conversation.",
               },
             ].map((item, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Card key={index} className="card-modern">
                 <CardHeader>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">

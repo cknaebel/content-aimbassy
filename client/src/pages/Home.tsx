@@ -128,7 +128,7 @@ export default function Home() {
               <Link href="/questionnaire">
                 <Button 
                   size="lg" 
-                  className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+                  className="btn-modern bg-secondary hover:bg-secondary/90 text-white font-semibold text-lg px-8 py-6 rounded-full glow-primary hover:scale-105 group"
                 >
                   Submit Your Content
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -268,7 +268,7 @@ export default function Home() {
             ].map((item, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105 cursor-pointer border-2 hover:border-primary/50 animate-fade-in-up overflow-hidden relative"
+                className="card-modern group cursor-pointer border-2 hover:border-primary/50 animate-fade-in-up overflow-hidden relative"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-500"></div>
@@ -297,7 +297,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Technical Requirements */}
-            <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <Card className="card-modern">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-primary">Technical Requirements for Video</h3>
                 <ul className="space-y-3">
@@ -318,7 +318,7 @@ export default function Home() {
             </Card>
 
             {/* Content Categories */}
-            <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <Card className="card-modern">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-primary">Content Categories</h3>
                 <ul className="space-y-3">
@@ -358,7 +358,7 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Card className="card-modern">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-6 text-primary">What We Aggregate</h3>
                   <ul className="space-y-3">
@@ -379,7 +379,7 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Card className="card-modern">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-6 text-primary">Technical Requirements for Audio</h3>
                   <ul className="space-y-3">
@@ -424,7 +424,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-primary/10 to-primary/5">
         <div className="container">
-          <Card className="max-w-4xl mx-auto text-center p-12 bg-gradient-to-br from-background to-muted/30 hover:shadow-2xl transition-all duration-500 hover:scale-105">
+          <Card className="card-modern max-w-4xl mx-auto text-center p-12 bg-gradient-to-br from-background to-muted/30">
             <CardContent className="space-y-6">
               <h2 className="text-4xl font-bold text-primary">Ready to Unlock Your Content's Value?</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -435,7 +435,7 @@ export default function Home() {
                 <Link href="/questionnaire">
                   <Button 
                     size="lg" 
-                    className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+                    className="btn-modern bg-secondary hover:bg-secondary/90 text-white font-semibold text-lg px-8 py-6 rounded-full glow-primary hover:scale-110 group"
                   >
                     Get Started Today
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
