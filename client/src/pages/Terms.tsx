@@ -247,7 +247,7 @@ export default function Terms() {
                   Grüngartenstrasse 1<br />
                   77836 Rheinmünster<br />
                   Germany<br /><br />
-                  Email: info@contentaimbassy.com<br />
+                  Email: info@content-aimbassy.com<br />
                   Phone: +49 7227 9969865
                 </p>
               </CardContent>

@@ -179,4 +179,10 @@
 - [x] Send confirmation email copy to submitter
 - [x] Update frontend form to use new submission endpoint
 - [x] Test form submission and email delivery
-- [ ] Create checkpoint with working form submission
+- [x] Create checkpoint with working form submission
+
+## Update Email Addresses
+- [x] Find all email addresses across the website
+- [x] Update all email addresses to info@content-aimbassy.com
+- [x] Test email address updates
+- [x] Create checkpoint with updated email addresses

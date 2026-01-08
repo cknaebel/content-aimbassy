@@ -51,8 +51,8 @@ export default function Imprint() {
                 <div>
                   <p className="font-semibold text-foreground mb-1">Email</p>
                   <p className="text-muted-foreground">
-                    <a href="mailto:info@contentaimbassy.com" className="hover:text-primary transition-colors">
-                      info@contentaimbassy.com
+                    <a href="mailto:info@content-aimbassy.com" className="hover:text-primary transition-colors">
+                      info@content-aimbassy.com
                     </a>
                   </p>
                 </div>

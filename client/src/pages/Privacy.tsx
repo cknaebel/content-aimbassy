@@ -113,7 +113,7 @@ export default function Privacy() {
                     Grüngartenstrasse 1<br />
                     77836 Rheinmünster<br />
                     Germany<br /><br />
-                    Email: info@contentaimbassy.com
+                    Email: info@content-aimbassy.com
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed mt-2">
                     The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of the processing of personal data (e.g., names, email addresses, etc.).
