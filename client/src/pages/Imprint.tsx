@@ -29,9 +29,9 @@ export default function Imprint() {
                 <div>
                   <h3 className="font-semibold text-lg mb-2 text-primary">Global Media Consult</h3>
                   <p className="text-muted-foreground">
-                    Represented by: [Owner Name]<br />
-                    [Street Address]<br />
-                    [Postal Code] Stuttgart<br />
+                    Represented by: Christian Knaebel<br />
+                    Grüngartenstrasse 1<br />
+                    77836 Rheinmünster<br />
                     Germany
                   </p>
                 </div>
@@ -58,7 +58,7 @@ export default function Imprint() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground mb-1">Phone</p>
-                  <p className="text-muted-foreground">[Phone Number]</p>
+                  <p className="text-muted-foreground">+49 7227 9969865</p>
                 </div>
                 <div>
                   <p className="font-semibold text-foreground mb-1">Website</p>
@@ -74,10 +74,10 @@ export default function Imprint() {
               <CardContent>
                 <p className="text-muted-foreground">
                   According to § 55 Abs. 2 RStV (German Interstate Broadcasting Treaty):<br />
-                  [Responsible Person Name]<br />
+                  Christian Knaebel<br />
                   Global Media Consult<br />
-                  [Address]<br />
-                  Stuttgart, Germany
+                  Grüngartenstrasse 1<br />
+                  77836 Rheinmünster, Germany
                 </p>
               </CardContent>
             </Card>

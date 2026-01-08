@@ -109,12 +109,11 @@ export default function Privacy() {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     The responsible party for data processing on this website is:<br /><br />
                     <strong>Global Media Consult</strong><br />
-                    [Owner Name]<br />
-                    [Street Address]<br />
-                    [Postal Code] Stuttgart<br />
+                    Christian Knaebel<br />
+                    Grüngartenstrasse 1<br />
+                    77836 Rheinmünster<br />
                     Germany<br /><br />
-                    Email: info@contentaimbassy.com<br />
-                    Phone: [Phone Number]
+                    Email: info@contentaimbassy.com
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed mt-2">
                     The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of the processing of personal data (e.g., names, email addresses, etc.).

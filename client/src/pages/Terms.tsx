@@ -243,9 +243,12 @@ export default function Terms() {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   For questions regarding these Terms of Service, please contact:<br /><br />
                   <strong>Global Media Consult (Content Aimbassy)</strong><br />
+                  Christian Knaebel<br />
+                  Grüngartenstrasse 1<br />
+                  77836 Rheinmünster<br />
+                  Germany<br /><br />
                   Email: info@contentaimbassy.com<br />
-                  [Address]<br />
-                  Stuttgart, Germany
+                  Phone: +49 7227 9969865
                 </p>
               </CardContent>
             </Card>

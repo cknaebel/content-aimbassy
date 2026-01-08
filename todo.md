@@ -121,4 +121,10 @@
 - [x] Create Terms of Service page
 - [x] Add footer with legal links
 - [x] Test all new pages and navigation
-- [ ] Create checkpoint with all updates
+- [x] Create checkpoint with all updates
+
+## Update Legal Pages with Actual Contact Information
+- [x] Update Privacy Policy with Christian Knaebel contact details
+- [x] Update Imprint with Christian Knaebel contact details
+- [x] Update Terms of Service with Christian Knaebel contact details
+- [ ] Create checkpoint with updated legal information
