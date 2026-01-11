@@ -9,7 +9,7 @@ export default function About() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-primary">
-              About Content Aimbassy
+              About Global Media Consult
             </h1>
             <p className="text-xl text-muted-foreground">
               Your trusted partner in navigating the emerging landscape of AI content licensing.
@@ -27,7 +27,7 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Content Aimbassy serves as a trusted intermediary between video content rights holders and leading AI companies. With over two decades of experience in media licensing, we help content owners unlock new revenue streams by licensing their archival and underutilized video libraries for AI training purposes.
+                Global Media Consult serves as a trusted intermediary between video content rights holders and leading AI companies. With over two decades of experience in media licensing, we help content owners unlock new revenue streams by licensing their archival and underutilized video libraries for AI training purposes.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 We believe in the responsible development of AI technologies while ensuring that content creators are fairly compensated and their creative legacy is protected. Our comprehensive approach combines deep industry expertise with robust legal safeguards to create win-win partnerships.

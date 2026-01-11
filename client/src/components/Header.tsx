@@ -31,7 +31,7 @@ export default function Header() {
           <div className="flex items-center gap-3 cursor-pointer">
             <img 
               src="/logo-header.png" 
-              alt="Content Aimbassy" 
+              alt="Global Media Consult" 
               className="h-10 w-auto"
             />
           </div>

@@ -11,7 +11,7 @@ export default function Terms() {
               Terms of Service
             </h1>
             <p className="text-lg text-muted-foreground">
-              General Terms and Conditions for Content Aimbassy Services
+              General Terms and Conditions for Global Media Consult Services
             </p>
           </div>
         </div>
@@ -27,7 +27,7 @@ export default function Terms() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  These Terms of Service govern the relationship between Global Media Consult ("Content Aimbassy", "we", "us") and content rights holders ("Client", "you") who wish to license their video or audio content for AI training purposes through our services.
+                  These Terms of Service govern the relationship between Global Media Consult ("Global Media Consult", "we", "us") and content rights holders ("Client", "you") who wish to license their video or audio content for AI training purposes through our services.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   By submitting content through our platform or entering into a licensing agreement with us, you agree to be bound by these Terms of Service.
@@ -41,7 +41,7 @@ export default function Terms() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Content Aimbassy provides intermediary services connecting content rights holders with AI companies seeking training data. Our services include:
+                  Global Media Consult provides intermediary services connecting content rights holders with AI companies seeking training data. Our services include:
                 </p>
                 <ul className="list-disc ml-6 text-muted-foreground text-sm space-y-2">
                   <li>Content evaluation and quality assessment</li>
@@ -88,13 +88,13 @@ export default function Terms() {
                 <div>
                   <h4 className="font-semibold mb-2">4.1 Non-Exclusive Representation</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    By engaging our services, you grant Content Aimbassy non-exclusive rights to represent and license your content to AI companies for training purposes. This does not affect your ability to exploit your content through other channels or for other purposes.
+                    By engaging our services, you grant Global Media Consult non-exclusive rights to represent and license your content to AI companies for training purposes. This does not affect your ability to exploit your content through other channels or for other purposes.
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">4.2 License Terms</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    All licensing agreements facilitated by Content Aimbassy include strict protections ensuring:
+                    All licensing agreements facilitated by Global Media Consult include strict protections ensuring:
                   </p>
                   <ul className="list-disc ml-6 text-muted-foreground text-sm space-y-1 mt-2">
                     <li>Content is used solely for AI model training</li>
@@ -114,7 +114,7 @@ export default function Terms() {
                 <div>
                   <h4 className="font-semibold mb-2">5.1 Commission Structure</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Content Aimbassy retains a commission from licensing fees as compensation for our services. The specific commission percentage will be agreed upon before any licensing agreement is finalized.
+                    Global Media Consult retains a commission from licensing fees as compensation for our services. The specific commission percentage will be agreed upon before any licensing agreement is finalized.
                   </p>
                 </div>
                 <div>
@@ -160,7 +160,7 @@ export default function Terms() {
                 <div>
                   <h4 className="font-semibold mb-2">7.1 Limitation of Liability</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Content Aimbassy acts as an intermediary and is not liable for:
+                    Global Media Consult acts as an intermediary and is not liable for:
                   </p>
                   <ul className="list-disc ml-6 text-muted-foreground text-sm space-y-1 mt-2">
                     <li>Actions or omissions of AI company clients</li>
@@ -172,7 +172,7 @@ export default function Terms() {
                 <div>
                   <h4 className="font-semibold mb-2">7.2 Indemnification</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    You agree to indemnify and hold harmless Content Aimbassy from any claims, damages, or expenses arising from:
+                    You agree to indemnify and hold harmless Global Media Consult from any claims, damages, or expenses arising from:
                   </p>
                   <ul className="list-disc ml-6 text-muted-foreground text-sm space-y-1 mt-2">
                     <li>Breach of your warranties regarding content rights</li>
@@ -204,7 +204,7 @@ export default function Terms() {
                 <div>
                   <h4 className="font-semibold mb-2">8.3 Effect of Termination</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Upon termination, Content Aimbassy will cease representing your content to new clients but will continue to administer existing licensing agreements and process related payments.
+                    Upon termination, Global Media Consult will cease representing your content to new clients but will continue to administer existing licensing agreements and process related payments.
                   </p>
                 </div>
               </CardContent>
@@ -230,7 +230,7 @@ export default function Terms() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Content Aimbassy reserves the right to modify these Terms of Service at any time. Changes will be communicated to active clients via email and will take effect 30 days after notification. Continued use of our services after the effective date constitutes acceptance of the modified terms.
+                  Global Media Consult reserves the right to modify these Terms of Service at any time. Changes will be communicated to active clients via email and will take effect 30 days after notification. Continued use of our services after the effective date constitutes acceptance of the modified terms.
                 </p>
               </CardContent>
             </Card>
@@ -242,7 +242,7 @@ export default function Terms() {
               <CardContent>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   For questions regarding these Terms of Service, please contact:<br /><br />
-                  <strong>Global Media Consult (Content Aimbassy)</strong><br />
+                  <strong>Global Media Consult (Global Media Consult)</strong><br />
                   Christian Knaebel<br />
                   Grüngartenstrasse 1<br />
                   77836 Rheinmünster<br />

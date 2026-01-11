@@ -157,7 +157,7 @@ export default function Home() {
               <img
                 ref={heroLogoRef}
                 src="/logo-header.png"
-                alt="Content Aimbassy"
+                alt="Global Media Consult"
                 className="w-full h-auto transition-transform duration-300 ease-out"
                 style={{ transformStyle: "preserve-3d" }}
               />
@@ -215,11 +215,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Content Aimbassy - Interactive Cards */}
+      {/* Why Choose Global Media Consult - Interactive Cards */}
       <section className="py-20 bg-muted/30">
         <div className="container">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold mb-4 text-primary">Why Choose Content Aimbassy?</h2>
+            <h2 className="text-4xl font-bold mb-4 text-primary">Why Choose Global Media Consult?</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We provide a comprehensive, secure, and profitable pathway to monetize your video content through AI training partnerships.
             </p>

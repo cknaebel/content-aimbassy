@@ -82,7 +82,7 @@ export async function sendAdminNotification(submission: {
       <div class="container">
         <div class="header">
           <h1 style="margin: 0;">New Content Submission</h1>
-          <p style="margin: 10px 0 0 0;">Content Aimbassy - A Global Gateway for AI Training Content</p>
+          <p style="margin: 10px 0 0 0;">Global Media Consult - A Global Gateway for AI Training Content</p>
         </div>
         <div class="content">
           <div class="section">
@@ -157,13 +157,13 @@ export async function sendSubmitterConfirmation(contactName: string, email: stri
       <div class="container">
         <div class="header">
           <h1 style="margin: 0;">Thank You for Your Submission!</h1>
-          <p style="margin: 10px 0 0 0;">Content Aimbassy</p>
+          <p style="margin: 10px 0 0 0;">Global Media Consult</p>
         </div>
         <div class="content">
           <div class="message">
             <p>Dear ${contactName},</p>
             
-            <p>Thank you for submitting your content to Content Aimbassy. We have received your submission and our team will review it carefully.</p>
+            <p>Thank you for submitting your content to Global Media Consult. We have received your submission and our team will review it carefully.</p>
             
             <p><strong>What happens next?</strong></p>
             <ul>
@@ -175,7 +175,7 @@ export async function sendSubmitterConfirmation(contactName: string, email: stri
             <p>If you have any questions in the meantime, please don't hesitate to contact us at <a href="mailto:ck@globalmediaconsult.com" style="color: #e67e22;">ck@globalmediaconsult.com</a>.</p>
             
             <p>Best regards,<br>
-            <strong>The Content Aimbassy Team</strong><br>
+            <strong>The Global Media Consult Team</strong><br>
             Global Media Consult</p>
           </div>
           
@@ -191,7 +191,7 @@ export async function sendSubmitterConfirmation(contactName: string, email: stri
 
   return await sendEmail({
     to: email,
-    subject: "Thank You for Your Content Submission - Content Aimbassy",
+    subject: "Thank You for Your Content Submission - Global Media Consult",
     html,
   });
 }

@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <img 
               src="/logo-beige.png" 
-              alt="Content Aimbassy" 
+              alt="Global Media Consult" 
               className="h-8 w-auto mb-4"
             />
             <p className="text-sm text-muted-foreground">
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Content Aimbassy. A service by Global Media Consult. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Global Media Consult. A service by Global Media Consult. All rights reserved.</p>
         </div>
       </div>
     </footer>

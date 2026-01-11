@@ -186,3 +186,24 @@
 - [x] Update all email addresses to info@content-aimbassy.com
 - [x] Test email address updates
 - [x] Create checkpoint with updated email addresses
+
+## Website Rebrand - Content Aimbassy to Global Media Consult
+- [x] Replace Content Aimbassy logo with Global Media Consult logo throughout site
+- [x] Update site title and meta tags to Global Media Consult
+- [x] Update navigation branding
+- [x] Update Home page hero section and all content references
+- [x] Update About page to reflect Global Media Consult company info
+- [x] Update How It Works page branding
+- [x] Update Video Content page branding
+- [x] Update Audio Content page branding
+- [x] Update Questionnaire page branding
+- [x] Update Contact page branding
+- [x] Update Blog pages branding
+- [x] Update Footer with Global Media Consult branding
+- [x] Update Imprint with Global Media Consult as primary entity
+- [x] Update Privacy Policy with Global Media Consult as data controller
+- [x] Update Terms of Service with Global Media Consult
+- [x] Update form submission emails to reflect Global Media Consult
+- [x] Update email addresses if needed
+- [x] Test all pages for consistent branding
+- [x] Create checkpoint with Global Media Consult rebrand

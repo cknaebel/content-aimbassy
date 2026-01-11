@@ -37,7 +37,7 @@ export default function Imprint() {
                 </div>
                 <div className="mt-4">
                   <p className="text-sm text-muted-foreground italic">
-                    Content Aimbassy is a service of Global Media Consult
+                    Global Media Consult is a service of Global Media Consult
                   </p>
                 </div>
               </CardContent>
