@@ -178,11 +178,18 @@ export default function Home() {
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
             <p className="text-sm text-muted-foreground">A service by</p>
-            <img 
-              src="/gmc-logo.png" 
-              alt="Global Media Consult" 
-              className="h-12 md:h-16 w-auto"
-            />
+            <a 
+              href="https://globalmediaconsult.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img 
+                src="/gmc-logo.png" 
+                alt="Global Media Consult" 
+                className="h-12 md:h-16 w-auto"
+              />
+            </a>
           </div>
         </div>
       </section>

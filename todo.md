@@ -207,3 +207,12 @@
 - [x] Update email addresses if needed
 - [x] Test all pages for consistent branding
 - [x] Create checkpoint with Global Media Consult rebrand
+
+## Add Backlinks and Blog Redirect
+- [x] Add backlink to globalmediaconsult.com in Footer
+- [ ] Add backlink to globalmediaconsult.com in About page
+- [x] Update GMC attribution section on Home page with link
+- [x] Update Blog navigation to redirect to https://globalmediaconsult.com/with-sidebar/
+- [x] Remove internal blog pages (Blog.tsx, BlogPost.tsx)
+- [x] Test all backlinks
+- [x] Create checkpoint with backlinks and blog redirect

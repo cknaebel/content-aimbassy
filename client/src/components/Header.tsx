@@ -14,7 +14,7 @@ export default function Header() {
     { href: "/video-content", label: "Video Content" },
     { href: "/audio-content", label: "Audio Content" },
     { href: "/questionnaire", label: "Submit Content" },
-    { href: "/blog", label: "Blog" },
+    { href: "https://globalmediaconsult.com/with-sidebar/", label: "Blog", external: true },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -40,17 +40,29 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href}>
-              <span
-                className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
-                  isActive(item.href)
-                    ? "text-primary"
-                    : "text-foreground/80"
-                }`}
+            item.external ? (
+              <a 
+                key={item.href} 
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80"
               >
                 {item.label}
-              </span>
-            </Link>
+              </a>
+            ) : (
+              <Link key={item.href} href={item.href}>
+                <span
+                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
+                    isActive(item.href)
+                      ? "text-primary"
+                      : "text-foreground/80"
+                  }`}
+                >
+                  {item.label}
+                </span>
+              </Link>
+            )
           ))}
         </nav>
 
@@ -73,18 +85,31 @@ export default function Header() {
         <div className="md:hidden border-t border-border/40 bg-background">
           <nav className="container py-4 flex flex-col gap-4">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <span
-                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer block py-2 ${
-                    isActive(item.href)
-                      ? "text-primary"
-                      : "text-foreground/80"
-                  }`}
+              item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium transition-colors hover:text-primary cursor-pointer block py-2 text-foreground/80"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
-                </span>
-              </Link>
+                </a>
+              ) : (
+                <Link key={item.href} href={item.href}>
+                  <span
+                    className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer block py-2 ${
+                      isActive(item.href)
+                        ? "text-primary"
+                        : "text-foreground/80"
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </span>
+                </Link>
+              )
             ))}
           </nav>
         </div>
