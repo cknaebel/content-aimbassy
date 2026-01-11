@@ -101,10 +101,17 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Pure White Background with Strategic Color Usage */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white">
-        {/* Subtle gradient accent in background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-secondary/5"></div>
+      {/* Hero Section - Dynamic Background with Gradient Overlay */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img 
+            src="/hero-bg.jpg" 
+            alt="" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-white/95 to-primary/10"></div>
+        </div>
         
         {/* Content */}
         <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center py-20">
@@ -151,16 +158,22 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right: Logo Card with 3D effect and Purple Frame */}
+          {/* Right: Prominent Company Logo with Modern Effects */}
           <div className="flex justify-center animate-fade-in-up animation-delay-300">
-            <div className="p-12 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500 bg-white border-4 border-primary/20">
-              <img
-                ref={heroLogoRef}
-                src="/logo-header.png"
-                alt="Global Media Consult"
-                className="w-full h-auto transition-transform duration-300 ease-out"
-                style={{ transformStyle: "preserve-3d" }}
-              />
+            <div className="relative">
+              {/* Glow effect behind logo */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/20 blur-3xl rounded-full"></div>
+              
+              {/* Logo container */}
+              <div className="relative p-16 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500 bg-white/80 backdrop-blur-sm border-2 border-primary/30">
+                <img
+                  ref={heroLogoRef}
+                  src="/gmc-logo.png"
+                  alt="Global Media Consult"
+                  className="w-full h-auto max-w-md transition-transform duration-300 ease-out"
+                  style={{ transformStyle: "preserve-3d" }}
+                />
+              </div>
             </div>
           </div>
         </div>
