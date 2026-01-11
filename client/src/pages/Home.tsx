@@ -165,12 +165,12 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/20 blur-3xl rounded-full"></div>
               
               {/* Logo container */}
-              <div className="relative p-16 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500 bg-white/80 backdrop-blur-sm border-2 border-primary/30">
+              <div className="relative p-8 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500 bg-white/80 backdrop-blur-sm border-2 border-primary/30 overflow-hidden">
                 <img
                   ref={heroLogoRef}
-                  src="/gmc-logo.png"
-                  alt="Global Media Consult"
-                  className="w-full h-auto max-w-md transition-transform duration-300 ease-out"
+                  src="/hero-graphic.jpg"
+                  alt="AI Content Creation"
+                  className="w-full h-auto max-w-lg transition-transform duration-300 ease-out rounded-xl"
                   style={{ transformStyle: "preserve-3d" }}
                 />
               </div>

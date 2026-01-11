@@ -224,3 +224,10 @@
 - [x] Enhance visual hierarchy and spacing
 - [x] Test hero section on different screen sizes
 - [x] Create checkpoint with redesigned hero section
+
+## Header Logo and Hero Graphic Updates
+- [x] Replace header logo with Global Media Consult logo
+- [x] Search for modern AI content licensing graphic
+- [x] Replace hero section logo with new graphic
+- [x] Test both changes
+- [x] Create checkpoint with updated logos and graphics
