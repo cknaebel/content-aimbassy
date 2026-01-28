@@ -237,3 +237,8 @@
 - [x] Replace hero graphic with better image
 - [x] Test new graphic
 - [x] Create checkpoint
+
+## Remove Statistics Section from Homepage
+- [x] Remove "20+ Years Experience" section from Home.tsx
+- [x] Test homepage layout
+- [x] Create checkpoint

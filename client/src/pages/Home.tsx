@@ -11,64 +11,13 @@ import {
   CheckCircle2,
   ArrowRight,
 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
-  const [statsInView, setStatsInView] = useState(false);
-  const statsRef = useRef<HTMLDivElement>(null);
+
   const heroLogoRef = useRef<HTMLImageElement>(null);
 
-  // Animated counter hook
-  const useCounter = (end: number, duration: number, shouldStart: boolean) => {
-    const [count, setCount] = useState(0);
 
-    useEffect(() => {
-      if (!shouldStart) return;
-      
-      let startTime: number;
-      let animationFrame: number;
-
-      const animate = (timestamp: number) => {
-        if (!startTime) startTime = timestamp;
-        const progress = timestamp - startTime;
-        const percentage = Math.min(progress / duration, 1);
-        
-        setCount(Math.floor(end * percentage));
-
-        if (percentage < 1) {
-          animationFrame = requestAnimationFrame(animate);
-        }
-      };
-
-      animationFrame = requestAnimationFrame(animate);
-      return () => cancelAnimationFrame(animationFrame);
-    }, [end, duration, shouldStart]);
-
-    return count;
-  };
-
-  const yearsCount = useCounter(20, 2000, statsInView);
-  const hoursCount = useCounter(100, 2000, statsInView);
-
-  // Intersection observer for stats animation
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setStatsInView(true);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   // 3D logo tilt effect
   useEffect(() => {
@@ -207,33 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Animated Statistics Section */}
-      <section ref={statsRef} className="py-20 bg-background">
-        <div className="container">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 hover:from-primary/10 hover:to-primary/15 transition-all duration-300 hover:scale-105 hover:shadow-lg group">
-              <div className="text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
-                {yearsCount}+
-              </div>
-              <div className="text-muted-foreground font-medium">Years of Experience</div>
-            </div>
 
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 hover:from-primary/10 hover:to-primary/15 transition-all duration-300 hover:scale-105 hover:shadow-lg group">
-              <div className="text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
-                {hoursCount}+
-              </div>
-              <div className="text-muted-foreground font-medium">Hours Minimum Content</div>
-            </div>
-
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 hover:from-primary/10 hover:to-primary/15 transition-all duration-300 hover:scale-105 hover:shadow-lg group">
-              <div className="text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
-                $$$
-              </div>
-              <div className="text-muted-foreground font-medium">Per Minute Pricing</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Why Choose Global Media Consult - Interactive Cards */}
       <section className="py-20 bg-muted/30">
