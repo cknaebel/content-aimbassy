@@ -242,3 +242,16 @@
 - [x] Remove "20+ Years Experience" section from Home.tsx
 - [x] Test homepage layout
 - [x] Create checkpoint
+
+## Design Makeover - Align with GMC Brand
+- [x] Analyze GMC website design (typography, colors, layout, tone)
+- [x] Create design adaptation plan following "sibling not twin" principle
+- [x] Update typography to match GMC font family (already matching)
+- [x] Adjust color palette - cooler tones, more technical feel
+- [x] Modify layout to be more modular and structured
+- [x] Update shadow system to be more subtle and professional
+- [x] Update button and card styles to be less dramatic
+- [ ] Update imagery style - prefer diagrams/flows over abstract visuals (future enhancement)
+- [x] Ensure clear "Content AImbassy - a service by Global Media Consult" branding (already implemented)
+- [x] Test all pages for consistent new design
+- [x] Create checkpoint with GMC-aligned design

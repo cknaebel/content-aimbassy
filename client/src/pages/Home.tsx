@@ -88,7 +88,7 @@ export default function Home() {
               <Link href="/questionnaire">
                 <Button 
                   size="lg" 
-                  className="btn-modern bg-secondary hover:bg-secondary/90 text-white font-semibold text-lg px-8 py-6 rounded-full glow-primary hover:scale-105 group"
+                  className="btn-modern bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-lg px-8 py-6 rounded-md group"
                 >
                   Submit Your Content
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -99,7 +99,7 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-2 border-primary/30 text-primary hover:bg-primary/5 hover:border-primary/50 font-semibold text-lg px-8 py-6 rounded-full transition-all duration-300"
+                  className="border border-border text-primary hover:bg-muted font-semibold text-lg px-8 py-6 rounded-md transition-all duration-200"
                 >
                   Learn How It Works
                 </Button>
@@ -110,11 +110,8 @@ export default function Home() {
           {/* Right: Prominent Company Logo with Modern Effects */}
           <div className="flex justify-center animate-fade-in-up animation-delay-300">
             <div className="relative">
-              {/* Glow effect behind logo */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/20 blur-3xl rounded-full"></div>
-              
               {/* Logo container */}
-              <div className="relative p-8 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500 bg-white/80 backdrop-blur-sm border-2 border-primary/30 overflow-hidden">
+              <div className="relative p-6 rounded-xl shadow-lg transition-all duration-300 bg-card border border-border overflow-hidden">
                 <img
                   ref={heroLogoRef}
                   src="/hero-graphic.jpg"

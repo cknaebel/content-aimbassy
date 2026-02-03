@@ -47,52 +47,52 @@
   --font-heading: 'Noto Sans', sans-serif;
   --font-body: 'Montserrat', sans-serif;
   
-  /* Enhanced Notion-Style Shadow System */
-  /* Notion uses multiple layered shadows for depth - more prominent and visible */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.06), 0 1px 3px 0 rgb(0 0 0 / 0.04);
-  --shadow: 0 2px 4px 0 rgb(0 0 0 / 0.08), 0 3px 6px 0 rgb(0 0 0 / 0.06);
-  --shadow-md: 0 4px 8px -2px rgb(0 0 0 / 0.12), 0 6px 12px -4px rgb(0 0 0 / 0.08);
-  --shadow-lg: 0 12px 24px -4px rgb(0 0 0 / 0.12), 0 8px 16px -8px rgb(0 0 0 / 0.08);
-  --shadow-xl: 0 20px 40px -8px rgb(0 0 0 / 0.14), 0 12px 24px -12px rgb(0 0 0 / 0.10);
-  --shadow-2xl: 0 32px 64px -12px rgb(0 0 0 / 0.18), 0 20px 40px -16px rgb(0 0 0 / 0.12);
-  --shadow-glow: 0 0 24px rgb(75 0 130 / 0.20), 0 0 12px rgb(75 0 130 / 0.10);
+  /* Subtle Shadow System - Professional B2B Feel */
+  /* Flatter, more restrained shadows for operational/technical aesthetic */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
+  --shadow-md: 0 2px 4px -1px rgb(0 0 0 / 0.08);
+  --shadow-lg: 0 2px 6px -1px rgb(0 0 0 / 0.10);
+  --shadow-xl: 0 4px 8px -2px rgb(0 0 0 / 0.12);
+  --shadow-2xl: 0 6px 12px -4px rgb(0 0 0 / 0.14);
+  --shadow-glow: 0 0 12px rgb(74 144 164 / 0.15);
   
-  /* Content Aimbassy - Refined color strategy */
-  /* Pure white background, indigo for headlines/frames, orange for CTAs, green/grey for accents */
-  /* Brand colors: #4b0082 (indigo), #e67e22 (orange), #1e8449 (emerald), #708090 (slate) */
-  --primary: oklch(0.35 0.20 295); /* Indigo #4b0082 - for headlines, frames, highlights */
-  --primary-foreground: oklch(1 0 0); /* White text on indigo */
-  --sidebar-primary: oklch(0.35 0.20 295);
+  /* Content Aimbassy - Technical/Operational Color Strategy */
+  /* Cooler, more restrained palette. Sibling to GMC, not twin. */
+  /* Instrument panel aesthetic: navy/slate primary, muted teal accent, subdued amber CTA */
+  --primary: oklch(0.32 0.04 240); /* Deep navy/slate #2c3e50 - main structure */
+  --primary-foreground: oklch(1 0 0); /* White text on navy */
+  --sidebar-primary: oklch(0.32 0.04 240);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --chart-1: oklch(0.35 0.20 295); /* Indigo */
-  --chart-2: oklch(0.65 0.18 45); /* Orange */
-  --chart-3: oklch(0.48 0.13 160); /* Emerald */
-  --chart-4: oklch(0.55 0.02 240); /* Slate */
-  --chart-5: oklch(0.50 0.15 295); /* Light indigo */
-  --radius: 0.75rem;
-  --background: oklch(1 0 0); /* Pure white background */
-  --foreground: oklch(0.20 0 0); /* Dark grey text for body content */
-  --card: oklch(1 0 0); /* Pure white cards */
-  --card-foreground: oklch(0.20 0 0); /* Dark grey text */
+  --chart-1: oklch(0.32 0.04 240); /* Navy */
+  --chart-2: oklch(0.60 0.08 200); /* Muted teal */
+  --chart-3: oklch(0.70 0.10 75); /* Subdued amber */
+  --chart-4: oklch(0.55 0.02 240); /* Cool grey */
+  --chart-5: oklch(0.50 0.06 220); /* Slate blue */
+  --radius: 0.5rem; /* Less rounded, more structured */
+  --background: oklch(0.98 0.002 240); /* Light cool grey #f8f9fa - not pure white */
+  --foreground: oklch(0.25 0.02 240); /* Dark slate text */
+  --card: oklch(1 0 0); /* White cards on grey background */
+  --card-foreground: oklch(0.25 0.02 240); /* Dark slate text */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.20 0 0);
-  --secondary: oklch(0.65 0.18 45); /* Orange #e67e22 - for CTAs */
-  --secondary-foreground: oklch(1 0 0); /* White text on orange */
-  --muted: oklch(0.96 0 0); /* Very light grey background */
-  --muted-foreground: oklch(0.55 0.02 240); /* Slate grey #708090 for subtle text */
-  --accent: oklch(0.48 0.13 160); /* Emerald green #1e8449 - for links and accents */
-  --accent-foreground: oklch(1 0 0); /* White text on emerald */
+  --popover-foreground: oklch(0.25 0.02 240);
+  --secondary: oklch(0.70 0.10 75); /* Subdued amber #d4a574 - restrained CTA */
+  --secondary-foreground: oklch(0.15 0.02 240); /* Dark text on amber */
+  --muted: oklch(0.95 0.005 240); /* Cool light grey */
+  --muted-foreground: oklch(0.50 0.02 240); /* Medium grey for subtle text */
+  --accent: oklch(0.60 0.08 200); /* Muted teal #4a90a4 - technical accent */
+  --accent-foreground: oklch(1 0 0); /* White text on teal */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0 0); /* Light grey borders */
-  --input: oklch(0.96 0 0); /* Very light grey input backgrounds */
-  --ring: oklch(0.35 0.20 295); /* Indigo ring for focus states */
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.20 0 0);
-  --sidebar-accent: oklch(0.96 0 0);
-  --sidebar-accent-foreground: oklch(0.20 0 0);
-  --sidebar-border: oklch(0.92 0 0);
-  --sidebar-ring: oklch(0.35 0.20 295);
+  --border: oklch(0.85 0.005 240); /* Cool grey borders #cbd5e0 */
+  --input: oklch(0.97 0.003 240); /* Very light cool grey */
+  --ring: oklch(0.60 0.08 200); /* Teal ring for focus */
+  --sidebar: oklch(0.97 0.003 240);
+  --sidebar-foreground: oklch(0.25 0.02 240);
+  --sidebar-accent: oklch(0.94 0.005 240);
+  --sidebar-accent-foreground: oklch(0.25 0.02 240);
+  --sidebar-border: oklch(0.88 0.005 240);
+  --sidebar-ring: oklch(0.60 0.08 200);
 }
 
 .dark {
@@ -197,44 +197,41 @@
     }
   }
 
-  /* Enhanced Notion-Style Button */
+  /* Subtle Professional Button */
   .btn-modern {
-    @apply transition-all duration-300 ease-out;
-    box-shadow: var(--shadow-lg);
+    @apply transition-all duration-200 ease-out;
+    box-shadow: var(--shadow);
   }
   
   .btn-modern:hover {
-    @apply -translate-y-1;
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-md);
   }
   
   .btn-modern:active {
-    @apply translate-y-0;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
   }
 
-  /* Enhanced Notion-Style Card */
+  /* Clean Professional Card */
   .card-modern {
-    @apply transition-all duration-300 ease-out;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid rgb(0 0 0 / 0.08);
+    @apply transition-all duration-200 ease-out;
+    box-shadow: var(--shadow);
+    border: 1px solid oklch(0.85 0.005 240);
   }
   
   .card-modern:hover {
-    @apply -translate-y-2;
-    box-shadow: var(--shadow-2xl);
-    border-color: rgb(0 0 0 / 0.12);
+    box-shadow: var(--shadow-lg);
+    border-color: oklch(0.75 0.01 240);
   }
 
-  /* Glassmorphism Effect */
+  /* Subtle Glass Effect - Minimal */
   .glass {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid oklch(0.85 0.005 240);
   }
 
-  /* Glow Effect */
+  /* Subtle Glow Effect */
   .glow-primary {
     box-shadow: var(--shadow-glow);
   }
