@@ -18,6 +18,10 @@ import AudioContent from "./pages/AudioContent";
 import VideoContent from "./pages/VideoContent";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Portfolio from "./pages/Portfolio";
+import ForAICompanies from "./pages/ForAICompanies";
+import ForContentOwners from "./pages/ForContentOwners";
+import RequestData from "./pages/RequestData";
 
 function Router() {
   return (
@@ -26,12 +30,16 @@ function Router() {
       <main className="flex-1">
         <Switch>
           <Route path={"/"} component={Home} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/for-ai-companies" component={ForAICompanies} />
+          <Route path="/for-content-owners" component={ForContentOwners} />
+          <Route path="/request-data" component={RequestData} />
           <Route path="/about" component={About} />
           <Route path="/how-it-works" component={HowItWorks} />
           <Route path={"/questionnaire"} component={Questionnaire} />
           <Route path={"/blog"} component={Blog} />
           <Route path={"/blog/:slug"} component={BlogPost} />
-           <Route path="/contact" component={Contact} />
+          <Route path="/contact" component={Contact} />
           <Route path="/audio-content" component={AudioContent} />
           <Route path="/video-content" component={VideoContent} />
           <Route path="/imprint" component={Imprint} />
