@@ -57,42 +57,42 @@
   --shadow-2xl: 0 6px 12px -4px rgb(0 0 0 / 0.14);
   --shadow-glow: 0 0 12px rgb(74 144 164 / 0.15);
   
-  /* Content Aimbassy - Warm White-Glove Service Color Strategy */
-  /* Warmer, inviting palette with golden/orange nuances and indigo purple */
-  /* White-glove service aesthetic: indigo purple primary, golden orange accent */
-  --primary: oklch(0.35 0.18 290); /* Indigo purple #4b0082 - main brand color */
-  --primary-foreground: oklch(1 0 0); /* White text on indigo */
-  --sidebar-primary: oklch(0.35 0.18 290);
+  /* Content Aimbassy - Technical/Operational Color Strategy */
+  /* Cooler, more restrained palette. Sibling to GMC, not twin. */
+  /* Instrument panel aesthetic: navy/slate primary, muted teal accent, subdued amber CTA */
+  --primary: oklch(0.32 0.04 240); /* Deep navy/slate #2c3e50 - main structure */
+  --primary-foreground: oklch(1 0 0); /* White text on navy */
+  --sidebar-primary: oklch(0.32 0.04 240);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --chart-1: oklch(0.35 0.18 290); /* Indigo purple */
-  --chart-2: oklch(0.65 0.15 50); /* Golden orange */
-  --chart-3: oklch(0.70 0.12 75); /* Warm amber */
-  --chart-4: oklch(0.60 0.05 30); /* Warm grey */
-  --chart-5: oklch(0.55 0.10 280); /* Purple accent */
-  --radius: 0.5rem;
-  --background: oklch(0.99 0.005 50); /* Warm off-white #fffbf5 - not pure white */
-  --foreground: oklch(0.30 0.02 30); /* Warm dark text */
-  --card: oklch(1 0 0); /* White cards */
-  --card-foreground: oklch(0.30 0.02 30); /* Warm dark text */
+  --chart-1: oklch(0.32 0.04 240); /* Navy */
+  --chart-2: oklch(0.60 0.08 200); /* Muted teal */
+  --chart-3: oklch(0.70 0.10 75); /* Subdued amber */
+  --chart-4: oklch(0.55 0.02 240); /* Cool grey */
+  --chart-5: oklch(0.50 0.06 220); /* Slate blue */
+  --radius: 0.5rem; /* Less rounded, more structured */
+  --background: oklch(0.98 0.002 240); /* Light cool grey #f8f9fa - not pure white */
+  --foreground: oklch(0.25 0.02 240); /* Dark slate text */
+  --card: oklch(1 0 0); /* White cards on grey background */
+  --card-foreground: oklch(0.25 0.02 240); /* Dark slate text */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.30 0.02 30);
-  --secondary: oklch(0.65 0.15 50); /* Golden orange #d97706 - warm CTA */
-  --secondary-foreground: oklch(0.15 0.02 30); /* Dark text on orange */
-  --muted: oklch(0.96 0.005 50); /* Warm light grey muted areas */
-  --muted-foreground: oklch(0.50 0.02 30); /* Warm muted text */
-  --accent: oklch(0.65 0.15 50); /* Golden orange accent */
-  --accent-foreground: oklch(0.15 0.02 30); /* Dark text on orange */
+  --popover-foreground: oklch(0.25 0.02 240);
+  --secondary: oklch(0.70 0.10 75); /* Subdued amber #d4a574 - restrained CTA */
+  --secondary-foreground: oklch(0.15 0.02 240); /* Dark text on amber */
+  --muted: oklch(0.95 0.005 240); /* Cool light grey */
+  --muted-foreground: oklch(0.50 0.02 240); /* Medium grey for subtle text */
+  --accent: oklch(0.60 0.08 200); /* Muted teal #4a90a4 - technical accent */
+  --accent-foreground: oklch(1 0 0); /* White text on teal */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.005 50); /* Warm subtle borders */
-  --input: oklch(0.97 0.005 50); /* Warm input background */
-  --ring: oklch(0.35 0.18 290); /* Focus ring - matches primary indigo */
-  --sidebar: oklch(0.97 0.005 50);
-  --sidebar-foreground: oklch(0.30 0.02 30);
-  --sidebar-accent: oklch(0.96 0.005 50);
-  --sidebar-accent-foreground: oklch(0.30 0.02 30);
-  --sidebar-border: oklch(0.92 0.005 50);
-  --sidebar-ring: oklch(0.35 0.18 290);
+  --border: oklch(0.85 0.005 240); /* Cool grey borders #cbd5e0 */
+  --input: oklch(0.97 0.003 240); /* Very light cool grey */
+  --ring: oklch(0.60 0.08 200); /* Teal ring for focus */
+  --sidebar: oklch(0.97 0.003 240);
+  --sidebar-foreground: oklch(0.25 0.02 240);
+  --sidebar-accent: oklch(0.94 0.005 240);
+  --sidebar-accent-foreground: oklch(0.25 0.02 240);
+  --sidebar-border: oklch(0.88 0.005 240);
+  --sidebar-ring: oklch(0.60 0.08 200);
 }
 
 .dark {
