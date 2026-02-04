@@ -9,12 +9,10 @@ export default function Header() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/how-it-works", label: "How It Works" },
-    { href: "/video-content", label: "Video Content" },
-    { href: "/audio-content", label: "Audio Content" },
-    { href: "/questionnaire", label: "Submit Content" },
-    { href: "https://globalmediaconsult.com/with-sidebar/", label: "Blog", external: true },
+    { href: "/portfolio", label: "Content Portfolio" },
+    { href: "/for-content-owners", label: "For Content Owners" },
+    { href: "/for-ai-companies", label: "For AI Companies" },
+    { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -40,29 +38,17 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            item.external ? (
-              <a 
-                key={item.href} 
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80"
+            <Link key={item.href} href={item.href}>
+              <span
+                className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
+                  isActive(item.href)
+                    ? "text-primary"
+                    : "text-foreground/80"
+                }`}
               >
                 {item.label}
-              </a>
-            ) : (
-              <Link key={item.href} href={item.href}>
-                <span
-                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
-                    isActive(item.href)
-                      ? "text-primary"
-                      : "text-foreground/80"
-                  }`}
-                >
-                  {item.label}
-                </span>
-              </Link>
-            )
+              </span>
+            </Link>
           ))}
         </nav>
 
@@ -85,31 +71,18 @@ export default function Header() {
         <div className="md:hidden border-t border-border/40 bg-background">
           <nav className="container py-4 flex flex-col gap-4">
             {navItems.map((item) => (
-              item.external ? (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium transition-colors hover:text-primary cursor-pointer block py-2 text-foreground/80"
+              <Link key={item.href} href={item.href}>
+                <span
+                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer block py-2 ${
+                    isActive(item.href)
+                      ? "text-primary"
+                      : "text-foreground/80"
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
-                </a>
-              ) : (
-                <Link key={item.href} href={item.href}>
-                  <span
-                    className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer block py-2 ${
-                      isActive(item.href)
-                        ? "text-primary"
-                        : "text-foreground/80"
-                    }`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </span>
-                </Link>
-              )
+                </span>
+              </Link>
             ))}
           </nav>
         </div>

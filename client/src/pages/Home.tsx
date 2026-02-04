@@ -1,23 +1,11 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  DollarSign,
-  Shield,
-  Users,
-  TrendingUp,
-  Repeat,
-  FileText,
-  CheckCircle2,
-  ArrowRight,
-} from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
-
   const heroLogoRef = useRef<HTMLImageElement>(null);
-
-
 
   // 3D logo tilt effect
   useEffect(() => {
@@ -50,9 +38,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Dynamic Background with Gradient Overlay */}
+      {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img 
             src="/hero-bg.jpg" 
@@ -62,341 +49,265 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-white via-white/95 to-primary/10"></div>
         </div>
         
-        {/* Content */}
         <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center py-20">
-          {/* Left: Text Content */}
           <div className="space-y-6 animate-fade-in-up">
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-sm font-medium border border-primary/20 text-primary">
               AI Content Licensing Experts
             </div>
             
-            <div className="text-2xl md:text-3xl font-semibold text-secondary mb-2">
-              A Global Gateway for AI Training Content
-            </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold leading-tight text-primary">
-              Monetize Your Video Content Through{" "}
-              <span className="text-secondary animate-text-shimmer">AI Training</span>
+              Rights-Cleared Training Data for{" "}
+              <span className="text-secondary animate-text-shimmer">AI Development</span>
             </h1>
             
             <p className="text-xl text-foreground/80 leading-relaxed">
-              Transform your audio or video libraries into valuable revenue streams. 
-              We connect content rights holders with leading AI companies seeking high-quality training material.
+              We connect AI companies with the world's largest independent portfolio of diverse, international video and audio content. 300,000 hours of video and 3 million hours of audio across 70 languages.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <Link href="/questionnaire">
+              <Link href="/for-ai-companies">
                 <Button 
                   size="lg" 
                   className="btn-modern bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-lg px-8 py-6 rounded-md group"
                 >
-                  Submit Your Content
+                  Request Data
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               
-              <Link href="/how-it-works">
+              <Link href="/for-content-owners">
                 <Button 
                   size="lg" 
-                  variant="outline" 
-                  className="border border-border text-primary hover:bg-muted font-semibold text-lg px-8 py-6 rounded-md transition-all duration-200"
+                  variant="outline"
+                  className="border-2 border-primary text-primary hover:bg-primary/10 font-semibold text-lg px-8 py-6 rounded-md"
                 >
-                  Learn How It Works
+                  Submit Your Content
                 </Button>
               </Link>
             </div>
+
+            <p className="text-sm text-muted-foreground pt-2">
+              A service by <strong>Global Media Consult</strong>
+            </p>
           </div>
 
-          {/* Right: Prominent Company Logo with Modern Effects */}
-          <div className="flex justify-center animate-fade-in-up animation-delay-300">
-            <div className="relative">
-              {/* Logo container */}
-              <div className="relative p-6 rounded-xl shadow-lg transition-all duration-300 bg-card border border-border overflow-hidden">
-                <img
-                  ref={heroLogoRef}
-                  src="/hero-graphic.jpg"
-                  alt="AI Content Creation"
-                  className="w-full h-auto max-w-lg transition-transform duration-300 ease-out rounded-xl"
-                  style={{ transformStyle: "preserve-3d" }}
-                />
-              </div>
+          <div className="flex justify-center">
+            <img 
+              ref={heroLogoRef}
+              src="/hero-bg.jpg" 
+              alt="AI Training Content" 
+              className="w-full max-w-md rounded-lg shadow-2xl transition-transform duration-200 ease-out"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* What Makes Us Different */}
+      <section className="py-16 bg-muted/30">
+        <div className="container">
+          <h2 className="text-3xl font-bold mb-12 text-center">What Makes Us Different</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full max-w-4xl mx-auto border-collapse">
+              <thead>
+                <tr className="border-b-2 border-primary/20">
+                  <th className="text-left p-4 text-xl font-bold">Scale</th>
+                  <th className="text-left p-4 text-xl font-bold">Diversity</th>
+                  <th className="text-left p-4 text-xl font-bold">Flexibility</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="p-4">
+                    <p className="text-3xl font-bold text-primary mb-2">300K hours</p>
+                    <p className="text-muted-foreground">video content</p>
+                    <p className="text-3xl font-bold text-primary mt-4 mb-2">3M hours</p>
+                    <p className="text-muted-foreground">audio content</p>
+                  </td>
+                  <td className="p-4">
+                    <p className="text-3xl font-bold text-primary mb-2">70 languages</p>
+                    <p className="text-muted-foreground mb-4">Global content</p>
+                    <p className="font-semibold">Reduces western bias</p>
+                  </td>
+                  <td className="p-4">
+                    <p className="font-semibold mb-2">Deal-by-deal</p>
+                    <p className="text-muted-foreground mb-4">Custom curation</p>
+                    <p className="font-semibold">White-glove service</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-16 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-center">Key Differentiators</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="p-6">
+                <h4 className="font-bold mb-2">Largest independent portfolio</h4>
+                <p className="text-sm text-muted-foreground">Not a platform, not corporate. We operate as a specialized intermediary.</p>
+              </Card>
+              <Card className="p-6">
+                <h4 className="font-bold mb-2">Reduces western bias</h4>
+                <p className="text-sm text-muted-foreground">International and niche content from 70 languages helps create more balanced AI models.</p>
+              </Card>
+              <Card className="p-6">
+                <h4 className="font-bold mb-2">European approach</h4>
+                <p className="text-sm text-muted-foreground">Alternative to US-centric providers, with focus on data privacy and governance.</p>
+              </Card>
+              <Card className="p-6">
+                <h4 className="font-bold mb-2">Industry veterans</h4>
+                <p className="text-sm text-muted-foreground">Decades of experience connecting content owners with buyers.</p>
+              </Card>
             </div>
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-3 bg-primary/50 rounded-full animate-scroll-indicator"></div>
-          </div>
-        </div>
       </section>
 
-      {/* Global Media Consult Attribution */}
-      <section className="py-8 bg-muted/30 border-t border-b border-muted">
+      {/* Who We Serve */}
+      <section className="py-16">
         <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
-            <p className="text-sm text-muted-foreground">A service by</p>
-            <a 
-              href="https://globalmediaconsult.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-            >
-              <img 
-                src="/gmc-logo.png" 
-                alt="Global Media Consult" 
-                className="h-12 md:h-16 w-auto"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* Why Choose Global Media Consult - Interactive Cards */}
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold mb-4 text-primary">Why Choose Global Media Consult?</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We provide a comprehensive, secure, and profitable pathway to monetize your video content through AI training partnerships.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: DollarSign,
-                title: "New Revenue Stream",
-                description: "Monetize archival or underutilized content without compromising existing distribution channels.",
-                color: "text-accent",
-                bgColor: "bg-accent/10",
-              },
-              {
-                icon: Shield,
-                title: "Robust Legal Protection",
-                description: "Comprehensive contracts ensure no public distribution, deepfakes, or unauthorized use of your creative work.",
-                color: "text-primary",
-                bgColor: "bg-primary/10",
-              },
-              {
-                icon: Users,
-                title: "Expert Guidance",
-                description: "Over two decades of media licensing experience guiding you through every step of the process.",
-                color: "text-primary",
-                bgColor: "bg-primary/10",
-              },
-              {
-                icon: TrendingUp,
-                title: "Early Market Advantage",
-                description: "Act now to benefit from premium rates before market saturation drives prices down.",
-                color: "text-secondary",
-                bgColor: "bg-secondary/10",
-              },
-              {
-                icon: Repeat,
-                title: "Ongoing Representation",
-                description: "We continue representing your content to new AI clients, creating multiple revenue opportunities.",
-                color: "text-accent",
-                bgColor: "bg-accent/10",
-              },
-              {
-                icon: FileText,
-                title: "Transparent Process",
-                description: "Clear pricing, straightforward agreements, and prompt payment within 10 days of client payment.",
-                color: "text-muted-foreground",
-                bgColor: "bg-muted",
-              },
-            ].map((item, index) => (
-              <Card
-                key={index}
-                className="card-modern group cursor-pointer border-2 hover:border-primary/50 animate-fade-in-up overflow-hidden relative"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-500"></div>
-                <CardContent className="p-6 relative z-10">
-                  <div className={`${item.bgColor} ${item.color} w-16 h-16 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                    <item.icon className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What We're Looking For */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-primary">What We're Looking For</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              AI companies are seeking diverse, high-quality video and audio content across almost all genre categories. We specialize in both video content licensing and large-scale audio content aggregation.
-            </p>
-          </div>
-
+          <h2 className="text-3xl font-bold mb-12 text-center">Who We Serve</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Technical Requirements */}
-            <Card className="card-modern">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-primary">Technical Requirements for Video</h3>
-                <ul className="space-y-3">
-                  {[
-                    "Minimum 100 hours (500+ hours ideal)",
-                    "HD 1080p quality, MP4 format",
-                    "Good bitrate quality",
-                    "No subtitles, watermarks, or overlays",
-                    "Different language tracks and Dubbed versions welcomed",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3 group">
-                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform" />
-                      <span className="text-muted-foreground group-hover:text-foreground transition-colors">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
+            <Card className="p-8">
+              <h3 className="text-2xl font-bold mb-6 text-primary">For AI Companies</h3>
+              <ul className="space-y-3 text-muted-foreground mb-6">
+                <li>• Multimodal, LLM, ASR, speech, and vision models</li>
+                <li>• Data procurement and partnerships teams</li>
+                <li>• Research and engineering leads</li>
+                <li>• Public-sector and sovereign AI initiatives</li>
+              </ul>
+              <Link href="/for-ai-companies">
+                <Button className="w-full">
+                  Explore Portfolio <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </Card>
 
-            {/* Content Categories */}
-            <Card className="card-modern">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-primary">Content Categories</h3>
-                <ul className="space-y-3">
-                  {[
-                    "Film, Series, Fiction",
-                    "TV Shows & Magazines",
-                    "News & Documentaries",
-                    "Sports",
-                    "Children Programming & Animation",
-                    "Music, Concerts & Performances",
-                    "Instructional & Educational Videos",
-                    "User Generated Content & Videocasts",
-                    "Podcast, Radio, Audio Shows",
-                    "Footage Material",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3 group">
-                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform" />
-                      <span className="text-muted-foreground group-hover:text-foreground transition-colors">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
+            <Card className="p-8">
+              <h3 className="text-2xl font-bold mb-6 text-primary">For Content Owners</h3>
+              <ul className="space-y-3 text-muted-foreground mb-6">
+                <li>• Broadcasters and media companies</li>
+                <li>• Production studios and archives</li>
+                <li>• Audio content aggregators</li>
+                <li>• Niche and international content libraries</li>
+              </ul>
+              <Link href="/for-content-owners">
+                <Button className="w-full">
+                  Submit Your Content <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Audio Content Aggregation Section */}
-      <section className="py-20 bg-gradient-to-br from-accent/5 to-accent/10">
+      {/* How It Works */}
+      <section className="py-16 bg-muted/30">
         <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4 text-primary">Large-Scale Audio Content Aggregation</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Beyond video, we specialize in aggregating audio content at scale for AI foundational model development—helping preserve linguistic diversity while creating new revenue streams.
-              </p>
+          <h2 className="text-3xl font-bold mb-12 text-center">How It Works</h2>
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-primary">1</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Discuss</h3>
+              <p className="text-muted-foreground">Initial conversation about your needs</p>
             </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="card-modern">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-primary">What We Aggregate</h3>
-                  <ul className="space-y-3">
-                    {[
-                      "Radio shows and broadcasts",
-                      "Podcasts and audio interviews",
-                      "Audiobooks and audio plays",
-                      "Call center recordings",
-                      "Conversational content in any language",
-                      "Rare languages, local dialects, ethnic languages",
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start gap-3 group">
-                        <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform" />
-                        <span className="text-muted-foreground group-hover:text-foreground transition-colors">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="card-modern">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-primary">Technical Requirements for Audio</h3>
-                  <ul className="space-y-3">
-                    {[
-                      "Minimum 1,000 hours of audio content",
-                      "MP3 or WAV format",
-                      "Any language, including rare and regional dialects",
-                      "Transcript included (ideal but not required)",
-                      "Conversational or narrative content preferred",
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start gap-3 group">
-                        <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform" />
-                        <span className="text-muted-foreground group-hover:text-foreground transition-colors">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-primary">2</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Curate</h3>
+              <p className="text-muted-foreground">We match content to your requirements</p>
             </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-primary">3</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Clear</h3>
+              <p className="text-muted-foreground">Rights verification and licensing</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-primary">4</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Deliver</h3>
+              <p className="text-muted-foreground">S3-WEST, fast and secure</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-accent/20">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4 text-primary">Preserving Linguistic Diversity Through AI</h3>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-                  We actively seek rare languages, local dialects, and ethnic languages from around the world. This helps preserve these languages by bringing them into the digital world, while making AI more diverse, inclusive, and reflective of humanity's rich linguistic variety. Your audio content helps AI companies develop foundational models that learn languages from scratch.
-                </p>
-                <Link href="/audio-content">
-                  <Button 
-                    size="lg" 
-                    className="bg-accent hover:bg-accent/90 text-white font-semibold"
-                  >
-                    Learn More About Audio Aggregation
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-              </CardContent>
+      {/* Portfolio Highlights */}
+      <section className="py-16">
+        <div className="container">
+          <h2 className="text-3xl font-bold mb-12 text-center">Portfolio Highlights</h2>
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <Card className="p-6 text-center">
+              <h4 className="font-bold mb-2">Scripted</h4>
+              <p className="text-2xl font-bold text-primary mb-1">47K hours</p>
+              <p className="text-sm text-muted-foreground">18 suppliers</p>
             </Card>
+            <Card className="p-6 text-center">
+              <h4 className="font-bold mb-2">Animation</h4>
+              <p className="text-2xl font-bold text-primary mb-1">13K hours</p>
+              <p className="text-sm text-muted-foreground">10 suppliers</p>
+            </Card>
+            <Card className="p-6 text-center">
+              <h4 className="font-bold mb-2">News</h4>
+              <p className="text-2xl font-bold text-primary mb-1">75K hours</p>
+              <p className="text-sm text-muted-foreground">Face mapping</p>
+            </Card>
+            <Card className="p-6 text-center">
+              <h4 className="font-bold mb-2">Sports</h4>
+              <p className="text-2xl font-bold text-primary mb-1">96K hours</p>
+              <p className="text-sm text-muted-foreground">Motion data</p>
+            </Card>
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/portfolio">
+              <Button size="lg" variant="outline">
+                View Full Portfolio <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 to-primary/5">
-        <div className="container">
-          <Card className="card-modern max-w-4xl mx-auto text-center p-12 bg-gradient-to-br from-background to-muted/30">
-            <CardContent className="space-y-6">
-              <h2 className="text-4xl font-bold text-primary">Ready to Unlock Your Content's Value?</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Join content creators worldwide who are monetizing their libraries through AI training partnerships. 
-                The window of opportunity is narrowing as the market matures.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center pt-4">
-                <Link href="/questionnaire">
-                  <Button 
-                    size="lg" 
-                    className="btn-modern bg-secondary hover:bg-secondary/90 text-white font-semibold text-lg px-8 py-6 rounded-full glow-primary hover:scale-110 group"
-                  >
-                    Get Started Today
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-2 border-primary text-primary hover:bg-primary/5 font-semibold text-lg px-8 py-6 rounded-full hover:scale-105 transition-all duration-300"
-                  >
-                    Contact Us
-                  </Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
+      <section className="py-16 bg-primary/5">
+        <div className="container text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            We operate deal-by-deal with custom curation for each client. Samples available immediately.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/for-ai-companies">
+              <Button size="lg">Request Data</Button>
+            </Link>
+            <Link href="/for-content-owners">
+              <Button size="lg" variant="outline">Submit Content</Button>
+            </Link>
+            <Link href="/contact">
+              <Button size="lg" variant="outline">Schedule a Call</Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* GMC Attribution */}
+      <section className="py-8 border-t">
+        <div className="container text-center">
+          <div className="flex items-center justify-center gap-4">
+            <img 
+              src="/logo-header.png" 
+              alt="Global Media Consult" 
+              className="h-12 w-auto"
+            />
+            <div className="text-left">
+              <p className="font-semibold">Content AImbassy</p>
+              <p className="text-sm text-muted-foreground">a service by Global Media Consult</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
