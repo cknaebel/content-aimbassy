@@ -8,12 +8,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img 
-              src="/logo-beige.png" 
-              alt="Global Media Consult" 
+              src="/content-aimbassy-logo.png" 
+              alt="Content AImbassy" 
               className="h-8 w-auto mb-4"
             />
             <p className="text-sm text-muted-foreground">
-              Your trusted partner in AI content licensing and monetization.
+              A service by Global Media Consult. Your trusted partner in AI content licensing.
             </p>
           </div>
 
@@ -29,30 +29,30 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/how-it-works">
+                <Link href="/portfolio">
                   <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    How It Works
+                    Content Portfolio
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/video-content">
+                <Link href="/for-ai-companies">
                   <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Video Content
+                    For AI Companies
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/audio-content">
+                <Link href="/for-content-owners">
                   <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Audio Content
+                    For Content Owners
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/questionnaire">
+                <Link href="/contact">
                   <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Submit Content
+                    Contact
                   </span>
                 </Link>
               </li>

@@ -28,8 +28,8 @@ export default function Header() {
         <Link href="/">
           <div className="flex items-center gap-3 cursor-pointer">
             <img 
-              src="/logo-header.png" 
-              alt="Global Media Consult" 
+              src="/content-aimbassy-logo.png" 
+              alt="Content AImbassy" 
               className="h-10 w-auto"
             />
           </div>
