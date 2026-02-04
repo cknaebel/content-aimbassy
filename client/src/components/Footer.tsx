@@ -8,8 +8,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img 
-              src="/logo-beige.png" 
-              alt="Global Media Consult" 
+              src="/logo.png" 
+              alt="Content Aimbassy - a service by Global Media Consult" 
               className="h-8 w-auto mb-4"
             />
             <p className="text-sm text-muted-foreground">
