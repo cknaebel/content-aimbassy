@@ -15,35 +15,26 @@ export default function ForContentOwners() {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Your Archive<br />
-              Is Worth More<br />
-              <span className="text-secondary">Than You Think</span>
+              Your Content<br />
+              Deserves Careful<br />
+              <span className="text-secondary">Stewardship</span>
             </h1>
             
             <p className="text-2xl text-white/90 mb-8 leading-relaxed">
-              AI companies need diverse, international training data. You have it. We connect the two.
+              AI companies need diverse, culturally rich training data. You've created it. We connect the two—with respect for your work and clear, defensible rights.
             </p>
             
             <p className="text-xl text-white/70 mb-10 leading-relaxed max-w-3xl">
-              We've spent two decades building relationships with broadcasters, production studios, and audio aggregators worldwide. When AI companies need content, they come to us. When content owners want new revenue streams, they come to us.
+              We're not aggregators or speculators. We're stewards. Three decades building relationships with broadcasters, studios, and archives worldwide. When AI companies need content, they trust us. When content owners seek partnerships, they trust us.
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="/questionnaire">
+              <Link href="/contact">
                 <Button 
                   size="lg" 
                   className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-lg px-10 py-7"
                 >
-                  Submit Your Content <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white/10 font-semibold text-lg px-10 py-7 backdrop-blur-sm"
-                >
-                  Schedule a Call
+                  Start a conversation <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>
@@ -51,56 +42,56 @@ export default function ForContentOwners() {
         </div>
       </section>
 
-      {/* What We Do */}
+      {/* Our Approach */}
       <section className="py-24 bg-white">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              What We<br />
-              <span className="text-secondary">Do For You</span>
+              How We<br />
+              <span className="text-secondary">Work With You</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
-              We operate as your intermediary. You focus on creating content. We handle the licensing, negotiations, and delivery.
+              We operate as stewards, not brokers. Your content is cultural expression, not raw material. We treat it accordingly.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-2xl font-bold mb-4">Global Reach to AI Buyers</h3>
+                <h3 className="text-2xl font-bold mb-4">Respect for Your Work</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Leading AI companies worldwide—multimodal, LLM, ASR, speech, and vision models. Data procurement teams. Research leads. Public-sector and sovereign AI initiatives. They come to us when they need diverse, international content.
+                  Your content represents creative effort, cultural value, and often decades of archival work. We don't treat it as commodity inventory. Every partnership begins with understanding what makes your content unique and valuable.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  You get access to buyers you wouldn't reach on your own. We've built these relationships over two decades.
+                <p className="text-sm text-muted-foreground italic">
+                  Cultural expression, not raw material.
                 </p>
               </Card>
 
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-2xl font-bold mb-4">Rights Management & Compliance</h3>
+                <h3 className="text-2xl font-bold mb-4">Selective Partnerships</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Rights verification, licensing negotiations, legal compliance—we handle it. You don't need to become an expert in AI training data licensing. We already are.
+                  We work with AI companies who understand the responsibility that comes with training on cultural content. European governance standards, ethical sourcing documentation, and clear use-case discussions. No bulk scraping, no speculative licensing.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  GDPR-compliant processes. Ethical sourcing. Proper documentation. No public distribution rights. Clean, defensible contracts.
+                <p className="text-sm text-muted-foreground italic">
+                  Quality partnerships, not volume deals.
                 </p>
               </Card>
 
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-2xl font-bold mb-4">Fair Compensation</h3>
+                <h3 className="text-2xl font-bold mb-4">Clear Rights & Fair Terms</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Competitive pricing based on content quality, uniqueness, and market demand. Deal-by-deal flexibility. No minimum commitments beyond 100 hours of professional-quality content.
+                  Rights verification, licensing negotiations, legal compliance—we handle it with transparency. GDPR-compliant processes, proper documentation, defensible contracts. No public distribution rights. You approve each deal.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  We operate on a commission basis. When you get paid, we get paid. Our incentives are aligned.
+                <p className="text-sm text-muted-foreground italic">
+                  Transparent terms, no hidden clauses.
                 </p>
               </Card>
 
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-2xl font-bold mb-4">White-Glove Service</h3>
+                <h3 className="text-2xl font-bold mb-4">Deal-by-Deal Flexibility</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  We're not a platform. We're intermediaries. You work with experienced professionals who understand both the content business and the AI training data market.
+                  No exclusivity required. No minimum commitments beyond quality thresholds. We operate on a commission basis—when you get paid, we get paid. Our incentives are aligned with finding the right partnerships, not the most partnerships.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Seasoned veterans, not startup hustle. European approach to data governance. Relationship-driven, not transactional.
+                <p className="text-sm text-muted-foreground italic">
+                  Aligned incentives, not volume pressure.
                 </p>
               </Card>
             </div>
@@ -114,10 +105,10 @@ export default function ForContentOwners() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Who We<br />
-              <span className="text-secondary">Work With</span>
+              <span className="text-secondary">Partner With</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
-              Broadcasters, production studios, audio aggregators, niche and international content libraries seeking new revenue streams.
+              Broadcasters, production studios, audio aggregators, and archives with substantial libraries seeking new revenue streams while maintaining control and respect for their content.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -138,7 +129,7 @@ export default function ForContentOwners() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
-                    <span>Niche and international content libraries</span>
+                    <span>International and niche content libraries</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
@@ -181,25 +172,25 @@ export default function ForContentOwners() {
         </div>
       </section>
 
-      {/* Requirements */}
+      {/* What We Look For */}
       <section className="py-24 bg-white">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              What We<br />
-              <span className="text-secondary">Look For</span>
+              What Makes<br />
+              <span className="text-secondary">Content Valuable</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
-              Not all content is suitable for AI training. Here's what matters.
+              Not all content is suitable for AI training partnerships. Here's what matters to AI companies—and therefore to us.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-xl font-bold mb-4">Minimum Requirements</h3>
+                <h3 className="text-xl font-bold mb-4">Quality Thresholds</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
-                    <span><strong>100 hours minimum</strong> - We work with substantial libraries, not one-off clips</span>
+                    <span><strong>Substantial libraries</strong> - We work with archives, not one-off clips</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
@@ -207,7 +198,7 @@ export default function ForContentOwners() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
-                    <span><strong>Rights clearance</strong> - You must own or control the rights for AI training licensing</span>
+                    <span><strong>Rights clarity</strong> - You must own or control the rights for AI training licensing</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
@@ -225,15 +216,15 @@ export default function ForContentOwners() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
-                    <span><strong>Diverse speakers</strong> - Multiple accents, ages, genders, cultural backgrounds</span>
+                    <span><strong>Cultural diversity</strong> - Non-western perspectives and regional content</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
-                    <span><strong>Metadata</strong> - Transcripts, subtitles, or descriptive data increase utility</span>
+                    <span><strong>Metadata richness</strong> - Transcripts, subtitles, or descriptive data</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
-                    <span><strong>Niche content</strong> - Specialized subject matter that's hard to find elsewhere</span>
+                    <span><strong>Specialized content</strong> - Niche subject matter that's hard to find elsewhere</span>
                   </li>
                 </ul>
               </Card>
@@ -242,14 +233,17 @@ export default function ForContentOwners() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How We Work */}
       <section className="py-24 bg-muted/30">
         <div className="container">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16">
-              How It<br />
-              <span className="text-secondary">Works</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              How We<br />
+              <span className="text-secondary">Work</span>
             </h2>
+            <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
+              A consultative, selective process focused on finding the right partnerships—not the most partnerships.
+            </p>
             
             <div className="space-y-12">
               <div className="flex gap-8 items-start">
@@ -257,9 +251,9 @@ export default function ForContentOwners() {
                   <span className="text-3xl font-bold text-primary">1</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Submit Your Content</h3>
+                  <h3 className="text-2xl font-bold mb-3">Initial Conversation</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Fill out our questionnaire. Tell us what you have, what rights you control, and what makes your content unique. We'll review and respond within a few business days.
+                    Tell us about your content. What you have, what rights you control, what makes it unique. We'll discuss whether it fits our portfolio and how we work. No forms, no automation—just conversation.
                   </p>
                 </div>
               </div>
@@ -269,9 +263,9 @@ export default function ForContentOwners() {
                   <span className="text-3xl font-bold text-primary">2</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Qualification Discussion</h3>
+                  <h3 className="text-2xl font-bold mb-3">Qualification & Terms</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    If your content fits our portfolio, we'll schedule a call. We'll discuss rights, technical specifications, pricing expectations, and how we work.
+                    If your content fits, we'll discuss rights, technical specifications, pricing expectations, and partnership terms. Transparent, straightforward, respectful of your time and expertise.
                   </p>
                 </div>
               </div>
@@ -281,9 +275,9 @@ export default function ForContentOwners() {
                   <span className="text-3xl font-bold text-primary">3</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Portfolio Integration</h3>
+                  <h3 className="text-2xl font-bold mb-3">Stewardship</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    We add your content to our portfolio. When AI companies request data that matches your content, we present it as an option. No exclusivity required.
+                    We represent your content to AI companies who match your values and requirements. When there's interest, we handle negotiations, contracts, and delivery coordination. You approve each deal.
                   </p>
                 </div>
               </div>
@@ -293,9 +287,9 @@ export default function ForContentOwners() {
                   <span className="text-3xl font-bold text-primary">4</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Deal-by-Deal Licensing</h3>
+                  <h3 className="text-2xl font-bold mb-3">Partnership</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    When a buyer wants your content, we negotiate terms, handle contracts, and coordinate delivery. You approve each deal. We get paid when you get paid.
+                    We get paid when you get paid. Our incentives are aligned with finding partnerships that respect your content, meet your requirements, and provide fair compensation. Long-term relationships, not one-off transactions.
                   </p>
                 </div>
               </div>
@@ -309,21 +303,16 @@ export default function ForContentOwners() {
         <div className="container text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Monetize<br />
-              <span className="text-secondary">Your Archive?</span>
+              Let's Start<br />
+              <span className="text-secondary">a Conversation</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Fill out our questionnaire, and we'll respond within a few business days. No commitment, no fees unless we close a deal.
+              Tell us about your content, and we'll discuss whether we're the right stewards for it. No commitment, no fees unless we close a deal that works for you.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/questionnaire">
-                <Button size="lg" className="text-lg px-10 py-7">
-                  Submit Your Content <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="text-lg px-10 py-7">
-                  Schedule a Call
+                <Button size="lg" className="text-lg px-10 py-7">
+                  Start a conversation <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>

@@ -85,3 +85,20 @@
 - [x] Use stewardship language throughout
 - [x] Remove transactional/self-service language
 - [x] Test and create checkpoint
+
+
+## For AI Companies Page Redesign
+- [x] Read current For AI Companies page structure
+- [x] Apply Strategic North Star framework
+- [x] Add "What You're Really Buying" block
+- [x] Use stewardship and conversation-first language
+- [x] Remove transactional/self-service language
+- [x] Emphasize consultation over instant access
+
+## For Content Owners Page Redesign
+- [x] Read current For Content Owners page structure
+- [x] Apply Strategic North Star framework
+- [x] Emphasize stewardship and cultural responsibility
+- [x] Remove volume-based promises
+- [x] Focus on trust-building and partnership
+- [x] Use warm, respectful tone
