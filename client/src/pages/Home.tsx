@@ -23,18 +23,12 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8">
-              The World's<br />
-              Largest Independent<br />
-              <span className="text-secondary">AI Training Data</span><br />
-              Portfolio
+              <span className="text-secondary">Bespoke</span> AI training data licensing—<br />
+              rights-cleared, audit-ready, globally diverse.
             </h1>
             
-            <div className="text-2xl md:text-3xl font-semibold mb-6 text-white/90">
-              300,000 hours of video. 3 million hours of audio. 70 languages.
-            </div>
-            
-            <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
-              We don't run a platform. We don't aggregate for the sake of scale. We operate as a specialized intermediary—connecting AI companies with rights-cleared, internationally diverse training content that reduces western bias and enriches model performance.
+            <p className="text-xl text-white/80 leading-relaxed max-w-3xl mb-10">
+              We curate and structure datasets deal-by-deal, with European governance standards and a white-glove process that protects creators and de-risks buyers.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -43,7 +37,7 @@ export default function Home() {
                   size="lg" 
                   className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-lg px-10 py-7 rounded-md group shadow-lg"
                 >
-                  Request Data
+                  I'm an AI buyer
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -54,7 +48,7 @@ export default function Home() {
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white/10 font-semibold text-lg px-10 py-7 rounded-md backdrop-blur-sm"
                 >
-                  Submit Your Content
+                  I'm a content owner
                 </Button>
               </Link>
             </div>

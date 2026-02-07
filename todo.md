@@ -36,3 +36,12 @@
 - [x] Update Footer component to use new logo
 - [x] Test logo on all pages
 - [x] Create checkpoint
+
+
+## Hero Section Redesign
+- [x] Update headline to "Bespoke AI training data licensing—rights-cleared, audit-ready, globally diverse."
+- [x] Update subhead to "We curate and structure datasets deal-by-deal, with European governance standards and a white-glove process that protects creators and de-risks buyers."
+- [x] Replace CTAs with "I'm a content owner" / "I'm an AI buyer"
+- [x] Link CTAs to /for-content-owners and /for-ai-companies
+- [x] Test hero section
+- [x] Create checkpoint
