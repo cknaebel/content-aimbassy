@@ -60,32 +60,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why We're Different */}
+      {/* Our Mission */}
       <section className="py-24 bg-white">
         <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              Our<br />
+              <span className="text-secondary">Mission</span>
+            </h2>
+            
+            <p className="text-xl text-muted-foreground leading-relaxed mb-16">
+              AI should reflect the richness, diversity, and dignity of global human culture. Content is not raw material—it's cultural expression. We steward internationally diverse training data with European governance standards, ensuring provenance, ethics, and respect for creators are strategic advantages, not compliance overhead.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why We're Different */}
+      <section className="py-24 bg-muted/30">
+        <div className="container">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Why We're<br />
               <span className="text-secondary">Different</span>
             </h2>
-            
-            <div className="grid md:grid-cols-3 gap-12 mb-20">
-              <div>
-                <div className="text-6xl font-bold text-primary mb-4">300K</div>
-                <div className="text-lg font-semibold mb-2">Hours of Video</div>
-                <p className="text-muted-foreground">Scripted content, animation, news, sports, documentaries—across 18 suppliers and growing.</p>
-              </div>
-              <div>
-                <div className="text-6xl font-bold text-primary mb-4">3M</div>
-                <div className="text-lg font-semibold mb-2">Hours of Audio</div>
-                <p className="text-muted-foreground">Radio, podcasts, rare languages, music—preserving linguistic and cultural diversity.</p>
-              </div>
-              <div>
-                <div className="text-6xl font-bold text-primary mb-4">70</div>
-                <div className="text-lg font-semibold mb-2">Languages</div>
-                <p className="text-muted-foreground">International, niche, non-English content that reduces western bias in AI models.</p>
-              </div>
-            </div>
+            <p className="text-xl text-muted-foreground mb-16 max-w-3xl">
+              We operate as a bespoke atelier, not a platform. Every deal is handled individually, with human judgment, cultural awareness, and a commitment to making AI more representative.
+            </p>
 
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-8 border-l-4 border-l-secondary">
@@ -97,7 +98,7 @@ export default function Home() {
               <Card className="p-8 border-l-4 border-l-secondary">
                 <h3 className="text-xl font-bold mb-3">Seasoned Veterans</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Two decades building relationships with content owners and AI buyers. We've seen the industry evolve—and we know where it's heading.
+                  Three decades building relationships with content owners and AI buyers. We've seen the industry evolve—and we know where it's heading.
                 </p>
               </Card>
               <Card className="p-8 border-l-4 border-l-secondary">
@@ -107,9 +108,9 @@ export default function Home() {
                 </p>
               </Card>
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-xl font-bold mb-3">Reduces Bias</h3>
+                <h3 className="text-xl font-bold mb-3">Globally Diverse</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  International and niche content from 70 languages helps create more balanced, representative AI models. Diversity isn't a checkbox—it's our core value.
+                  One of the largest independent portfolios of rights-cleared international content. 70+ languages, rare dialects, underrepresented cultures—curated deal-by-deal to reduce algorithmic bias.
                 </p>
               </Card>
             </div>
@@ -194,14 +195,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How We Work */}
       <section className="py-24 bg-white">
         <div className="container">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16">
-              How It<br />
-              <span className="text-secondary">Works</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              How We<br />
+              <span className="text-secondary">Work</span>
             </h2>
+            <p className="text-xl text-muted-foreground mb-16 max-w-3xl">
+              We operate as stewards, not brokers. Every engagement begins with conversation, proceeds through careful curation, and results in defensible, ethically sourced training data.
+            </p>
             
             <div className="space-y-12">
               <div className="flex gap-8 items-start">
@@ -209,9 +213,9 @@ export default function Home() {
                   <span className="text-3xl font-bold text-primary">1</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Discuss</h3>
+                  <h3 className="text-2xl font-bold mb-3">Conversation</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    We start with a conversation. What are you building? What data characteristics matter? What languages, genres, quality levels do you need? Or, if you're a content owner: what do you have, and what rights can you clear?
+                    We begin by understanding your needs. What are you building? What cultural, linguistic, or technical characteristics matter? For content owners: what do you steward, and what rights can you clear? This is a consultation, not a transaction.
                   </p>
                 </div>
               </div>
@@ -221,9 +225,9 @@ export default function Home() {
                   <span className="text-3xl font-bold text-primary">2</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Curate</h3>
+                  <h3 className="text-2xl font-bold mb-3">Curation</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    We match content to your specific requirements. Not algorithmic recommendations—human curation by people who understand both the content and the use case.
+                    We curate datasets tailored to your model, geography, and risk profile. This is human judgment—not algorithmic matching. We know the content, the creators, and the cultural context.
                   </p>
                 </div>
               </div>
@@ -233,9 +237,9 @@ export default function Home() {
                   <span className="text-3xl font-bold text-primary">3</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Clear</h3>
+                  <h3 className="text-2xl font-bold mb-3">Stewardship</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Rights verification, licensing negotiations, legal compliance—we handle it. You get clean, defensible data with proper provenance and documentation.
+                    Rights verification, licensing negotiations, legal compliance—we handle it with care. You receive defensible data with complete provenance, audit-ready documentation, and respect for creators built in.
                   </p>
                 </div>
               </div>
@@ -245,9 +249,9 @@ export default function Home() {
                   <span className="text-3xl font-bold text-primary">4</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Deliver</h3>
+                  <h3 className="text-2xl font-bold mb-3">Delivery</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    S3-WEST delivery. Fast, secure, reliable. Samples available immediately. Full datasets delivered on agreed timelines with complete metadata.
+                    Fast sample → contract → delivery pipeline. Secure S3-WEST infrastructure. Full datasets delivered on agreed timelines with complete metadata and ongoing support.
                   </p>
                 </div>
               </div>
@@ -256,45 +260,87 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Highlights */}
+      {/* What We Steward */}
       <section className="py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Portfolio<br />
-              <span className="text-secondary">Highlights</span>
+              What We<br />
+              <span className="text-secondary">Steward</span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
-              A selection of what we have available. This is not a catalogue—it's a starting point for conversation.
+            <p className="text-xl text-muted-foreground mb-16 max-w-3xl">
+              A large, fast-growing independent portfolio—curated deal-by-deal. These are examples of the content we steward, not a catalogue to browse.
             </p>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <h4 className="font-bold mb-3 text-lg">Scripted</h4>
-                <p className="text-4xl font-bold text-primary mb-2">47K</p>
-                <p className="text-sm text-muted-foreground">hours • 18 suppliers</p>
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <Card className="p-8 hover:shadow-lg transition-shadow">
+                <h4 className="font-bold mb-3 text-xl text-primary">Rare Languages Audio Collection</h4>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  One of the largest curated audio portfolios of rare and underrepresented languages. Ideal for speech recognition, linguistic diversity, and accent training.
+                </p>
+                <p className="text-sm text-muted-foreground italic">
+                  Extensive archive • 70+ languages • Curated by linguistic experts
+                </p>
               </Card>
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <h4 className="font-bold mb-3 text-lg">Animation</h4>
-                <p className="text-4xl font-bold text-primary mb-2">13K</p>
-                <p className="text-sm text-muted-foreground">hours • 10 suppliers</p>
+
+              <Card className="p-8 hover:shadow-lg transition-shadow">
+                <h4 className="font-bold mb-3 text-xl text-primary">News & Interview Archive for Face Mapping</h4>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Extensive international news and interview content across 40+ languages. Ideal for face mapping, emotion recognition, and diverse facial features.
+                </p>
+                <p className="text-sm text-muted-foreground italic">
+                  International coverage • Diverse demographics • Rights-cleared
+                </p>
               </Card>
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <h4 className="font-bold mb-3 text-lg">News</h4>
-                <p className="text-4xl font-bold text-primary mb-2">75K</p>
-                <p className="text-sm text-muted-foreground">hours • Face mapping</p>
+
+              <Card className="p-8 hover:shadow-lg transition-shadow">
+                <h4 className="font-bold mb-3 text-xl text-primary">Sports & High-Motion Content</h4>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Specialized sports footage from leading suppliers (clearance required for samples). Ideal for motion analysis, action recognition, and athletic movement.
+                </p>
+                <p className="text-sm text-muted-foreground italic">
+                  Specialized suppliers • High-quality capture • NDA required
+                </p>
               </Card>
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <h4 className="font-bold mb-3 text-lg">Sports</h4>
-                <p className="text-4xl font-bold text-primary mb-2">96K</p>
-                <p className="text-sm text-muted-foreground">hours • Motion data</p>
+
+              <Card className="p-8 hover:shadow-lg transition-shadow">
+                <h4 className="font-bold mb-3 text-xl text-primary">Instructional & Documentary Library</h4>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Curated selection from 30+ independent producers. Ideal for educational AI, procedural learning, and specialized knowledge domains.
+                </p>
+                <p className="text-sm text-muted-foreground italic">
+                  30+ producers • Specialized topics • Curated for quality
+                </p>
               </Card>
+            </div>
+
+            {/* What You're Really Buying */}
+            <div className="bg-white rounded-lg p-10 shadow-sm border-l-4 border-l-secondary mb-12">
+              <h3 className="text-2xl font-bold mb-6">What You're Really Buying</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold mb-2 text-primary">✓ Defensible Rights & Provenance</h4>
+                  <p className="text-muted-foreground">Audit-ready documentation, complete chain of custody, legal defensibility.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2 text-primary">✓ Fast Sample → Contract → Delivery</h4>
+                  <p className="text-muted-foreground">Samples available immediately. Contracts negotiated efficiently. Delivery on agreed timelines.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2 text-primary">✓ Deal Design Tailored to You</h4>
+                  <p className="text-muted-foreground">Customized to your model, geography, and risk profile. No one-size-fits-all licensing.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2 text-primary">✓ Human Curation</h4>
+                  <p className="text-muted-foreground">No platform dumping. Every dataset is curated by people who understand content and culture.</p>
+                </div>
+              </div>
             </div>
             
             <div className="text-center">
               <Link href="/portfolio">
                 <Button size="lg" variant="outline" className="text-lg px-10 py-6">
-                  View Full Portfolio <ArrowRight className="ml-2 h-5 w-5" />
+                  Discuss Your Needs <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>
@@ -316,17 +362,12 @@ export default function Home() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/for-ai-companies">
                 <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white text-lg px-10 py-7">
-                  Request Data
+                  I'm an AI buyer
                 </Button>
               </Link>
               <Link href="/for-content-owners">
                 <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-7 backdrop-blur-sm">
-                  Submit Content
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-7 backdrop-blur-sm">
-                  Schedule a Call
+                  I'm a content owner
                 </Button>
               </Link>
             </div>
