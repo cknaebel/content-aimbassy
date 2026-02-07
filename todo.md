@@ -75,3 +75,13 @@
 - [ ] Replace with atelier-aligned language
 - [ ] Final check against Strategic North Star
 - [ ] Test and create checkpoint
+
+
+## Portfolio Page Redesign
+- [x] Read current Portfolio page structure
+- [x] Apply Strategic North Star framework
+- [x] Replace catalog-style listings with curated examples
+- [x] Add "What You're Really Buying" block
+- [x] Use stewardship language throughout
+- [x] Remove transactional/self-service language
+- [x] Test and create checkpoint

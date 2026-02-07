@@ -1,51 +1,29 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Lock } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Portfolio() {
-  const categories = [
+  const curatedPackages = [
     {
-      title: "Scripted Content",
-      hours: "47,000",
-      suppliers: "18 suppliers",
-      description: "Foreign language films, series, and fiction. Multiple genres, high production quality, diverse cultural perspectives.",
-      features: ["Drama & Comedy", "International Cinema", "Period Pieces"]
+      title: "Rare Languages Audio",
+      description: "One of the largest curated audio portfolios of rare and regional languages. Radio shows, podcasts, audiobooks, and conversational content from 70 languages—including endangered dialects and regional variants rarely found in commercial datasets.",
+      examples: ["Indigenous languages of the Americas", "African language families", "Southeast Asian regional dialects", "Authentic conversational patterns"]
     },
     {
-      title: "Animation",
-      hours: "13,000",
-      suppliers: "10 suppliers",
-      description: "Children's programming, adult animation, various styles. From traditional 2D to modern 3D production.",
-      features: ["Children's Content", "Adult Animation", "Anime & Cartoons"]
+      title: "News & Interviews for Face Mapping",
+      description: "Extensive international news content and documentary interviews. Ideal for face mapping, speech recognition, and real-world scenario training. Diverse speakers, authentic contexts, professional production quality.",
+      examples: ["International broadcast news", "Documentary interviews", "Panel discussions", "Real-world conversational contexts"]
     },
     {
-      title: "News & Face Mapping",
-      hours: "75,000",
-      suppliers: "Multiple sources",
-      description: "News broadcasts and documentary content. Ideal for face mapping, speech recognition, and real-world scenario training.",
-      features: ["Foreign Languages", "Diverse Speakers", "Real-World Context"]
+      title: "Sports & High-Motion",
+      description: "Specialized sports footage and motion-rich content from leading global suppliers. Computer vision training, action recognition, crowd dynamics. Multiple sports, professional production, diverse contexts.",
+      examples: ["Action sequences and fast motion", "Crowd behavior and dynamics", "Multiple sports disciplines", "Professional and amateur contexts"]
     },
     {
-      title: "Sports & Motion",
-      hours: "96,000",
-      suppliers: "Global coverage",
-      description: "Sports footage and motion-rich content. Computer vision training, action recognition, crowd analysis.",
-      features: ["Multiple Sports", "Action Sequences", "Crowd Dynamics"]
-    },
-    {
-      title: "Audio Content",
-      hours: "3,000,000",
-      suppliers: "70 languages",
-      description: "Radio shows, podcasts, audiobooks, conversational content. Rare languages, regional dialects, authentic speech patterns.",
-      features: ["Rare Languages", "Regional Dialects", "Conversational Data"]
-    },
-    {
-      title: "Music & Performances",
-      hours: "Extensive",
-      suppliers: "Global artists",
-      description: "Concerts, performances, music videos. Live and studio recordings across genres.",
-      features: ["Live Performances", "Studio Recordings", "Global Genres"]
+      title: "Instructional & Documentary",
+      description: "Scripted content, educational programming, and documentary material. Foreign language films, series, and instructional content across multiple genres. High production quality, diverse cultural perspectives.",
+      examples: ["International cinema and series", "Educational programming", "Documentary content", "Instructional material"]
     }
   ];
 
@@ -56,19 +34,19 @@ export default function Portfolio() {
         <div className="container">
           <div className="max-w-4xl">
             <div className="inline-block px-4 py-2 bg-secondary/20 rounded-full text-sm font-medium border border-secondary/30 text-secondary mb-8">
-              Not a Catalogue—A Starting Point
+              Not a Catalogue—A Conversation
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              The Portfolio
+              What We Steward
             </h1>
             
             <p className="text-2xl text-white/90 mb-8 leading-relaxed">
-              300,000 hours of video. 3 million hours of audio. 70 languages. This is what we have available today. Tomorrow, it grows.
+              Three decades of relationships with content owners worldwide. Rare languages, international news, specialized sports footage, and cultural content you won't find elsewhere.
             </p>
             
             <p className="text-xl text-white/70 mb-10 leading-relaxed max-w-3xl">
-              We don't operate a self-service platform. This portfolio is a conversation starter. Tell us what you need, and we'll curate a match.
+              We don't operate a self-service platform. This portfolio represents capacity and trust—not a shopping list. Tell us what you need, and we'll curate a match.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -77,7 +55,7 @@ export default function Portfolio() {
                   size="lg" 
                   className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-lg px-10 py-7"
                 >
-                  Request Data <ArrowRight className="ml-2 h-5 w-5" />
+                  I'm an AI buyer <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/contact">
@@ -86,7 +64,7 @@ export default function Portfolio() {
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white/10 font-semibold text-lg px-10 py-7 backdrop-blur-sm"
                 >
-                  Discuss Your Needs
+                  I'm a content owner
                 </Button>
               </Link>
             </div>
@@ -94,33 +72,29 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Content Categories */}
+      {/* Curated Packages */}
       <section className="py-24 bg-white">
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Content<br />
-              <span className="text-secondary">Categories</span>
+              Curated<br />
+              <span className="text-secondary">Packages</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
-              Six core categories, each with multiple suppliers and growing inventory. This is not exhaustive—it's representative.
+              Four representative examples of what we steward. Each package is tailored to your specific needs—these are starting points for conversation, not fixed offerings.
             </p>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {categories.map((category) => (
-                <Card key={category.title} className="p-8 hover:shadow-xl transition-shadow border-l-4 border-l-secondary">
-                  <h3 className="text-2xl font-bold mb-3">{category.title}</h3>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl font-bold text-primary">{category.hours}</span>
-                    <span className="text-sm text-muted-foreground">hours</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">{category.suppliers}</p>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{category.description}</p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {curatedPackages.map((pkg) => (
+                <Card key={pkg.title} className="p-8 hover:shadow-xl transition-shadow border-l-4 border-l-secondary">
+                  <h3 className="text-2xl font-bold mb-4">{pkg.title}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">{pkg.description}</p>
                   <div className="space-y-2">
-                    {category.features.map((feature) => (
-                      <div key={feature} className="flex items-start gap-2">
+                    <p className="text-sm font-semibold text-primary mb-3">Examples include:</p>
+                    {pkg.examples.map((example) => (
+                      <div key={example} className="flex items-start gap-2">
                         <span className="text-secondary font-bold">•</span>
-                        <span className="text-sm text-muted-foreground">{feature}</span>
+                        <span className="text-sm text-muted-foreground">{example}</span>
                       </div>
                     ))}
                   </div>
@@ -131,48 +105,85 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Strategic Assets */}
+      {/* Our Capacity */}
       <section className="py-24 bg-muted/30">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Strategic<br />
-              <span className="text-secondary">Assets</span>
+              Our<br />
+              <span className="text-secondary">Capacity</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
-              Specialized content with unique value. Access requires NDA and qualification discussion.
+              Scale is a consequence of trust, not our identity. These numbers represent three decades of relationships with content owners worldwide.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="p-8 text-center border-2 border-primary/20">
+                <p className="text-sm font-semibold text-primary mb-2">Video Content</p>
+                <p className="text-4xl font-bold mb-2">300,000+</p>
+                <p className="text-muted-foreground">hours available</p>
+              </Card>
+
+              <Card className="p-8 text-center border-2 border-primary/20">
+                <p className="text-sm font-semibold text-primary mb-2">Audio Content</p>
+                <p className="text-4xl font-bold mb-2">3,000,000+</p>
+                <p className="text-muted-foreground">hours available</p>
+              </Card>
+
+              <Card className="p-8 text-center border-2 border-primary/20">
+                <p className="text-sm font-semibold text-primary mb-2">Languages</p>
+                <p className="text-4xl font-bold mb-2">70+</p>
+                <p className="text-muted-foreground">including rare dialects</p>
+              </Card>
+            </div>
+
+            <div className="mt-12 p-8 bg-white rounded-lg border-l-4 border-l-secondary">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                This portfolio grows continuously through our relationships with content owners. We don't scrape, speculate, or stockpile. We steward content on behalf of rights holders who trust us to find the right partnerships.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What You're Really Buying */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              What You're<br />
+              <span className="text-secondary">Really Buying</span>
+            </h2>
+            <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
+              Beyond the data itself, you're buying peace of mind and professional service.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-10 border-2 border-primary/20 relative overflow-hidden">
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-xs font-semibold text-primary">
-                    <Lock className="h-3 w-3" />
-                    NDA Required
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 pr-24">E-Sports with Metadata</h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Comprehensive e-sports coverage with detailed metadata. Game state data, player actions, commentary, crowd reactions. Ideal for multimodal training and action recognition.
-                </p>
-                <p className="text-sm text-muted-foreground italic">
-                  Available to qualified buyers after NDA and use-case discussion.
+              <Card className="p-8 border-l-4 border-l-secondary">
+                <h3 className="text-xl font-bold mb-4">Defensible Rights & Provenance</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Every dataset comes with clear licensing documentation and provenance. We know the rights holders, we have the agreements, and we can demonstrate the chain of custody. No legal ambiguity, no future liability.
                 </p>
               </Card>
 
-              <Card className="p-10 border-2 border-primary/20 relative overflow-hidden">
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-xs font-semibold text-primary">
-                    <Lock className="h-3 w-3" />
-                    NDA Required
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 pr-24">Volumetric Capture</h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Cutting-edge volumetric video capture. Full 3D spatial data, multiple camera angles, depth information. Next-generation AI applications, spatial computing, immersive experiences.
+              <Card className="p-8 border-l-4 border-l-secondary">
+                <h3 className="text-xl font-bold mb-4">Fast Pipeline</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We deliver samples immediately and full datasets on agreed timelines. S3-WEST server for cost-effective transfer. Complete documentation and metadata. No delays, no surprises.
                 </p>
-                <p className="text-sm text-muted-foreground italic">
-                  Available to qualified buyers after NDA and use-case discussion.
+              </Card>
+
+              <Card className="p-8 border-l-4 border-l-secondary">
+                <h3 className="text-xl font-bold mb-4">Deal Design Tailored to Your Needs</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  No rigid pricing tiers or minimum commitments. We design each deal around your specific requirements, timeline, and budget. Flexible licensing terms that work for your business model.
+                </p>
+              </Card>
+
+              <Card className="p-8 border-l-4 border-l-secondary">
+                <h3 className="text-xl font-bold mb-4">Human Curation, Not Algorithms</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Every package is curated by people who understand both the content and your needs. We review quality, verify metadata, and ensure cultural appropriateness. No automated scraping, no bulk dumping.
                 </p>
               </Card>
             </div>
@@ -180,16 +191,16 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Technical Specifications */}
-      <section className="py-24 bg-white">
+      {/* Technical Standards */}
+      <section className="py-24 bg-muted/30">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Technical<br />
-              <span className="text-secondary">Specifications</span>
+              <span className="text-secondary">Standards</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
-              What you get. No surprises, no compromises.
+              What you can expect from every delivery. No compromises on quality.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -216,6 +227,28 @@ export default function Portfolio() {
               </Card>
 
               <Card className="p-8 border-l-4 border-l-secondary">
+                <h3 className="text-xl font-bold mb-4">Rights & Compliance</h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Rights-cleared for AI training</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>GDPR-compliant processes</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Ethical sourcing documentation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Complete provenance records</span>
+                  </li>
+                </ul>
+              </Card>
+
+              <Card className="p-8 border-l-4 border-l-secondary">
                 <h3 className="text-xl font-bold mb-4">Delivery</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
@@ -232,35 +265,13 @@ export default function Portfolio() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
-                    <span>Complete documentation and provenance</span>
+                    <span>Complete documentation included</span>
                   </li>
                 </ul>
               </Card>
 
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-xl font-bold mb-4">Rights & Compliance</h3>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary font-bold">•</span>
-                    <span>Rights-cleared for AI training</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary font-bold">•</span>
-                    <span>No public distribution rights</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary font-bold">•</span>
-                    <span>GDPR-compliant processes</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary font-bold">•</span>
-                    <span>Ethical sourcing and documentation</span>
-                  </li>
-                </ul>
-              </Card>
-
-              <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-xl font-bold mb-4">Flexibility</h3>
+                <h3 className="text-xl font-bold mb-4">Service Approach</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="text-secondary font-bold">•</span>
@@ -290,21 +301,21 @@ export default function Portfolio() {
         <div className="container text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Discuss<br />
-              <span className="text-secondary">Your Requirements</span>
+              Let's Start<br />
+              <span className="text-secondary">a Conversation</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              This portfolio is a starting point. Tell us what you're building, and we'll curate a match.
+              This portfolio is a starting point. Tell us what you're building, and we'll curate a match that fits your needs, timeline, and budget.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/for-ai-companies">
                 <Button size="lg" className="text-lg px-10 py-7">
-                  Request Data <ArrowRight className="ml-2 h-5 w-5" />
+                  I'm an AI buyer <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button size="lg" variant="outline" className="text-lg px-10 py-7">
-                  Schedule a Call
+                  I'm a content owner
                 </Button>
               </Link>
             </div>
