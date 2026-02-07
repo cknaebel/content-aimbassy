@@ -45,3 +45,13 @@
 - [x] Link CTAs to /for-content-owners and /for-ai-companies
 - [x] Test hero section
 - [x] Create checkpoint
+
+
+## About Us Page Redesign
+- [x] Redesign About Us page with dramatic layout (dark hero section, asymmetric layout)
+- [x] Emphasize three decades of experience in content licensing
+- [x] Highlight international perspective and European positioning
+- [x] Showcase industry veteran status and seasoned team
+- [x] Use Savile Row tone (authoritative, warm, distinguished)
+- [x] Test About Us page
+- [x] Create checkpoint

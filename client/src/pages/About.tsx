@@ -1,207 +1,204 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Target, Award, Globe, Heart } from "lucide-react";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function About() {
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/5 via-background to-accent/10 py-20">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary">
-              About Global Media Consult
+      {/* Hero Section - Dark, Dramatic */}
+      <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-[#1a1a2e] via-[#2d1b4e] to-[#1a1a2e] text-white overflow-hidden">
+        <div className="container relative z-10 py-20">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8">
+              <span className="text-secondary">Three decades</span> building the bridge<br />
+              between content and technology.
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Your trusted partner in navigating the emerging landscape of AI content licensing.
+            
+            <p className="text-xl text-white/80 leading-relaxed max-w-3xl">
+              We are not consultants. We are not a platform. We are seasoned operators who have spent thirty years navigating content licensing across continents, languages, and technological shifts—from broadcast to streaming, and now to AI training.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20">
+      {/* Who We Are */}
+      <section className="py-24">
         <div className="container">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">
-                Our Mission
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Who <span className="text-primary">We Are</span>
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Global Media Consult serves as a trusted intermediary between video content rights holders and leading AI companies. With over two decades of experience in media licensing, we help content owners unlock new revenue streams by licensing their archival and underutilized video libraries for AI training purposes.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Content AImbassy operates as the specialized licensing arm of Global Media Consult, a firm with roots in international media strategy and content distribution since the mid-1990s.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We believe in the responsible development of AI technologies while ensuring that content creators are fairly compensated and their creative legacy is protected. Our comprehensive approach combines deep industry expertise with robust legal safeguards to create win-win partnerships.
+                We are industry veterans who have seen markets evolve, technologies disrupt, and business models transform. We know what works because we've done it—repeatedly, across multiple continents and content categories.
               </p>
             </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card className="border-2">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Target className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle>Our Vision</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    To be the leading bridge between content creators and AI innovation, enabling ethical AI development while maximizing value for rights holders.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Heart className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle>Our Values</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Transparency, integrity, and respect for creative work guide every partnership we forge and every agreement we negotiate.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">
-                Why Trust Us?
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Award className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle>Proven Expertise</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">
-                    With over 20 years of experience in media licensing and content distribution, we understand the complexities of rights management and the nuances of content valuation.
-                  </p>
-                  <p className="text-muted-foreground">
-                    Our team has successfully negotiated countless licensing agreements across traditional media, and we've adapted this expertise to the emerging AI training market.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Globe className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle>Global Network</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">
-                    As part of a consortium with leading content aggregators, we have direct relationships with major AI companies actively seeking training content.
-                  </p>
-                  <p className="text-muted-foreground">
-                    This network ensures your content reaches the right buyers and receives competitive market pricing based on current demand.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How We're Different */}
-      <section className="py-20">
-        <div className="container">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">
-                What Sets Us Apart
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                We go beyond simple content brokerage to provide comprehensive support throughout the entire licensing journey.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Comprehensive Legal Protection</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    We've developed robust contractual frameworks that explicitly prohibit public distribution, deepfakes, sequels, and unauthorized use of names, faces, stories, or characters from your content. Your creative legacy remains protected.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Transparent Pricing</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    We provide clear per-minute pricing based on content quality, genre, and current market rates. You'll understand the value proposition from the outset, with no hidden fees or surprises.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Ongoing Representation</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Beyond the initial deal, we continue to represent your content to new AI clients as additional opportunities arise, creating the potential for multiple revenue streams from the same content library.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>White-Glove Service</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    From initial consultation through content delivery and payment, we manage every step of the process. Our team provides guidance on optimal delivery methods, handles quality assessments, and ensures prompt payment.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Market Context */}
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">
-                The AI Content Licensing Opportunity
-              </h2>
-            </div>
-
-            <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                The market for AI training content is experiencing unprecedented growth as technology companies race to develop more sophisticated visual understanding capabilities. Unlike traditional licensing arrangements, this model never involves public streaming or distribution of your content. Instead, your material serves as educational data that helps AI systems learn visual patterns and structures—similar to how textbooks function in human education.
-              </p>
-
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                The timing of this opportunity is particularly significant. As the technology matures and more content becomes available, the premium pricing currently offered is expected to decrease substantially. Rights holders who act promptly stand to benefit from this early-market advantage before the inevitable price adjustments occur.
-              </p>
-
-              <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg">
-                <p className="text-foreground font-medium italic">
-                  "This isn't about replacing creative work—it's about enabling machines to understand visual structure whilst respecting and protecting the original content and its creators."
+            
+            <div className="space-y-8">
+              <div className="border-l-4 border-secondary pl-6">
+                <div className="text-5xl font-bold text-primary mb-2">30+</div>
+                <div className="text-lg font-semibold mb-2">Years of Experience</div>
+                <p className="text-muted-foreground">
+                  Building relationships with content owners and technology buyers across traditional media and emerging platforms.
                 </p>
               </div>
+              
+              <div className="border-l-4 border-secondary pl-6">
+                <div className="text-5xl font-bold text-primary mb-2">70+</div>
+                <div className="text-lg font-semibold mb-2">Languages</div>
+                <p className="text-muted-foreground">
+                  International and niche content from every corner of the globe—reducing algorithm bias, enriching model performance.
+                </p>
+              </div>
+              
+              <div className="border-l-4 border-secondary pl-6">
+                <div className="text-5xl font-bold text-primary mb-2">300K+</div>
+                <div className="text-lg font-semibold mb-2">Hours of Video</div>
+                <p className="text-muted-foreground">
+                  The world's largest independent portfolio of rights-cleared, audit-ready training content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Makes Us Different - Dark Section */}
+      <section className="py-24 bg-gradient-to-br from-[#1a1a2e] via-[#2d1b4e] to-[#1a1a2e] text-white">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+              What Makes Us <span className="text-secondary">Different</span>
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8">
+                <h3 className="text-2xl font-bold mb-4 text-secondary">European Perspective</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Based in Europe, we bring a distinct international viewpoint to a market often dominated by US-centric providers. Data privacy, governance, and ethical sourcing are built into our process—not bolted on as afterthoughts.
+                </p>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8">
+                <h3 className="text-2xl font-bold mb-4 text-secondary">Deal-by-Deal Curation</h3>
+                <p className="text-white/80 leading-relaxed">
+                  We don't run a platform. We don't aggregate for the sake of scale. Every dataset is curated, structured, and negotiated individually—tailored to the buyer's needs and the creator's constraints.
+                </p>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8">
+                <h3 className="text-2xl font-bold mb-4 text-secondary">White-Glove Service</h3>
+                <p className="text-white/80 leading-relaxed">
+                  From initial consultation through delivery and payment, we manage every step. No self-service portals. No automated workflows. Just seasoned professionals who understand the nuances of content licensing.
+                </p>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8">
+                <h3 className="text-2xl font-bold mb-4 text-secondary">Relationship-Driven</h3>
+                <p className="text-white/80 leading-relaxed">
+                  We operate on trust, reputation, and long-term partnerships—not transaction volume. Our network of content owners and AI buyers has been built over decades, not months.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach */}
+      <section className="py-24">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">
+              Our <span className="text-primary">Approach</span>
+            </h2>
+            
+            <div className="space-y-12">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">For Content Owners</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  We help you unlock new revenue from archival and underutilized libraries. Our process is transparent: clear per-minute pricing, robust legal protections, and ongoing representation as new opportunities arise.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We've developed contractual frameworks that explicitly prohibit public distribution, deepfakes, sequels, and unauthorized use of names, faces, stories, or characters. Your creative legacy remains protected.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-2xl font-bold mb-4">For AI Companies</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  We provide rights-cleared, audit-ready datasets that reduce legal risk and improve model performance. Our portfolio spans 70+ languages and diverse content categories—helping you build more balanced, representative AI systems.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Every dataset is structured deal-by-deal, with metadata, clean feeds, and delivery via S3-WEST for fast, cost-effective access. Samples are available immediately.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Now */}
+      <section className="py-24 bg-muted/30">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              Why <span className="text-primary">Now</span>
+            </h2>
+            
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                The AI training data market is experiencing unprecedented growth. Unlike traditional licensing, this model never involves public distribution—your content serves as educational data, similar to how textbooks function in human education.
+              </p>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                The timing is significant. As the market matures and more content becomes available, premium pricing is expected to decrease. Rights holders who act now benefit from early-market advantage before inevitable price adjustments.
+              </p>
+              
+              <div className="bg-primary/5 border-l-4 border-primary p-8 rounded-r-lg mt-8">
+                <p className="text-foreground text-xl font-medium italic leading-relaxed">
+                  "This isn't about replacing creative work. It's about enabling machines to understand visual structure whilst respecting and protecting the original content and its creators."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Ready to <span className="text-primary">Start the Conversation?</span>
+            </h2>
+            
+            <p className="text-xl text-muted-foreground">
+              Whether you're a content owner looking to monetize your library or an AI company seeking diverse, rights-cleared training data, we're here to help.
+            </p>
+            
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/for-ai-companies">
+                <Button 
+                  size="lg" 
+                  className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-lg px-10 py-7 rounded-md group shadow-lg"
+                >
+                  I'm an AI buyer
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              
+              <Link href="/for-content-owners">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="border-2 border-primary text-primary hover:bg-primary/10 font-semibold text-lg px-10 py-7 rounded-md"
+                >
+                  I'm a content owner
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
