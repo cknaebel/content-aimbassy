@@ -132,3 +132,12 @@
 - [x] Maintain Strategic North Star and stewardship language (non-negotiable)
 - [x] Test visual consistency between brands
 - [x] Create checkpoint
+
+
+## Gradient Text Readability Fix
+- [x] Review gradient text contrast on dark hero backgrounds
+- [x] Create lighter gradient variant for dark backgrounds OR use solid orange/white
+- [x] Replace gradient in hero sections with readable alternative
+- [x] Keep gradient text only on light background sections
+- [x] Test readability across all pages
+- [x] Create checkpoint

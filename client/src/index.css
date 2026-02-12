@@ -139,6 +139,14 @@
   background-clip: text;
 }
 
+/* Lighter gradient for dark backgrounds - better readability */
+.text-gradient-light {
+  background: linear-gradient(135deg, #FFC107 0%, #FBA93E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .text-gradient-secondary {
   background: linear-gradient(135deg, #8B2A9B 0%, #F88379 100%);
   -webkit-background-clip: text;

@@ -25,8 +25,8 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8">
-              <span className="text-gradient-primary">Bespoke</span> AI training data licensing—<br />
-              rights-cleared, audit-ready, <span className="text-gradient-primary">globally diverse</span>.
+              <span className="text-gradient-light">Bespoke</span> AI training data licensing—<br />
+              rights-cleared, audit-ready, <span className="text-gradient-light">globally diverse</span>.
             </h1>
             
             <p className="text-xl text-white/80 leading-relaxed max-w-3xl mb-10">
@@ -379,7 +379,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Start<br />
-              <span className="text-gradient-primary">the Conversation?</span>
+              <span className="text-gradient-light">the Conversation?</span>
             </h2>
             <p className="text-xl text-white/80 mb-12 leading-relaxed">
               We operate deal-by-deal with custom curation for each client. No catalogues, no self-service. Just experienced intermediaries who understand both sides of the market.
