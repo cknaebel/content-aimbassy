@@ -47,88 +47,88 @@
   --font-heading: 'Noto Sans', sans-serif;
   --font-body: 'Montserrat', sans-serif;
   
-  /* Subtle Shadow System - Professional B2B Feel */
-  /* Flatter, more restrained shadows for operational/technical aesthetic */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
-  --shadow-md: 0 2px 4px -1px rgb(0 0 0 / 0.08);
-  --shadow-lg: 0 2px 6px -1px rgb(0 0 0 / 0.10);
-  --shadow-xl: 0 4px 8px -2px rgb(0 0 0 / 0.12);
-  --shadow-2xl: 0 6px 12px -4px rgb(0 0 0 / 0.14);
-  --shadow-glow: 0 0 12px rgb(74 144 164 / 0.15);
+  /* Warm Shadow System - Approachable yet Professional */
+  /* Softer, warmer shadows with subtle amber/orange tints */
+  --shadow-sm: 0 1px 3px 0 rgb(251 169 62 / 0.05);
+  --shadow: 0 2px 4px 0 rgb(251 169 62 / 0.08);
+  --shadow-md: 0 3px 6px -1px rgb(251 169 62 / 0.10);
+  --shadow-lg: 0 4px 10px -1px rgb(251 169 62 / 0.12);
+  --shadow-xl: 0 6px 14px -2px rgb(251 169 62 / 0.14);
+  --shadow-2xl: 0 8px 18px -4px rgb(251 169 62 / 0.16);
+  --shadow-glow: 0 0 16px rgb(251 169 62 / 0.20);
   
-  /* Content Aimbassy - Technical/Operational Color Strategy */
-  /* Cooler, more restrained palette. Sibling to GMC, not twin. */
-  /* Instrument panel aesthetic: navy/slate primary, muted teal accent, subdued amber CTA */
-  --primary: oklch(0.32 0.04 240); /* Deep navy/slate #2c3e50 - main structure */
-  --primary-foreground: oklch(1 0 0); /* White text on navy */
-  --sidebar-primary: oklch(0.32 0.04 240);
+  /* Content Aimbassy - Warm & Approachable Color Strategy */
+  /* Human-centered palette: deep purple primary, vibrant orange accent, warm coral touches */
+  /* White-glove service that feels approachable and lively */
+  --primary: oklch(0.40 0.15 285); /* Deep purple #5D1681 - sophisticated yet warm */
+  --primary-foreground: oklch(1 0 0); /* White text on purple */
+  --sidebar-primary: oklch(0.40 0.15 285);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --chart-1: oklch(0.32 0.04 240); /* Navy */
-  --chart-2: oklch(0.60 0.08 200); /* Muted teal */
-  --chart-3: oklch(0.70 0.10 75); /* Subdued amber */
-  --chart-4: oklch(0.55 0.02 240); /* Cool grey */
-  --chart-5: oklch(0.50 0.06 220); /* Slate blue */
-  --radius: 0.5rem; /* Less rounded, more structured */
-  --background: oklch(0.98 0.002 240); /* Light cool grey #f8f9fa - not pure white */
-  --foreground: oklch(0.25 0.02 240); /* Dark slate text */
-  --card: oklch(1 0 0); /* White cards on grey background */
-  --card-foreground: oklch(0.25 0.02 240); /* Dark slate text */
+  --chart-1: oklch(0.40 0.15 285); /* Purple */
+  --chart-2: oklch(0.72 0.15 50); /* Vibrant orange */
+  --chart-3: oklch(0.70 0.12 25); /* Coral pink */
+  --chart-4: oklch(0.75 0.12 85); /* Golden yellow */
+  --chart-5: oklch(0.55 0.10 180); /* Teal accent */
+  --radius: 0.75rem; /* More rounded, friendlier feel */
+  --background: oklch(0.99 0.005 50); /* Warm off-white with subtle peachy tint */
+  --foreground: oklch(0.25 0.02 285); /* Deep purple-tinted text */
+  --card: oklch(1 0 0); /* Pure white cards for contrast */
+  --card-foreground: oklch(0.25 0.02 285); /* Deep purple-tinted text */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.02 240);
-  --secondary: oklch(0.70 0.10 75); /* Subdued amber #d4a574 - restrained CTA */
-  --secondary-foreground: oklch(0.15 0.02 240); /* Dark text on amber */
-  --muted: oklch(0.95 0.005 240); /* Cool light grey */
-  --muted-foreground: oklch(0.50 0.02 240); /* Medium grey for subtle text */
-  --accent: oklch(0.60 0.08 200); /* Muted teal #4a90a4 - technical accent */
-  --accent-foreground: oklch(1 0 0); /* White text on teal */
+  --popover-foreground: oklch(0.25 0.02 285);
+  --secondary: oklch(0.72 0.15 50); /* Vibrant orange #FBA93E - energetic CTA */
+  --secondary-foreground: oklch(0.15 0.02 285); /* Dark text on orange */
+  --muted: oklch(0.96 0.01 50); /* Warm light peachy grey */
+  --muted-foreground: oklch(0.50 0.03 285); /* Medium purple-grey for subtle text */
+  --accent: oklch(0.70 0.12 25); /* Coral pink #F88379 - warm accent */
+  --accent-foreground: oklch(1 0 0); /* White text on coral */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.85 0.005 240); /* Cool grey borders #cbd5e0 */
-  --input: oklch(0.97 0.003 240); /* Very light cool grey */
-  --ring: oklch(0.60 0.08 200); /* Teal ring for focus */
-  --sidebar: oklch(0.97 0.003 240);
-  --sidebar-foreground: oklch(0.25 0.02 240);
-  --sidebar-accent: oklch(0.94 0.005 240);
-  --sidebar-accent-foreground: oklch(0.25 0.02 240);
-  --sidebar-border: oklch(0.88 0.005 240);
-  --sidebar-ring: oklch(0.60 0.08 200);
+  --border: oklch(0.90 0.01 50); /* Warm peachy-grey borders */
+  --input: oklch(0.98 0.005 50); /* Very light warm grey */
+  --ring: oklch(0.72 0.15 50); /* Orange ring for focus - energetic */
+  --sidebar: oklch(0.98 0.005 50);
+  --sidebar-foreground: oklch(0.25 0.02 285);
+  --sidebar-accent: oklch(0.95 0.01 50);
+  --sidebar-accent-foreground: oklch(0.25 0.02 285);
+  --sidebar-border: oklch(0.92 0.01 50);
+  --sidebar-ring: oklch(0.72 0.15 50);
 }
 
 .dark {
-  /* Content Aimbassy - Dark purple theme */
-  --primary: oklch(0.70 0.15 285); /* Light purple in dark mode */
+  /* Content Aimbassy - Warm Dark Theme */
+  --primary: oklch(0.75 0.15 285); /* Light purple in dark mode */
   --primary-foreground: oklch(0.15 0.15 285); /* Deep purple */
-  --sidebar-primary: oklch(0.70 0.15 285);
+  --sidebar-primary: oklch(0.75 0.15 285);
   --sidebar-primary-foreground: oklch(0.15 0.15 285);
-  --background: oklch(0.15 0.15 285); /* Deep purple background */
-  --foreground: oklch(0.95 0.01 0); /* Near white text */
-  --card: oklch(0.25 0.07 16);
-  --card-foreground: oklch(0.85 0.03 40);
-  --popover: oklch(0.25 0.07 16);
-  --popover-foreground: oklch(0.85 0.03 40);
-  --secondary: oklch(0.35 0.06 18);
-  --secondary-foreground: oklch(0.85 0.03 40);
-  --muted: oklch(0.30 0.06 17);
-  --muted-foreground: oklch(0.70 0.04 38);
-  --accent: oklch(0.62 0.05 36);
-  --accent-foreground: oklch(0.20 0.08 15);
+  --background: oklch(0.18 0.08 285); /* Deep warm purple background */
+  --foreground: oklch(0.95 0.01 50); /* Warm near-white text */
+  --card: oklch(0.25 0.10 285);
+  --card-foreground: oklch(0.90 0.03 50);
+  --popover: oklch(0.25 0.10 285);
+  --popover-foreground: oklch(0.90 0.03 50);
+  --secondary: oklch(0.72 0.15 50); /* Vibrant orange */
+  --secondary-foreground: oklch(0.15 0.02 285);
+  --muted: oklch(0.30 0.08 285);
+  --muted-foreground: oklch(0.70 0.05 50);
+  --accent: oklch(0.70 0.12 25); /* Coral pink */
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.72 0.05 40);
-  --chart-1: oklch(0.72 0.05 40);
-  --chart-2: oklch(0.50 0.07 20);
-  --chart-3: oklch(0.60 0.05 35);
-  --chart-4: oklch(0.65 0.06 25);
-  --chart-5: oklch(0.45 0.07 18);
-  --sidebar: oklch(0.25 0.07 16);
-  --sidebar-foreground: oklch(0.85 0.03 40);
-  --sidebar-accent: oklch(0.30 0.06 17);
-  --sidebar-accent-foreground: oklch(0.985 0.01 40);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.72 0.05 40);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: oklch(0.72 0.15 50);
+  --chart-1: oklch(0.75 0.15 285);
+  --chart-2: oklch(0.72 0.15 50);
+  --chart-3: oklch(0.70 0.12 25);
+  --chart-4: oklch(0.75 0.12 85);
+  --chart-5: oklch(0.55 0.10 180);
+  --sidebar: oklch(0.25 0.10 285);
+  --sidebar-foreground: oklch(0.90 0.03 50);
+  --sidebar-accent: oklch(0.30 0.08 285);
+  --sidebar-accent-foreground: oklch(0.95 0.01 50);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.72 0.15 50);
 }
 
 @layer base {
@@ -211,29 +211,38 @@
     box-shadow: var(--shadow-sm);
   }
 
-  /* Clean Professional Card */
+  /* Warm Approachable Card */
   .card-modern {
-    @apply transition-all duration-200 ease-out;
+    @apply transition-all duration-300 ease-out;
     box-shadow: var(--shadow);
-    border: 1px solid oklch(0.85 0.005 240);
+    border: 1px solid oklch(0.90 0.01 50);
   }
   
   .card-modern:hover {
     box-shadow: var(--shadow-lg);
-    border-color: oklch(0.75 0.01 240);
+    border-color: oklch(0.72 0.15 50);
+    transform: translateY(-2px);
   }
 
-  /* Subtle Glass Effect - Minimal */
+  /* Warm Glass Effect */
   .glass {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid oklch(0.85 0.005 240);
+    background: rgba(255, 250, 245, 0.95);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid oklch(0.90 0.01 50);
   }
 
-  /* Subtle Glow Effect */
+  /* Warm Glow Effect */
   .glow-primary {
     box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-orange {
+    box-shadow: 0 0 20px rgb(251 169 62 / 0.25);
+  }
+  
+  .glow-coral {
+    box-shadow: 0 0 20px rgb(248 131 121 / 0.25);
   }
 }
 

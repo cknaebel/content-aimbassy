@@ -102,3 +102,12 @@
 - [x] Remove volume-based promises
 - [x] Focus on trust-building and partnership
 - [x] Use warm, respectful tone
+
+
+## Design Upgrade - Warmer & More Approachable
+- [x] Update color palette to warmer tones (incorporate orange, coral pink, golden yellow)
+- [x] Adjust typography for more warmth (Noto Sans headlines, Montserrat body)
+- [x] Update gradient backgrounds to warmer color combinations
+- [x] Add subtle visual warmth elements (rounded corners, softer shadows)
+- [x] Update all pages with new design system
+- [x] Test and create checkpoint

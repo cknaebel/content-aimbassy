@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div className="w-full">
       {/* Hero Section - Dark, Dramatic */}
-      <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-[#1a1a2e] via-[#2d1b4e] to-[#1a1a2e] text-white overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white overflow-hidden">
         <div className="container relative z-10 py-20">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8">
@@ -67,7 +67,7 @@ export default function About() {
       </section>
 
       {/* What Makes Us Different - Dark Section */}
-      <section className="py-24 bg-gradient-to-br from-[#1a1a2e] via-[#2d1b4e] to-[#1a1a2e] text-white">
+      <section className="py-24 bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">

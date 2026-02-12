@@ -7,7 +7,7 @@ export default function ForContentOwners() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#1a1a2e] via-[#2d1b4e] to-[#1a1a2e] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white">
         <div className="container">
           <div className="max-w-4xl">
             <div className="inline-block px-4 py-2 bg-secondary/20 rounded-full text-sm font-medium border border-secondary/30 text-secondary mb-8">
