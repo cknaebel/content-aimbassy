@@ -7,6 +7,13 @@ export default function About() {
     <div className="w-full">
       {/* Hero Section - Dark, Dramatic */}
       <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-15">
+          <img 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/dDbXrPiVGKcNkgmU.png" 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div className="container relative z-10 py-20">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8">
@@ -24,20 +31,26 @@ export default function About() {
       {/* Who We Are */}
       <section className="py-24">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div>
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="order-2 md:order-1">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/GahmJxJUybEICPcz.jpg" 
+                alt="Diverse team collaboration" 
+                className="rounded-2xl shadow-xl w-full h-auto object-cover"
+              />
+            </div>
+            <div className="order-1 md:order-2">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Who <span className="text-primary">We Are</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Content AImbassy operates as the specialized licensing arm of Global Media Consult, a firm with roots in international media strategy and content distribution since the mid-1990s.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 We are industry veterans who have seen markets evolve, technologies disrupt, and business models transform. We know what works because we've done it—repeatedly, across multiple continents and content categories.
               </p>
-            </div>
             
-            <div className="space-y-8">
+              <div className="space-y-8">
               <div className="border-l-4 border-secondary pl-6">
                 <div className="text-5xl font-bold text-primary mb-2">30+</div>
                 <div className="text-lg font-semibold mb-2">Years of Experience</div>
@@ -60,6 +73,7 @@ export default function About() {
                 <p className="text-muted-foreground">
                   The world's largest independent portfolio of rights-cleared, audit-ready training content.
                 </p>
+              </div>
               </div>
             </div>
           </div>

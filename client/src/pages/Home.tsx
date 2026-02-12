@@ -8,9 +8,9 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section - Dark, Dramatic, Asymmetric */}
       <section className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-20">
           <img 
-            src="/hero-bg.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/eyzfqPatXBUDtYOz.png" 
             alt="" 
             className="w-full h-full object-cover"
           />
@@ -261,8 +261,15 @@ export default function Home() {
       </section>
 
       {/* What We Steward */}
-      <section className="py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container">
+      <section className="relative py-24 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+          <img 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/knTfXDJGCttulzlM.png" 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container relative z-10">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               What We<br />

@@ -30,8 +30,15 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white">
-        <div className="container">
+      <section className="relative py-20 bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white overflow-hidden">
+        <div className="absolute top-0 left-0 w-1/2 h-full opacity-10 pointer-events-none">
+          <img 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/MNimtILisDAcNBak.png" 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container relative z-10">
           <div className="max-w-4xl">
             <div className="inline-block px-4 py-2 bg-secondary/20 rounded-full text-sm font-medium border border-secondary/30 text-secondary mb-8">
               Not a Catalogue—A Conversation
