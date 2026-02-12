@@ -141,3 +141,12 @@
 - [x] Keep gradient text only on light background sections
 - [x] Test readability across all pages
 - [x] Create checkpoint
+
+
+## Apply New Logo to Website
+- [x] Replace logo in website header/navigation with new primary logo
+- [x] Update favicon with icon variant (Three Dots in Circle)
+- [x] Replace logo references in all pages
+- [x] Update VITE_APP_LOGO environment variable with new logo URL
+- [x] Test logo display across all pages
+- [x] Create checkpoint
