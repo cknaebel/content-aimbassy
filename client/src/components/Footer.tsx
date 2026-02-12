@@ -8,9 +8,9 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img 
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/YWXSSMYudGpQAJXF.png" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/ovIVFGxBRXKOhnfx.png" 
               alt="Content Aimbassy - a service by Global Media Consult" 
-              className="h-10 w-auto mb-4"
+              className="h-12 w-auto max-w-[300px] object-contain mb-4"
             />
             <p className="text-sm text-muted-foreground">
               Your trusted partner in AI content licensing and monetization.

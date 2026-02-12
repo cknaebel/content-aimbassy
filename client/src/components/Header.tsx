@@ -23,14 +23,14 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container flex h-24 items-center justify-between">
         {/* Logo */}
         <Link href="/">
           <div className="flex items-center gap-3 cursor-pointer">
             <img 
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/YWXSSMYudGpQAJXF.png" 
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/ovIVFGxBRXKOhnfx.png" 
               alt="Content Aimbassy - a service by Global Media Consult" 
-              className="h-14 w-auto max-w-[280px] object-contain"
+              className="h-16 w-auto max-w-[400px] object-contain"
             />
           </div>
         </Link>
