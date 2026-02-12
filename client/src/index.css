@@ -131,6 +131,21 @@
   --sidebar-ring: oklch(0.72 0.15 50);
 }
 
+/* GMC Brand Alignment - Gradient Text Utility */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #5D1681 0%, #FBA93E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-secondary {
+  background: linear-gradient(135deg, #8B2A9B 0%, #F88379 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

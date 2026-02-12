@@ -85,7 +85,7 @@ export default function Portfolio() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Curated<br />
-              <span className="text-secondary">Packages</span>
+              <span className="text-gradient-primary">Packages</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               Four representative examples of what we steward. Each package is tailored to your specific needs—these are starting points for conversation, not fixed offerings.
@@ -118,7 +118,7 @@ export default function Portfolio() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Our<br />
-              <span className="text-secondary">Capacity</span>
+              <span className="text-gradient-primary">Capacity</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               Scale is a consequence of trust, not our identity. These numbers represent three decades of relationships with content owners worldwide.
@@ -159,7 +159,7 @@ export default function Portfolio() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               What You're<br />
-              <span className="text-secondary">Really Buying</span>
+              <span className="text-gradient-primary">Really Buying</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               Beyond the data itself, you're buying peace of mind and professional service.
@@ -204,7 +204,7 @@ export default function Portfolio() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Technical<br />
-              <span className="text-secondary">Standards</span>
+              <span className="text-gradient-primary">Standards</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               What you can expect from every delivery. No compromises on quality.
@@ -309,7 +309,7 @@ export default function Portfolio() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Let's Start<br />
-              <span className="text-secondary">a Conversation</span>
+              <span className="text-gradient-primary">a Conversation</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               This portfolio is a starting point. Tell us what you're building, and we'll curate a match that fits your needs, timeline, and budget.

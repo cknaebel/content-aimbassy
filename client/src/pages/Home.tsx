@@ -1,7 +1,9 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users, Globe, Shield, Sparkles } from "lucide-react";
+import { IconCircle } from "@/components/IconCircle";
+import { DiagonalDivider } from "@/components/DiagonalDivider";
 
 export default function Home() {
   return (
@@ -23,8 +25,8 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8">
-              <span className="text-secondary">Bespoke</span> AI training data licensing—<br />
-              rights-cleared, audit-ready, globally diverse.
+              <span className="text-gradient-primary">Bespoke</span> AI training data licensing—<br />
+              rights-cleared, audit-ready, <span className="text-gradient-primary">globally diverse</span>.
             </h1>
             
             <p className="text-xl text-white/80 leading-relaxed max-w-3xl mb-10">
@@ -60,13 +62,15 @@ export default function Home() {
         </div>
       </section>
 
+      <DiagonalDivider direction="left" className="text-white" />
+
       {/* Our Mission */}
       <section className="py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
               Our<br />
-              <span className="text-secondary">Mission</span>
+              <span className="text-gradient-primary">Mission</span>
             </h2>
             
             <p className="text-xl text-muted-foreground leading-relaxed mb-16">
@@ -82,7 +86,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Why We're<br />
-              <span className="text-secondary">Different</span>
+              <span className="text-gradient-primary">Different</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-3xl">
               We operate as a bespoke atelier, not a platform. Every deal is handled individually, with human judgment, cultural awareness, and a commitment to making AI more representative.
@@ -90,25 +94,37 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-xl font-bold mb-3">Not a Platform</h3>
+                <div className="flex items-start gap-4 mb-4">
+                  <IconCircle icon={Sparkles} color="lavender" size="md" />
+                  <h3 className="text-xl font-bold mt-3">Not a Platform</h3>
+                </div>
                 <p className="text-muted-foreground leading-relaxed">
                   We're not building a self-service marketplace. We operate deal-by-deal with custom curation for each client. White-glove service, not algorithms.
                 </p>
               </Card>
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-xl font-bold mb-3">Seasoned Veterans</h3>
+                <div className="flex items-start gap-4 mb-4">
+                  <IconCircle icon={Users} color="mint" size="md" />
+                  <h3 className="text-xl font-bold mt-3">Seasoned Veterans</h3>
+                </div>
                 <p className="text-muted-foreground leading-relaxed">
                   Three decades building relationships with content owners and AI buyers. We've seen the industry evolve—and we know where it's heading.
                 </p>
               </Card>
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-xl font-bold mb-3">European Approach</h3>
+                <div className="flex items-start gap-4 mb-4">
+                  <IconCircle icon={Shield} color="peach" size="md" />
+                  <h3 className="text-xl font-bold mt-3">European Approach</h3>
+                </div>
                 <p className="text-muted-foreground leading-relaxed">
                   Alternative to US-centric providers. Data privacy, governance, and ethical sourcing are built into our process, not bolted on.
                 </p>
               </Card>
               <Card className="p-8 border-l-4 border-l-secondary">
-                <h3 className="text-xl font-bold mb-3">Globally Diverse</h3>
+                <div className="flex items-start gap-4 mb-4">
+                  <IconCircle icon={Globe} color="coral" size="md" />
+                  <h3 className="text-xl font-bold mt-3">Globally Diverse</h3>
+                </div>
                 <p className="text-muted-foreground leading-relaxed">
                   One of the largest independent portfolios of rights-cleared international content. 70+ languages, rare dialects, underrepresented cultures—curated deal-by-deal to reduce algorithmic bias.
                 </p>
@@ -124,7 +140,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Who We<br />
-              <span className="text-secondary">Serve</span>
+              <span className="text-gradient-primary">Serve</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               We work with both sides of the market. AI companies seeking training data. Content owners monetizing their libraries.
@@ -195,13 +211,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How We Work */}
+      <DiagonalDivider direction="right" className="text-white" />
+
+      {/* Why We're Different */}
       <section className="py-24 bg-white">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               How We<br />
-              <span className="text-secondary">Work</span>
+              <span className="text-gradient-primary">Work</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-3xl">
               We operate as stewards, not brokers. Every engagement begins with conversation, proceeds through careful curation, and results in defensible, ethically sourced training data.
@@ -273,7 +291,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               What We<br />
-              <span className="text-secondary">Steward</span>
+              <span className="text-gradient-primary">Steward</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-3xl">
               A large, fast-growing independent portfolio—curated deal-by-deal. These are examples of the content we steward, not a catalogue to browse.
@@ -361,7 +379,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Start<br />
-              <span className="text-secondary">the Conversation?</span>
+              <span className="text-gradient-primary">the Conversation?</span>
             </h2>
             <p className="text-xl text-white/80 mb-12 leading-relaxed">
               We operate deal-by-deal with custom curation for each client. No catalogues, no self-service. Just experienced intermediaries who understand both sides of the market.

@@ -24,7 +24,7 @@ export default function ForContentOwners() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Your Content<br />
               Deserves Careful<br />
-              <span className="text-secondary">Stewardship</span>
+              <span className="text-gradient-primary">Stewardship</span>
             </h1>
             
             <p className="text-2xl text-white/90 mb-8 leading-relaxed">
@@ -55,7 +55,7 @@ export default function ForContentOwners() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               How We<br />
-              <span className="text-secondary">Work With You</span>
+              <span className="text-gradient-primary">Work With You</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               We operate as stewards, not brokers. Your content is cultural expression, not raw material. We treat it accordingly.
@@ -112,7 +112,7 @@ export default function ForContentOwners() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Who We<br />
-              <span className="text-secondary">Partner With</span>
+              <span className="text-gradient-primary">Partner With</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               Broadcasters, production studios, audio aggregators, and archives with substantial libraries seeking new revenue streams while maintaining control and respect for their content.
@@ -185,7 +185,7 @@ export default function ForContentOwners() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               What Makes<br />
-              <span className="text-secondary">Content Valuable</span>
+              <span className="text-gradient-primary">Content Valuable</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               Not all content is suitable for AI training partnerships. Here's what matters to AI companies—and therefore to us.
@@ -246,7 +246,7 @@ export default function ForContentOwners() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               How We<br />
-              <span className="text-secondary">Work</span>
+              <span className="text-gradient-primary">Work</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               A consultative, selective process focused on finding the right partnerships—not the most partnerships.
@@ -311,7 +311,7 @@ export default function ForContentOwners() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Let's Start<br />
-              <span className="text-secondary">a Conversation</span>
+              <span className="text-gradient-primary">a Conversation</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               Tell us about your content, and we'll discuss whether we're the right stewards for it. No commitment, no fees unless we close a deal that works for you.

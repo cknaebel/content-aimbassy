@@ -17,7 +17,7 @@ export default function About() {
         <div className="container relative z-10 py-20">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8">
-              <span className="text-secondary">Three decades</span> building the bridge<br />
+              <span className="text-gradient-primary">Three decades</span> building the bridge<br />
               between content and technology.
             </h1>
             
@@ -85,33 +85,33 @@ export default function About() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-              What Makes Us <span className="text-secondary">Different</span>
+              What Makes Us <span className="text-gradient-primary">Different</span>
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-4 text-secondary">European Perspective</h3>
+                <h3 className="text-2xl font-bold mb-4 text-gradient-primary">European Perspective</h3>
                 <p className="text-white/80 leading-relaxed">
                   Based in Europe, we bring a distinct international viewpoint to a market often dominated by US-centric providers. Data privacy, governance, and ethical sourcing are built into our process—not bolted on as afterthoughts.
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-4 text-secondary">Deal-by-Deal Curation</h3>
+                <h3 className="text-2xl font-bold mb-4 text-gradient-primary">Deal-by-Deal Curation</h3>
                 <p className="text-white/80 leading-relaxed">
                   We don't run a platform. We don't aggregate for the sake of scale. Every dataset is curated, structured, and negotiated individually—tailored to the buyer's needs and the creator's constraints.
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-4 text-secondary">White-Glove Service</h3>
+                <h3 className="text-2xl font-bold mb-4 text-gradient-primary">White-Glove Service</h3>
                 <p className="text-white/80 leading-relaxed">
                   From initial consultation through delivery and payment, we manage every step. No self-service portals. No automated workflows. Just seasoned professionals who understand the nuances of content licensing.
                 </p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8">
-                <h3 className="text-2xl font-bold mb-4 text-secondary">Relationship-Driven</h3>
+                <h3 className="text-2xl font-bold mb-4 text-gradient-primary">Relationship-Driven</h3>
                 <p className="text-white/80 leading-relaxed">
                   We operate on trust, reputation, and long-term partnerships—not transaction volume. Our network of content owners and AI buyers has been built over decades, not months.
                 </p>

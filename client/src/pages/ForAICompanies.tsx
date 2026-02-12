@@ -24,7 +24,7 @@ export default function ForAICompanies() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Training Data<br />
               That Reflects<br />
-              <span className="text-secondary">Global Culture</span>
+              <span className="text-gradient-primary">Global Culture</span>
             </h1>
             
             <p className="text-2xl text-white/90 mb-8 leading-relaxed">
@@ -64,7 +64,7 @@ export default function ForAICompanies() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Our<br />
-              <span className="text-secondary">Approach</span>
+              <span className="text-gradient-primary">Approach</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               We operate as stewards, not brokers. Every dataset is curated with human judgment, cultural context, and respect for creators.
@@ -121,7 +121,7 @@ export default function ForAICompanies() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               What You're<br />
-              <span className="text-secondary">Really Buying</span>
+              <span className="text-gradient-primary">Really Buying</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               Beyond the data itself, you're buying peace of mind and professional service.
@@ -166,7 +166,7 @@ export default function ForAICompanies() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Common<br />
-              <span className="text-secondary">Use Cases</span>
+              <span className="text-gradient-primary">Use Cases</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               Multimodal, LLM, ASR, speech, and vision models. Data procurement teams. Research leads. Public-sector and sovereign AI initiatives.
@@ -220,7 +220,7 @@ export default function ForAICompanies() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               How We<br />
-              <span className="text-secondary">Work</span>
+              <span className="text-gradient-primary">Work</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-2xl">
               We operate as stewards, not brokers. Every engagement is consultative, selective, and relationship-focused.
@@ -285,7 +285,7 @@ export default function ForAICompanies() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Let's Start<br />
-              <span className="text-secondary">a Conversation</span>
+              <span className="text-gradient-primary">a Conversation</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               Tell us what you're building, and we'll curate a match that fits your needs, timeline, and budget. No catalogue browsing. No instant downloads. Just careful matching.
