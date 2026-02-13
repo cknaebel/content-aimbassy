@@ -191,4 +191,7 @@
 - [x] Replace team photo on About page with new graphic
 - [x] Adjust layout if needed
 - [x] Test changes
+- [x] Generate custom branded graphic in CAI purple colors
+- [x] Replace stock photo with custom branded graphic
+- [x] Test custom graphic
 - [ ] Create checkpoint
