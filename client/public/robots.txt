@@ -1,0 +1,9 @@
+# robots.txt for Content Aimbassy
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://content-aimbassy.manus.space/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1

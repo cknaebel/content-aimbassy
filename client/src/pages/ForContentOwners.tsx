@@ -3,10 +3,20 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
+import SEO, { getServiceSchema } from "@/components/SEO";
 
 export default function ForContentOwners() {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="For Content Owners - Monetize Your Archive"
+        description="Partner with experienced content licensing professionals. Fair compensation, transparent terms, cultural respect. We steward your content for AI training partnerships."
+        keywords="content monetization, video licensing, audio licensing, content rights management, AI content partnerships, archive monetization, media licensing"
+        structuredData={getServiceSchema(
+          'Content Licensing Services',
+          'Professional content licensing and monetization services for media owners and rights holders'
+        )}
+      />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-12 pointer-events-none">

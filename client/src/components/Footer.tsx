@@ -12,15 +12,51 @@ export default function Footer() {
               alt="Content Aimbassy - a service by Global Media Consult" 
               className="h-12 w-auto max-w-[300px] object-contain mb-4"
             />
-            <p className="text-sm text-muted-foreground">
-              Your trusted partner in AI content licensing and monetization.
+            <p className="text-sm text-muted-foreground mb-4">
+              Bespoke AI training data licensing—rights-cleared, audit-ready, globally diverse.
             </p>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-muted-foreground">A service by</span>
+              <a 
+                href="https://globalmediaconsult.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <img 
+                  src="https://globalmediaconsult.com/wp-content/uploads/2024/12/GMC-Logo-Horizontal-1.png" 
+                  alt="Global Media Consult" 
+                  className="h-6 w-auto object-contain"
+                />
+              </a>
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Services */}
           <div>
-            <h3 className="font-semibold mb-4 text-foreground">Quick Links</h3>
+            <h3 className="font-semibold mb-4 text-foreground">Services</h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/for-ai-companies">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                    For AI Companies
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/for-content-owners">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                    For Content Owners
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/portfolio">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                    What We Steward
+                  </span>
+                </Link>
+              </li>
               <li>
                 <Link href="/about">
                   <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
@@ -29,30 +65,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/how-it-works">
+                <Link href="/contact">
                   <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    How It Works
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/video-content">
-                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Video Content
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/audio-content">
-                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Audio Content
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/questionnaire">
-                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                    Submit Content
+                    Contact
                   </span>
                 </Link>
               </li>

@@ -1,10 +1,17 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import SEO, { getOrganizationSchema } from "@/components/SEO";
 
 export default function About() {
   return (
     <div className="w-full">
+      <SEO 
+        title="About Us - Three Decades in Content Licensing"
+        description="Industry veterans with 30+ years in content licensing. We bridge content owners and AI companies with European governance standards and white-glove service."
+        keywords="content licensing experts, AI training data professionals, European content licensing, media rights management, content brokerage"
+        structuredData={getOrganizationSchema()}
+      />
       {/* Hero Section - Dark, Dramatic */}
       <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-15">

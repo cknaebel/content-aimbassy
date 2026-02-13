@@ -4,10 +4,17 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Users, Globe, Shield, Sparkles } from "lucide-react";
 import { IconCircle } from "@/components/IconCircle";
 import { DiagonalDivider } from "@/components/DiagonalDivider";
+import SEO, { getOrganizationSchema } from "@/components/SEO";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Bespoke AI Training Data Licensing"
+        description="Rights-cleared, audit-ready, globally diverse AI training data. We curate datasets deal-by-deal with European governance standards and white-glove service."
+        keywords="AI training data, content licensing, video licensing, audio licensing, AI datasets, machine learning data, rights-cleared content, European AI governance"
+        structuredData={getOrganizationSchema()}
+      />
       {/* Hero Section - Dark, Dramatic, Asymmetric */}
       <section className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">

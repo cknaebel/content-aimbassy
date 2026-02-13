@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 
 export default function Portfolio() {
   const curatedPackages = [
@@ -29,6 +30,11 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="What We Steward - Curated AI Training Content"
+        description="Rare languages audio, international news, sports footage, and cultural content. 70+ languages, 300,000+ hours of rights-cleared content for AI training."
+        keywords="rare language datasets, multilingual AI training data, sports footage licensing, news content licensing, cultural diversity datasets, audio datasets"
+      />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white overflow-hidden">
         <div className="absolute top-0 left-0 w-1/2 h-full opacity-10 pointer-events-none">

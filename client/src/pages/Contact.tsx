@@ -2,10 +2,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, MapPin, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import SEO from "@/components/SEO";
 
 export default function Contact() {
   return (
     <div className="w-full">
+      <SEO 
+        title="Contact Us - Get in Touch"
+        description="Have questions about AI content licensing? Contact Content Aimbassy to discuss how we can help you monetize your video content through AI training partnerships."
+        keywords="contact content aimbassy, AI training data inquiry, content licensing contact, get in touch"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/10 py-20">
         <div className="container">

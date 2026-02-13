@@ -3,10 +3,20 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
+import SEO, { getServiceSchema } from "@/components/SEO";
 
 export default function ForAICompanies() {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="For AI Companies - Rights-Cleared Training Data"
+        description="Defensible AI training data with European governance. Rare languages, diverse content, white-glove curation. Fast pipeline, human oversight, culturally aware datasets."
+        keywords="AI training data, machine learning datasets, rights-cleared content, AI content licensing, diverse training data, multilingual AI datasets, European AI governance"
+        structuredData={getServiceSchema(
+          'AI Training Data Licensing',
+          'Bespoke AI training data licensing with rights-cleared, audit-ready content from global sources'
+        )}
+      />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#5D1681] via-[#8B2A9B] to-[#5D1681] text-white overflow-hidden">
         <div className="absolute inset-0 opacity-15 pointer-events-none">
