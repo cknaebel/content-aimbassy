@@ -133,6 +133,24 @@ export default function Footer() {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link href="/cookie-policy">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                    Cookie-Richtlinie
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    localStorage.removeItem('cookie-consent');
+                    window.location.reload();
+                  }}
+                  className="text-muted-foreground hover:text-primary transition-colors cursor-pointer text-left"
+                >
+                  Cookie-Einstellungen
+                </button>
+              </li>
             </ul>
           </div>
         </div>

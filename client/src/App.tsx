@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import CookieConsent from "./components/CookieConsent";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import HowItWorks from "./pages/HowItWorks";
@@ -14,6 +15,7 @@ import Contact from "./pages/Contact";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import CookiePolicy from "./pages/CookiePolicy";
 import AudioContent from "./pages/AudioContent";
 import VideoContent from "./pages/VideoContent";
 import Blog from "./pages/Blog";
@@ -26,6 +28,7 @@ function Router() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <CookieConsent />
       <main className="flex-1">
         <Switch>
           <Route path={"/"} component={Home} />
@@ -42,6 +45,7 @@ function Router() {
           <Route path="/video-content" component={VideoContent} />
           <Route path="/imprint" component={Imprint} />
           <Route path="/privacy" component={Privacy} />
+          <Route path="/cookie-policy" component={CookiePolicy} />
           <Route path="/terms" component={Terms} />
           <Route path={"/404"} component={NotFound} />
           <Route component={NotFound} />

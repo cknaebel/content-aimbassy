@@ -1,8 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 
 export default function Privacy() {
   return (
     <div className="w-full">
+      <SEO 
+        title="Datenschutzerklärung - Privacy Policy"
+        description="Datenschutzerklärung von Content Aimbassy. Informationen über die Erhebung, Verarbeitung und Nutzung personenbezogener Daten gemäß DSGVO."
+        keywords="Datenschutz, Privacy Policy, DSGVO, GDPR, Datenschutzerklärung"
+      />
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-muted/30 py-16">
         <div className="container">
@@ -13,6 +20,9 @@ export default function Privacy() {
             <p className="text-lg text-muted-foreground">
               Privacy Policy / Data Protection Declaration
             </p>
+            <p className="text-sm text-muted-foreground">
+              Letzte Aktualisierung: 13. Februar 2026
+            </p>
           </div>
         </div>
       </section>
@@ -21,213 +31,232 @@ export default function Privacy() {
       <section className="py-16">
         <div className="container max-w-4xl">
           <div className="space-y-8">
+            
+            {/* 1. Datenschutz auf einen Blick */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">1. Data Protection at a Glance</CardTitle>
+                <CardTitle className="text-2xl text-primary">1. Datenschutz auf einen Blick</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold mb-2">General Information</h4>
+                  <h4 className="font-semibold mb-2">Allgemeine Hinweise</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally. For detailed information on data protection, please refer to our privacy policy listed below this text.
+                    Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Datenerfassung auf dieser Website</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br />
+                    Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    <strong>Wie erfassen wir Ihre Daten?</strong><br />
+                    Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    <strong>Wofür nutzen wir Ihre Daten?</strong><br />
+                    Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden, sofern Sie dem zugestimmt haben.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    <strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong><br />
+                    Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
                   </p>
                 </div>
               </CardContent>
             </Card>
 
+            {/* 2. Hosting */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">2. Data Collection on This Website</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Who is responsible for data collection on this website?</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Data processing on this website is carried out by the website operator. You can find the operator's contact details in the section "Information about the responsible party" in this privacy policy.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">How do we collect your data?</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Your data is collected when you provide it to us. This may be data that you enter in a contact form, for example. Other data is collected automatically or with your consent when you visit the website by our IT systems. This is mainly technical data (e.g., internet browser, operating system, or time of page access). This data is collected automatically as soon as you enter this website.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">What do we use your data for?</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Some of the data is collected to ensure error-free provision of the website. Other data may be used to analyze your user behavior. If contracts can be concluded or initiated via the website, the transmitted data will also be processed for contract offers, orders, or other order inquiries.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">What rights do you have regarding your data?</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    You have the right to receive information about the origin, recipient, and purpose of your stored personal data free of charge at any time. You also have the right to request the correction or deletion of this data. If you have given your consent to data processing, you can revoke this consent at any time for the future. You also have the right to request the restriction of the processing of your personal data under certain circumstances. Furthermore, you have the right to lodge a complaint with the competent supervisory authority.
-                  </p>
-                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
-                    You can contact us at any time if you have further questions on the subject of data protection.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary">3. Hosting</CardTitle>
+                <CardTitle className="text-2xl text-primary">2. Hosting</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  This website is hosted by an external service provider (hoster). The personal data collected on this website is stored on the hoster's servers. This may include IP addresses, contact requests, meta and communication data, contract data, contact details, names, website access, and other data generated via a website.
+                  Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  The hoster is used for the purpose of fulfilling the contract with our potential and existing customers (Art. 6 para. 1 lit. b GDPR) and in the interest of secure, fast, and efficient provision of our online offer by a professional provider (Art. 6 para. 1 lit. f GDPR).
+                  Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Our hoster will only process your data to the extent necessary to fulfill its performance obligations and follow our instructions regarding this data.
+                  Unser Hoster wird Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                  <strong>Abschluss eines Vertrages über Auftragsverarbeitung</strong><br />
+                  Um die datenschutzkonforme Verarbeitung zu gewährleisten, haben wir einen Vertrag über Auftragsverarbeitung mit unserem Hoster geschlossen.
                 </p>
               </CardContent>
             </Card>
 
+            {/* 3. Allgemeine Hinweise und Pflichtinformationen */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">4. General Information and Mandatory Information</CardTitle>
+                <CardTitle className="text-2xl text-primary">3. Allgemeine Hinweise und Pflichtinformationen</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold mb-2">Data Protection</h4>
+                  <h4 className="font-semibold mb-2">Datenschutz</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy.
+                    Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed mt-2">
-                    When you use this website, various personal data is collected. Personal data is data with which you can be personally identified. This privacy policy explains what data we collect and what we use it for. It also explains how and for what purpose this is done.
+                    Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed mt-2">
-                    We would like to point out that data transmission over the Internet (e.g., communication by email) can have security gaps. Complete protection of data against access by third parties is not possible.
+                    Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Information about the Responsible Party</h4>
+                  <h4 className="font-semibold mb-2">Hinweis zur verantwortlichen Stelle</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    The responsible party for data processing on this website is:<br /><br />
+                    Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br /><br />
                     <strong>Global Media Consult</strong><br />
                     Christian Knaebel<br />
                     Grüngartenstrasse 1<br />
                     77836 Rheinmünster<br />
-                    Germany<br /><br />
-                    Email: info@content-aimbassy.com
+                    Deutschland<br /><br />
+                    E-Mail: cai@globalmediaconsult.com
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed mt-2">
-                    The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of the processing of personal data (e.g., names, email addresses, etc.).
+                    Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Storage Duration</h4>
+                  <h4 className="font-semibold mb-2">Speicherdauer</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Unless a more specific storage period has been specified within this privacy policy, your personal data will remain with us until the purpose for data processing no longer applies. If you assert a legitimate request for deletion or revoke consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g., tax or commercial retention periods); in the latter case, deletion will take place after these reasons no longer apply.
+                    Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z.B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Legal Basis for Data Processing</h4>
+                  <h4 className="font-semibold mb-2">Widerruf Ihrer Einwilligung zur Datenverarbeitung</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    We only process personal data if there is a legal basis for doing so. The legal basis is primarily:
+                    Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Beschwerderecht bei der zuständigen Aufsichtsbehörde</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    Die für uns zuständige Datenschutz-Aufsichtsbehörde ist:<br />
+                    <strong>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg</strong><br />
+                    Lautenschlagerstraße 20<br />
+                    70173 Stuttgart<br />
+                    Telefon: 0711/615541-0<br />
+                    E-Mail: poststelle@lfdi.bwl.de
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* 4. Datenerfassung auf dieser Website */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl text-primary">4. Datenerfassung auf dieser Website</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <h4 className="font-semibold mb-2">Cookies</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen (sog. Third-Party-Cookies). Third-Party-Cookies ermöglichen die Einbindung bestimmter Dienstleistungen von Drittunternehmen innerhalb von Webseiten.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    <strong>Rechtsgrundlage:</strong> Die Speicherung von Cookies erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können Ihre Cookie-Einstellungen jederzeit über unser Cookie-Banner anpassen oder Cookies in Ihren Browsereinstellungen löschen.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    Weitere Informationen zu den von uns eingesetzten Cookies finden Sie in unserer Cookie-Richtlinie.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Server-Log-Dateien</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:
                   </p>
                   <ul className="list-disc ml-6 mt-2 text-muted-foreground text-sm space-y-1">
-                    <li>Art. 6 para. 1 lit. a GDPR (consent)</li>
-                    <li>Art. 6 para. 1 lit. b GDPR (contract performance)</li>
-                    <li>Art. 6 para. 1 lit. c GDPR (legal obligation)</li>
-                    <li>Art. 6 para. 1 lit. f GDPR (legitimate interests)</li>
+                    <li>Browsertyp und Browserversion</li>
+                    <li>verwendetes Betriebssystem</li>
+                    <li>Referrer URL</li>
+                    <li>Hostname des zugreifenden Rechners</li>
+                    <li>Uhrzeit der Serveranfrage</li>
+                    <li>IP-Adresse</li>
                   </ul>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website – hierzu müssen die Server-Log-Files erfasst werden.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Kontaktformular</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z.B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Anfrage per E-Mail, Telefon oder Telefax</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
+                    Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde.
+                  </p>
                 </div>
               </CardContent>
             </Card>
 
+            {/* 5. Analyse-Tools und Werbung */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">5. Data Collection on This Website</CardTitle>
+                <CardTitle className="text-2xl text-primary">5. Analyse-Tools und Werbung</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold mb-2">Contact Form</h4>
+                  <h4 className="font-semibold mb-2">Umami Analytics</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    If you send us inquiries via the contact form, your details from the inquiry form, including the contact data you provided there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We do not pass on this data without your consent.
+                    Diese Website nutzt Umami Analytics, einen datenschutzfreundlichen Webanalysedienst. Umami Analytics verwendet Cookies nur mit Ihrer Einwilligung und erfasst anonymisierte Nutzungsdaten, um die Nutzung der Website zu analysieren.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed mt-2">
-                    The processing of this data is based on Art. 6 para. 1 lit. b GDPR if your request is related to the performance of a contract or is necessary for the implementation of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of the inquiries addressed to us (Art. 6 para. 1 lit. f GDPR) or on your consent (Art. 6 para. 1 lit. a GDPR) if this has been requested.
+                    Die durch Umami Analytics erzeugten Informationen über Ihre Benutzung dieser Website werden auf Servern in der EU gespeichert. Ihre IP-Adresse wird vor der Speicherung anonymisiert.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed mt-2">
-                    The data you enter in the contact form will remain with us until you request us to delete it, revoke your consent to storage, or the purpose for data storage no longer applies (e.g., after your request has been processed). Mandatory statutory provisions – in particular retention periods – remain unaffected.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Inquiry by Email, Phone, or Fax</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    If you contact us by email, phone, or fax, your inquiry including all resulting personal data (name, inquiry) will be stored and processed by us for the purpose of processing your request. We do not pass on this data without your consent.
-                  </p>
-                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">
-                    The processing of this data is based on Art. 6 para. 1 lit. b GDPR if your inquiry is related to the performance of a contract or is necessary for the implementation of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of the inquiries addressed to us (Art. 6 para. 1 lit. f GDPR) or on your consent (Art. 6 para. 1 lit. a GDPR) if this has been requested.
+                    <strong>Rechtsgrundlage:</strong> Die Nutzung von Umami Analytics erfolgt auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit über unsere Cookie-Einstellungen widerrufen.
                   </p>
                 </div>
               </CardContent>
             </Card>
 
+            {/* 6. Ihre Rechte */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">6. Your Rights</CardTitle>
+                <CardTitle className="text-2xl text-primary">6. Ihre Rechte als betroffene Person</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Right to Information</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    You have the right to receive confirmation as to whether personal data concerning you is being processed and, if so, to receive information about this personal data and further information according to Art. 15 GDPR.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Right to Correction</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    You have the right to request the immediate correction of incorrect personal data concerning you and, if necessary, the completion of incomplete personal data (Art. 16 GDPR).
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Right to Deletion</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    You have the right to request that personal data concerning you be deleted immediately if one of the reasons set out in Art. 17 GDPR applies.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Right to Restriction of Processing</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    You have the right to request the restriction of the processing of personal data concerning you if one of the conditions set out in Art. 18 GDPR is met.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Right to Data Portability</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    You have the right to receive the personal data concerning you that you have provided to us in a structured, commonly used, and machine-readable format (Art. 20 GDPR).
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Right to Object</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    You have the right to object at any time, for reasons arising from your particular situation, to the processing of personal data concerning you which is carried out on the basis of Art. 6 para. 1 lit. e or f GDPR (Art. 21 GDPR).
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Right to Revoke Consent</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    If the processing of personal data is based on your consent, you have the right to revoke your consent at any time. The revocation of consent does not affect the lawfulness of the processing carried out on the basis of the consent until revocation.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Right to Lodge a Complaint</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    You have the right to lodge a complaint with a supervisory authority, in particular in the Member State of your habitual residence, place of work, or place of the alleged infringement, if you consider that the processing of personal data concerning you infringes the GDPR (Art. 77 GDPR).
-                  </p>
-                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:
+                </p>
+                <ul className="list-disc ml-6 text-muted-foreground text-sm space-y-2">
+                  <li><strong>Recht auf Auskunft (Art. 15 DSGVO):</strong> Sie haben das Recht, Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen.</li>
+                  <li><strong>Recht auf Berichtigung (Art. 16 DSGVO):</strong> Sie haben das Recht, unverzüglich die Berichtigung unrichtiger oder Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen.</li>
+                  <li><strong>Recht auf Löschung (Art. 17 DSGVO):</strong> Sie haben das Recht, die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen, soweit nicht die Verarbeitung zur Ausübung des Rechts auf freie Meinungsäußerung und Information, zur Erfüllung einer rechtlichen Verpflichtung, aus Gründen des öffentlichen Interesses oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist.</li>
+                  <li><strong>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+                  <li><strong>Recht auf Datenübertragbarkeit (Art. 20 DSGVO):</strong> Sie haben das Recht, Ihre personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.</li>
+                  <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener Daten Widerspruch einzulegen.</li>
+                  <li><strong>Recht auf Widerruf der Einwilligung:</strong> Sofern die Verarbeitung Ihrer personenbezogenen Daten auf einer erteilten Einwilligung beruht, haben Sie das Recht, die Einwilligung jederzeit zu widerrufen.</li>
+                </ul>
+                <p className="text-muted-foreground text-sm leading-relaxed mt-4">
+                  Zur Ausübung Ihrer Rechte können Sie sich jederzeit an uns wenden unter: cai@globalmediaconsult.com
+                </p>
               </CardContent>
             </Card>
 
-            <div className="text-center text-sm text-muted-foreground pt-8">
-              <p>Last updated: January 2025</p>
-            </div>
           </div>
         </div>
       </section>

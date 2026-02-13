@@ -1,8 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import SEO from "@/components/SEO";
 
 export default function Imprint() {
   return (
     <div className="w-full">
+      <SEO 
+        title="Impressum - Legal Notice"
+        description="Impressum und rechtliche Informationen von Content Aimbassy gemäß §5 TMG."
+        keywords="Impressum, Legal Notice, TMG, Kontakt"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/10 py-20">
         <div className="container">
@@ -51,8 +57,8 @@ export default function Imprint() {
                 <div>
                   <p className="font-semibold text-foreground mb-1">Email</p>
                   <p className="text-muted-foreground">
-                    <a href="mailto:info@content-aimbassy.com" className="hover:text-primary transition-colors">
-                      info@content-aimbassy.com
+                    <a href="mailto:cai@globalmediaconsult.com" className="hover:text-primary transition-colors">
+                      cai@globalmediaconsult.com
                     </a>
                   </p>
                 </div>
@@ -128,7 +134,7 @@ export default function Imprint() {
             </Card>
 
             <div className="text-center text-sm text-muted-foreground pt-8">
-              <p>Last updated: November 2025</p>
+              <p>Letzte Aktualisierung: 13. Februar 2026</p>
             </div>
           </div>
         </div>
