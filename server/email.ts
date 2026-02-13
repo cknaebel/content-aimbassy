@@ -1,40 +1,48 @@
-import { ENV } from './_core/env';
+import nodemailer from "nodemailer";
 
 const ADMIN_EMAIL = 'ck@globalmediaconsult.com';
+const GMAIL_USER = process.env.GMAIL_USER!;
+const GMAIL_CLIENT_ID = process.env.GMAIL_CLIENT_ID!;
+const GMAIL_CLIENT_SECRET = process.env.GMAIL_CLIENT_SECRET!;
+const GMAIL_REFRESH_TOKEN = process.env.GMAIL_REFRESH_TOKEN!;
+const CONTACT_EMAIL_RECIPIENT = process.env.CONTACT_EMAIL_RECIPIENT!;
 
 interface EmailParams {
   to: string;
   subject: string;
   html: string;
+  replyTo?: string;
 }
 
 /**
- * Send email notification using Manus built-in notification API
- * This sends emails through the platform's email service
+ * Send email using Gmail OAuth2
  */
-export async function sendEmail({ to, subject, html }: EmailParams): Promise<boolean> {
+export async function sendEmail({ to, subject, html, replyTo }: EmailParams): Promise<boolean> {
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      type: "OAuth2",
+      user: GMAIL_USER,
+      clientId: GMAIL_CLIENT_ID,
+      clientSecret: GMAIL_CLIENT_SECRET,
+      refreshToken: GMAIL_REFRESH_TOKEN,
+    },
+  });
+
+  const mailOptions = {
+    from: `Content Aimbassy <${GMAIL_USER}>`,
+    to,
+    subject,
+    html,
+    replyTo,
+  };
+
   try {
-    const response = await fetch(`${ENV.forgeApiUrl}/notification/email`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${ENV.forgeApiKey}`,
-      },
-      body: JSON.stringify({
-        to,
-        subject,
-        html,
-      }),
-    });
-
-    if (!response.ok) {
-      console.error('[Email] Failed to send email:', await response.text());
-      return false;
-    }
-
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.messageId);
     return true;
   } catch (error) {
-    console.error('[Email] Error sending email:', error);
+    console.error("Email send error:", error);
     return false;
   }
 }

@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function ForContentOwners() {
   return (
@@ -305,24 +306,25 @@ export default function ForContentOwners() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Contact Form Section */}
       <section className="py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Start<br />
-              <span className="text-gradient-primary">a Conversation</span>
-            </h2>
-            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Tell us about your content, and we'll discuss whether we're the right stewards for it. No commitment, no fees unless we close a deal that works for you.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/contact">
-                <Button size="lg" className="text-lg px-10 py-7">
-                  Start a conversation <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Let's Start<br />
+                <span className="text-gradient-primary">a Conversation</span>
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                Tell us about your content, and we'll discuss whether we're the right stewards for it. No commitment, no fees unless we close a deal that works for you.
+              </p>
             </div>
+            
+            <ContactForm
+              formType="content-owners"
+              title="Get in Touch"
+              description="Share details about your content archive and we'll respond within 1-2 business days to discuss partnership opportunities."
+            />
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function ForAICompanies() {
   return (
@@ -279,27 +280,29 @@ export default function ForAICompanies() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Contact Form Section */}
       <section className="py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Start<br />
-              <span className="text-gradient-primary">a Conversation</span>
-            </h2>
-            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Tell us what you're building, and we'll curate a match that fits your needs, timeline, and budget. No catalogue browsing. No instant downloads. Just careful matching.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/portfolio">
-                <Button size="lg" className="text-lg px-10 py-7">
-                  What we steward <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="text-lg px-10 py-7">
-                  Start a conversation
-                </Button>
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Let's Start<br />
+                <span className="text-gradient-primary">a Conversation</span>
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                Tell us what you're building, and we'll curate a match that fits your needs, timeline, and budget.
+              </p>
+            </div>
+            
+            <ContactForm
+              formType="ai-companies"
+              title="Get in Touch"
+              description="Share your project details and we'll respond within 1-2 business days with a curated proposal."
+            />
+            
+            <div className="text-center mt-8">
+              <Link href="/portfolio" className="inline-flex items-center text-primary hover:text-primary/80 font-semibold">
+                Or explore what we steward <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
           </div>

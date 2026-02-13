@@ -5,6 +5,7 @@ import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { createContentSubmission, getAllContentSubmissions, getAllBlogPosts, getBlogPostBySlug } from "./db";
 import { notifyOwner } from "./_core/notification";
 import { sendAdminNotification, sendSubmitterConfirmation } from "./email";
+import { sendContactFormNotification, sendContactFormConfirmation } from "./contactForms";
 import { z } from "zod";
 
 export const appRouter = router({
@@ -92,6 +93,36 @@ export const appRouter = router({
     list: protectedProcedure.query(async () => {
       return await getAllContentSubmissions();
     }),
+  }),
+
+  // Contact form router
+  contact: router({
+    submit: publicProcedure
+      .input(z.object({
+        name: z.string().min(1, "Name is required"),
+        email: z.string().email("Valid email is required"),
+        company: z.string().optional(),
+        message: z.string().min(10, "Message must be at least 10 characters"),
+        formType: z.enum(["ai-companies", "content-owners", "general"]),
+      }))
+      .mutation(async ({ input }) => {
+        try {
+          // Send notification to admin
+          await sendContactFormNotification(input);
+          
+          // Send confirmation to submitter
+          await sendContactFormConfirmation({
+            name: input.name,
+            email: input.email,
+            formType: input.formType,
+          });
+          
+          return { success: true };
+        } catch (error) {
+          console.error('[Contact Form] Failed to send emails:', error);
+          throw new Error("Failed to send contact form. Please try again later.");
+        }
+      }),
   }),
 });
 
