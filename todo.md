@@ -184,3 +184,11 @@
 - [x] Test cookie consent flow
 - [x] Test all legal pages
 - [ ] Create checkpoint
+
+
+## About Page Photo Replacement
+- [x] Search for appropriate generic graphic representing content licensing/global collaboration
+- [x] Replace team photo on About page with new graphic
+- [x] Adjust layout if needed
+- [x] Test changes
+- [ ] Create checkpoint

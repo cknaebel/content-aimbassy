@@ -41,8 +41,8 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
               <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/GahmJxJUybEICPcz.jpg" 
-                alt="Diverse team collaboration" 
+                src="/about-global-network.jpg" 
+                alt="Global network representing international content licensing" 
                 className="rounded-2xl shadow-xl w-full h-auto object-cover"
               />
             </div>
