@@ -216,7 +216,7 @@ export default function Terms() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  These Terms of Service are governed by the laws of the Federal Republic of Germany. The exclusive place of jurisdiction for all disputes arising from or in connection with these terms is Stuttgart, Germany.
+                  These Terms of Service are governed by the laws of the Federal Republic of Germany. The exclusive place of jurisdiction for all disputes arising from or in connection with these terms is Mannheim, Germany (Amtsgericht Mannheim).
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   For consumers, mandatory consumer protection laws of their country of residence may apply.
@@ -242,19 +242,21 @@ export default function Terms() {
               <CardContent>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   For questions regarding these Terms of Service, please contact:<br /><br />
-                  <strong>Global Media Consult (Global Media Consult)</strong><br />
-                  Christian Knaebel<br />
+                  Content Aimbassy is a service of <strong>Global Media Consult GmbH</strong><br /><br />
+                  <strong>Global Media Consult GmbH</strong><br />
                   Grüngartenstrasse 1<br />
                   77836 Rheinmünster<br />
                   Germany<br /><br />
-                  Email: info@content-aimbassy.com<br />
-                  Phone: +49 7227 9969865
+                  Managing Director: Christian Knaebel<br />
+                  Register Court: Amtsgericht Mannheim, HRB 757980<br /><br />
+                  Phone: +49 7227 50 36 992<br />
+                  Email: cai@globalmediaconsult.com
                 </p>
               </CardContent>
             </Card>
 
             <div className="text-center text-sm text-muted-foreground pt-8">
-              <p>Last updated: January 2025</p>
+              <p>Last updated: April 2026</p>
             </div>
           </div>
         </div>

@@ -6,8 +6,8 @@ export default function Imprint() {
     <div className="w-full">
       <SEO 
         title="Impressum - Legal Notice"
-        description="Impressum und rechtliche Informationen von Content Aimbassy gemäß §5 TMG."
-        keywords="Impressum, Legal Notice, TMG, Kontakt"
+        description="Impressum und rechtliche Informationen von Content Aimbassy, einem Service der Global Media Consult GmbH, gemäß §5 TMG."
+        keywords="Impressum, Legal Notice, TMG, Global Media Consult GmbH, Rheinmünster"
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/10 py-20">
@@ -33,17 +33,28 @@ export default function Imprint() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h3 className="font-semibold text-lg mb-2 text-primary">Global Media Consult</h3>
+                  <p className="text-sm text-muted-foreground italic mb-3">
+                    Content Aimbassy is a service of Global Media Consult GmbH
+                  </p>
+                  <h3 className="font-semibold text-lg mb-2 text-primary">Global Media Consult GmbH</h3>
                   <p className="text-muted-foreground">
-                    Represented by: Christian Knaebel<br />
                     Grüngartenstrasse 1<br />
                     77836 Rheinmünster<br />
                     Germany
                   </p>
                 </div>
-                <div className="mt-4">
-                  <p className="text-sm text-muted-foreground italic">
-                    Global Media Consult is a service of Global Media Consult
+                <div className="mt-4 space-y-1">
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold text-foreground">Managing Director:</span> Christian Knaebel
+                  </p>
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold text-foreground">Company Seat:</span> Rheinmünster
+                  </p>
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold text-foreground">Register Court:</span> Amtsgericht Mannheim
+                  </p>
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold text-foreground">Registration Number:</span> HRB 757980
                   </p>
                 </div>
               </CardContent>
@@ -55,6 +66,14 @@ export default function Imprint() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
+                  <p className="font-semibold text-foreground mb-1">Phone</p>
+                  <p className="text-muted-foreground">
+                    <a href="tel:+4972275036992" className="hover:text-primary transition-colors">
+                      +49 7227 50 36 992
+                    </a>
+                  </p>
+                </div>
+                <div>
                   <p className="font-semibold text-foreground mb-1">Email</p>
                   <p className="text-muted-foreground">
                     <a href="mailto:cai@globalmediaconsult.com" className="hover:text-primary transition-colors">
@@ -63,12 +82,12 @@ export default function Imprint() {
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground mb-1">Phone</p>
-                  <p className="text-muted-foreground">+49 7227 9969865</p>
-                </div>
-                <div>
                   <p className="font-semibold text-foreground mb-1">Website</p>
-                  <p className="text-muted-foreground">www.contentaimbassy.com</p>
+                  <p className="text-muted-foreground">
+                    <a href="https://www.content-aimbassy.com" className="hover:text-primary transition-colors">
+                      www.content-aimbassy.com
+                    </a>
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -81,7 +100,7 @@ export default function Imprint() {
                 <p className="text-muted-foreground">
                   According to § 55 Abs. 2 RStV (German Interstate Broadcasting Treaty):<br />
                   Christian Knaebel<br />
-                  Global Media Consult<br />
+                  Global Media Consult GmbH<br />
                   Grüngartenstrasse 1<br />
                   77836 Rheinmünster, Germany
                 </p>
@@ -134,7 +153,7 @@ export default function Imprint() {
             </Card>
 
             <div className="text-center text-sm text-muted-foreground pt-8">
-              <p>Letzte Aktualisierung: 13. Februar 2026</p>
+              <p>Letzte Aktualisierung: 20. April 2026</p>
             </div>
           </div>
         </div>

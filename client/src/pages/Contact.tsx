@@ -51,10 +51,10 @@ export default function Contact() {
                       <div>
                         <CardTitle className="mb-2">Email</CardTitle>
                         <a 
-                          href="mailto:info@content-aimbassy.com" 
+                          href="mailto:cai@globalmediaconsult.com" 
                           className="text-muted-foreground hover:text-accent transition-colors"
                         >
-                          info@content-aimbassy.com
+                          cai@globalmediaconsult.com
                         </a>
                       </div>
                     </div>
@@ -70,7 +70,7 @@ export default function Contact() {
                       <div>
                         <CardTitle className="mb-2">Location</CardTitle>
                         <p className="text-muted-foreground">
-                          Stuttgart, Germany
+                          Rheinmünster, Germany
                         </p>
                       </div>
                     </div>
@@ -122,7 +122,7 @@ export default function Contact() {
                     Not sure if your content is suitable? Want to understand the process better? Send us an email and we'll be happy to discuss your specific situation.
                   </p>
                   <Button variant="outline" className="w-full border-2 border-primary text-primary hover:bg-primary/5" asChild>
-                    <a href="mailto:info@content-aimbassy.com">
+                    <a href="mailto:cai@globalmediaconsult.com">
                       Send Us an Email
                     </a>
                   </Button>

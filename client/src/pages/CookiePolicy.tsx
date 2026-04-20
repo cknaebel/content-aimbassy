@@ -207,8 +207,13 @@ export default function CookiePolicy() {
                   Wenn Sie Fragen zu unserer Verwendung von Cookies haben, können Sie uns kontaktieren unter:
                 </p>
                 <p className="text-muted-foreground text-sm">
-                  <strong>Global Media Consult</strong><br />
-                  Christian Knaebel<br />
+                  Content Aimbassy ist ein Service der <strong>Global Media Consult GmbH</strong><br /><br />
+                  <strong>Global Media Consult GmbH</strong><br />
+                  Grüngartenstrasse 1<br />
+                  77836 Rheinmünster<br />
+                  Deutschland<br /><br />
+                  Geschäftsführer: Christian Knaebel<br />
+                  Telefon: +49 7227 50 36 992<br />
                   E-Mail: cai@globalmediaconsult.com
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed mt-4">

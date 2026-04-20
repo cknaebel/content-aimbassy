@@ -199,3 +199,11 @@
 ## Email Address Update
 - [x] Replace all contact email addresses with cai@globalmediaconsult.com
 - [ ] Create checkpoint
+
+## Legal Pages Company Information Update
+- [x] Update Impressum with correct GMC GmbH company data
+- [x] Update Privacy Policy (Datenschutzerklärung) with correct company data
+- [x] Update Cookie Policy with correct company data
+- [x] Update Terms of Service (AGB) with correct company data
+- [x] Update Contact page with correct email and location
+- [ ] Create checkpoint
