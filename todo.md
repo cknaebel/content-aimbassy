@@ -195,3 +195,7 @@
 - [x] Replace stock photo with custom branded graphic
 - [x] Test custom graphic
 - [ ] Create checkpoint
+
+## Email Address Update
+- [x] Replace all contact email addresses with cai@globalmediaconsult.com
+- [ ] Create checkpoint

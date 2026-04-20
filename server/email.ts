@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-const ADMIN_EMAIL = 'ck@globalmediaconsult.com';
+const ADMIN_EMAIL = 'cai@globalmediaconsult.com';
 const GMAIL_USER = process.env.GMAIL_USER!;
 const GMAIL_CLIENT_ID = process.env.GMAIL_CLIENT_ID!;
 const GMAIL_CLIENT_SECRET = process.env.GMAIL_CLIENT_SECRET!;
@@ -180,7 +180,7 @@ export async function sendSubmitterConfirmation(contactName: string, email: stri
               <li>You'll receive a follow-up email with next steps</li>
             </ul>
             
-            <p>If you have any questions in the meantime, please don't hesitate to contact us at <a href="mailto:ck@globalmediaconsult.com" style="color: #e67e22;">ck@globalmediaconsult.com</a>.</p>
+            <p>If you have any questions in the meantime, please don't hesitate to contact us at <a href="mailto:cai@globalmediaconsult.com" style="color: #e67e22;">cai@globalmediaconsult.com</a>.</p>
             
             <p>Best regards,<br>
             <strong>The Global Media Consult Team</strong><br>

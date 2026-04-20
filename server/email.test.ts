@@ -47,7 +47,7 @@ describe('Email Notifications', () => {
       expect(fetchOptions.headers['Authorization']).toContain('Bearer');
       
       const body = JSON.parse(fetchOptions.body);
-      expect(body.to).toBe('ck@globalmediaconsult.com');
+      expect(body.to).toBe('cai@globalmediaconsult.com');
       expect(body.subject).toContain('VIDEO');
       expect(body.subject).toContain('John Doe');
       expect(body.html).toContain('John Doe');
@@ -127,7 +127,7 @@ describe('Email Notifications', () => {
       expect(body.subject).toContain('Thank You');
       expect(body.html).toContain('John Doe');
       expect(body.html).toContain('24-48 hours');
-      expect(body.html).toContain('ck@globalmediaconsult.com');
+      expect(body.html).toContain('cai@globalmediaconsult.com');
     });
 
     it('should handle confirmation email failure', async () => {
