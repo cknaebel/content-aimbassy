@@ -32,7 +32,7 @@ export default function Portfolio() {
     <div className="min-h-screen">
       <SEO 
         title="What We Steward - Curated AI Training Content"
-        description="Rare languages audio, international news, sports footage, and cultural content. 70+ languages, 300,000+ hours of rights-cleared content for AI training."
+        description="Rare languages audio, international news, sports footage, and cultural content. 100+ languages, 400,000+ hours of video and 4,000,000+ hours of audio content for AI training."
         keywords="rare language datasets, multilingual AI training data, sports footage licensing, news content licensing, cultural diversity datasets, audio datasets"
       />
       {/* Hero Section */}
@@ -133,19 +133,19 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="p-8 text-center border-2 border-primary/20">
                 <p className="text-sm font-semibold text-primary mb-2">Video Content</p>
-                <p className="text-4xl font-bold mb-2">300,000+</p>
+                <p className="text-4xl font-bold mb-2">400,000+</p>
                 <p className="text-muted-foreground">hours available</p>
               </Card>
 
               <Card className="p-8 text-center border-2 border-primary/20">
                 <p className="text-sm font-semibold text-primary mb-2">Audio Content</p>
-                <p className="text-4xl font-bold mb-2">3,000,000+</p>
+                <p className="text-4xl font-bold mb-2">4,000,000+</p>
                 <p className="text-muted-foreground">hours available</p>
               </Card>
 
               <Card className="p-8 text-center border-2 border-primary/20">
                 <p className="text-sm font-semibold text-primary mb-2">Languages</p>
-                <p className="text-4xl font-bold mb-2">70+</p>
+                <p className="text-4xl font-bold mb-2">100+</p>
                 <p className="text-muted-foreground">including rare dialects</p>
               </Card>
             </div>
