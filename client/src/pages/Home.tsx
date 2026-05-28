@@ -32,13 +32,17 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8">
-              <span className="text-gradient-light">Bespoke</span> AI training data licensing—<br />
-              rights-cleared, audit-ready, <span className="text-gradient-light">globally diverse</span>.
+              The AI training data market is entering its <span className="text-gradient-light">second wave</span>.
             </h1>
             
-            <p className="text-xl text-white/80 leading-relaxed max-w-3xl mb-10">
-              We curate and structure datasets deal-by-deal, with European governance standards and a white-glove process that protects creators and de-risks buyers.
-            </p>
+            <div className="space-y-4 mb-10">
+              <p className="text-2xl md:text-3xl font-semibold text-white/90 leading-relaxed max-w-3xl">
+                Quality. Provenance. Genuine content diversity.
+              </p>
+              <p className="text-xl text-white/80 leading-relaxed max-w-3xl">
+                Content Aimbassy curates and brokers rights-cleared audiovisual and audio content from broadcasters, archives, and producers worldwide — sourced for major AI and technology buyers as training data. European-headquartered. Institutionally sourced. Built for what the market now requires.
+              </p>
+            </div>
 
             <div className="flex flex-wrap gap-4">
               <Link href="/for-ai-companies">
@@ -71,18 +75,22 @@ export default function Home() {
 
       <DiagonalDivider direction="left" className="text-white" />
 
-      {/* Our Mission */}
+      {/* What Content Aimbassy Is */}
       <section className="py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Our<br />
-              <span className="text-gradient-primary">Mission</span>
-            </h2>
+            <div className="inline-block px-4 py-2 bg-secondary/20 rounded-full text-sm font-medium border border-secondary/30 text-secondary mb-8 uppercase tracking-wider">
+              What Content Aimbassy Is
+            </div>
             
-            <p className="text-xl text-muted-foreground leading-relaxed mb-16">
-              AI should reflect the richness, diversity, and dignity of global human culture. Content is not raw material—it's cultural expression. We steward internationally diverse training data with European governance standards, ensuring provenance, ethics, and respect for creators are strategic advantages, not compliance overhead.
-            </p>
+            <div className="space-y-6">
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                We are not a volume data platform. We are a specialist curator and aggregator — selecting for quality, rights integrity, and genuine content diversity across languages, geographies, and genres. We work with broadcasters, public media archives, independent producers, and rights holders on every continent.
+              </p>
+              <p className="text-xl text-muted-foreground leading-relaxed font-semibold">
+                The distinction matters to buyers. It should matter to you, too.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -92,8 +100,8 @@ export default function Home() {
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Why We're<br />
-              <span className="text-gradient-primary">Different</span>
+              Why Work<br />
+              <span className="text-gradient-primary">With Us</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-16 max-w-3xl">
               We operate as a bespoke atelier, not a platform. Every deal is handled individually, with human judgment, cultural awareness, and a commitment to making AI more representative.
@@ -102,38 +110,38 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-8 border-l-4 border-l-secondary">
                 <div className="flex items-start gap-4 mb-4">
-                  <IconCircle icon={Sparkles} color="lavender" size="md" />
-                  <h3 className="text-xl font-bold mt-3">Not a Platform</h3>
+                  <IconCircle icon={Globe} color="coral" size="md" />
+                  <h3 className="text-xl font-bold mt-3">International depth, not Anglo-American volume</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  We're not building a self-service marketplace. We operate deal-by-deal with custom curation for each client. White-glove service, not algorithms.
-                </p>
-              </Card>
-              <Card className="p-8 border-l-4 border-l-secondary">
-                <div className="flex items-start gap-4 mb-4">
-                  <IconCircle icon={Users} color="mint" size="md" />
-                  <h3 className="text-xl font-bold mt-3">Seasoned Veterans</h3>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  Three decades building relationships with content owners and AI buyers. We've seen the industry evolve—and we know where it's heading.
+                  Our catalogue and supplier network spans Europe, Asia, Latin America, Africa, and beyond. The underrepresentation of non-English content in AI training data is a known gap — and a structural opportunity for rights holders whose content sits outside the mainstream.
                 </p>
               </Card>
               <Card className="p-8 border-l-4 border-l-secondary">
                 <div className="flex items-start gap-4 mb-4">
                   <IconCircle icon={Shield} color="peach" size="md" />
-                  <h3 className="text-xl font-bold mt-3">European Approach</h3>
+                  <h3 className="text-xl font-bold mt-3">European headquarters as a compliance asset</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Alternative to US-centric providers. Data privacy, governance, and ethical sourcing are built into our process, not bolted on.
+                  Registered in Germany. Operating under EU law. For buyers who need provenance-documented, rights-clear content that satisfies emerging regulatory requirements — including the EU AI Act — our European base is a feature, not a footnote.
                 </p>
               </Card>
               <Card className="p-8 border-l-4 border-l-secondary">
                 <div className="flex items-start gap-4 mb-4">
-                  <IconCircle icon={Globe} color="coral" size="md" />
-                  <h3 className="text-xl font-bold mt-3">Globally Diverse</h3>
+                  <IconCircle icon={Sparkles} color="lavender" size="md" />
+                  <h3 className="text-xl font-bold mt-3">Curation over aggregation</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  One of the largest independent portfolios of rights-cleared international content. 70+ languages, rare dialects, underrepresented cultures—curated deal-by-deal to reduce algorithmic bias.
+                  We reject more than we accept. Content that enters our pipeline has been assessed for rights clarity, technical quality, and buyer fit. This protects our buyers and protects the value of your catalogue.
+                </p>
+              </Card>
+              <Card className="p-8 border-l-4 border-l-secondary">
+                <div className="flex items-start gap-4 mb-4">
+                  <IconCircle icon={Users} color="mint" size="md" />
+                  <h3 className="text-xl font-bold mt-3">Direct buyer relationships</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  We negotiate directly with AI and technology buyers — not through layers of intermediaries. This means faster deal cycles, cleaner terms, and a single point of accountability for rights holders.
                 </p>
               </Card>
             </div>
@@ -219,6 +227,51 @@ export default function Home() {
       </section>
 
       <DiagonalDivider direction="right" className="text-white" />
+
+
+      {/* The Market Moment - Why Now */}
+      <section className="py-24 bg-muted/30">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="inline-block px-4 py-2 bg-secondary/20 rounded-full text-sm font-medium border border-secondary/30 text-secondary mb-8 uppercase tracking-wider">
+              The Market Moment
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              The first wave is commoditising. The <span className="text-gradient-primary">second wave has begun</span>.
+            </h2>
+            
+            <div className="space-y-8">
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
+                The AI training data market's first wave was defined by high volume, Anglo-American content, and aggregator-driven supply. That market is now maturing — supply is rising, rates are adjusting, and the differentiation window for generic volume content is closing.
+              </p>
+              
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
+                The second wave is defined by three things AI buyers increasingly require and cannot easily find:
+              </p>
+              
+              <div className="space-y-4 pl-6">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  • Provenance documentation — rights chains that are auditable and defensible
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  • Regulatory compliance — particularly relevant under the EU AI Act for non-Anglo-American content
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  • Genuine content diversity — language, geography, genre, and cultural representation beyond the English-speaking world
+                </p>
+              </div>
+              
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl font-semibold">
+                Content Aimbassy was built for this wave. Our European headquarters is a compliance asset, not a geographic limitation. Our catalogue reaches well beyond Europe — spanning Asia, Latin America, Africa, and the Pacific.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <DiagonalDivider direction="left" className="text-white" />
+
 
       {/* Why We're Different */}
       <section className="py-24 bg-white">
@@ -389,7 +442,7 @@ export default function Home() {
               <span className="text-gradient-light">the Conversation?</span>
             </h2>
             <p className="text-xl text-white/80 mb-12 leading-relaxed">
-              We operate deal-by-deal with custom curation for each client. No catalogues, no self-service. Just experienced intermediaries who understand both sides of the market.
+              Whether you're sourcing training data or looking to monetise your content library, we're ready for a conversation. We work with both sides of the market—and we understand what each side needs.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/for-ai-companies">

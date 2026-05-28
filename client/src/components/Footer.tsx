@@ -156,7 +156,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} <a href="https://globalmediaconsult.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Global Media Consult</a>. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} <a href="https://globalmediaconsult.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Global Media Consult GmbH</a>. Content Aimbassy is a service of Global Media Consult. All rights reserved.</p>
         </div>
       </div>
     </footer>
