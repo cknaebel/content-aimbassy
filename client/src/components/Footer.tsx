@@ -8,28 +8,16 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img 
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031433820/ovIVFGxBRXKOhnfx.png" 
-              alt="Content Aimbassy - a service by Global Media Consult" 
+              src="/manus-storage/cai-logo-transparent_8c299a49.png" 
+              alt="Content Aimbassy" 
               className="h-12 w-auto max-w-[300px] object-contain mb-4"
             />
             <p className="text-sm text-muted-foreground mb-4">
               Bespoke AI training data licensing—rights-cleared, audit-ready, globally diverse.
             </p>
-            <div className="flex items-center gap-2">
-              <span className="text-xs text-muted-foreground">A service by</span>
-              <a 
-                href="https://globalmediaconsult.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:opacity-80 transition-opacity"
-              >
-                <img 
-                  src="https://globalmediaconsult.com/wp-content/uploads/2024/12/GMC-Logo-Horizontal-1.png" 
-                  alt="Global Media Consult" 
-                  className="h-6 w-auto object-contain"
-                />
-              </a>
-            </div>
+            <p className="text-xs text-muted-foreground">
+              A service of Global Media Consult GmbH and its Partner Network
+            </p>
           </div>
 
           {/* Services */}
