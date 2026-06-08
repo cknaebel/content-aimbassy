@@ -56,6 +56,9 @@ export default function Imprint() {
                   <p className="text-muted-foreground">
                     <span className="font-semibold text-foreground">Registration Number:</span> HRB 757980
                   </p>
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold text-foreground">EU VAT ID:</span> DE462698096
+                  </p>
                 </div>
               </CardContent>
             </Card>
