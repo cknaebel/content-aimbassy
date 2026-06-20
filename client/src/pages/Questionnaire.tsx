@@ -43,15 +43,20 @@ export default function Questionnaire() {
     contentGenres: [] as string[],
     totalHours: "",
     contentDescription: "",
+    // Video-specific
     hasHD1080p: "yes" as "yes" | "no" | "partial",
     hasMP4Format: "yes" as "yes" | "no" | "partial",
     hasWatermarks: "no" as "yes" | "no" | "some",
+    // Audio-specific
+    audioFormat: "",
     hasTranscript: "no" as "yes" | "no",
+    // Common
     rightsConfirmation: "yes" as "yes" | "no",
     additionalNotes: "",
   });
 
   const genreOptions = formData.contentType === "video" ? VIDEO_GENRE_OPTIONS : AUDIO_GENRE_OPTIONS;
+  // Bug fix #1: min hours was hardcoded to 100 in the HTML input regardless of content type
   const minHours = formData.contentType === "video" ? 100 : 1000;
 
   const submitMutation = trpc.contentSubmissions.submit.useMutation({
@@ -79,7 +84,7 @@ export default function Questionnaire() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const totalHours = parseInt(formData.totalHours);
     if (isNaN(totalHours) || totalHours < minHours) {
       toast.error("Invalid hours", {
@@ -95,13 +100,31 @@ export default function Questionnaire() {
       return;
     }
 
-    submitMutation.mutate({
-      ...formData,
-      totalHours,
+    // Bug fix #2: only pass fields relevant to the selected content type
+    const payload: Parameters<typeof submitMutation.mutate>[0] = {
+      contactName: formData.contactName,
+      email: formData.email,
       phone: formData.phone || undefined,
       company: formData.company || undefined,
+      contentType: formData.contentType,
+      contentGenres: formData.contentGenres,
+      totalHours,
+      contentDescription: formData.contentDescription,
+      rightsConfirmation: formData.rightsConfirmation,
       additionalNotes: formData.additionalNotes || undefined,
-    });
+      // Transcript applies to both types
+      hasTranscript: formData.hasTranscript,
+    };
+
+    if (formData.contentType === "video") {
+      payload.hasHD1080p = formData.hasHD1080p;
+      payload.hasMP4Format = formData.hasMP4Format;
+      payload.hasWatermarks = formData.hasWatermarks;
+    } else {
+      payload.audioFormat = formData.audioFormat || undefined;
+    }
+
+    submitMutation.mutate(payload);
   };
 
   if (submitted) {
@@ -120,7 +143,7 @@ export default function Questionnaire() {
             </CardHeader>
             <CardContent className="space-y-6 text-center">
               <p className="text-muted-foreground">
-                We'll review your submission and contact you within 1-2 business days to discuss next steps. 
+                We'll review your submission and contact you within 1-2 business days to discuss next steps.
                 Please check your email (including spam folder) for our response.
               </p>
               <div className="bg-muted/50 p-4 rounded-lg">
@@ -129,7 +152,7 @@ export default function Questionnaire() {
                   <li>• Our team will review your content details</li>
                   <li>• We'll assess technical requirements and market fit</li>
                   <li>• You'll receive an initial evaluation and next steps</li>
-                  <li>• If suitable, we'll request sample videos for quality assessment</li>
+                  <li>• If suitable, we'll request sample files for quality assessment</li>
                 </ul>
               </div>
               <Button onClick={() => window.location.href = "/"} className="bg-secondary hover:bg-secondary/90 text-white">
@@ -162,13 +185,12 @@ export default function Questionnaire() {
       <section className="py-16">
         <div className="container max-w-4xl">
           <form onSubmit={handleSubmit} className="space-y-8">
+
             {/* Contact Information */}
             <Card>
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
-                <CardDescription>
-                  How can we reach you?
-                </CardDescription>
+                <CardDescription>How can we reach you?</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -202,11 +224,11 @@ export default function Questionnaire() {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+49 7227 50 36 992"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company/Organization</Label>
+                    <Label htmlFor="company">Company / Organization</Label>
                     <Input
                       id="company"
                       value={formData.company}
@@ -232,7 +254,17 @@ export default function Questionnaire() {
                   <RadioGroup
                     value={formData.contentType}
                     onValueChange={(value: "video" | "audio") => {
-                      setFormData({ ...formData, contentType: value, contentGenres: [] });
+                      // Reset genres and type-specific fields when switching
+                      setFormData({
+                        ...formData,
+                        contentType: value,
+                        contentGenres: [],
+                        hasHD1080p: "yes",
+                        hasMP4Format: "yes",
+                        hasWatermarks: "no",
+                        audioFormat: "",
+                        hasTranscript: "no",
+                      });
                     }}
                   >
                     <div className="flex items-center space-x-2">
@@ -277,13 +309,13 @@ export default function Questionnaire() {
                     id="totalHours"
                     type="number"
                     required
-                    min="100"
+                    min={minHours}
                     value={formData.totalHours}
                     onChange={(e) => setFormData({ ...formData, totalHours: e.target.value })}
-                    placeholder="e.g., 500"
+                    placeholder={`e.g., ${minHours}`}
                   />
                   <p className="text-sm text-muted-foreground">
-                    Minimum {minHours} hours required for {formData.contentType} content
+                    Minimum {minHours.toLocaleString()} hours required for {formData.contentType} content
                   </p>
                 </div>
 
@@ -294,7 +326,7 @@ export default function Questionnaire() {
                     required
                     value={formData.contentDescription}
                     onChange={(e) => setFormData({ ...formData, contentDescription: e.target.value })}
-                    placeholder="Describe your content library, including themes, production quality, and any notable features..."
+                    placeholder="Describe your content library, including themes, languages, production quality, and any notable features..."
                     rows={5}
                   />
                 </div>
@@ -310,114 +342,143 @@ export default function Questionnaire() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
+
+                {/* VIDEO-SPECIFIC fields */}
                 {formData.contentType === "video" && (
-                  <div className="space-y-3">
-                    <Label>Is your content in HD 1080p quality? *</Label>
-                  <RadioGroup
-                    value={formData.hasHD1080p}
-                    onValueChange={(value: "yes" | "no") => 
-                      setFormData({ ...formData, hasHD1080p: value })
-                    }
-                  >
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="yes" id="hd-yes" />
-                      <Label htmlFor="hd-yes" className="font-normal cursor-pointer">
-                        Yes, all content is HD 1080p
-                      </Label>
+                  <>
+                    <div className="space-y-3">
+                      <Label>Is your content in HD 1080p quality? *</Label>
+                      <RadioGroup
+                        value={formData.hasHD1080p}
+                        onValueChange={(value: "yes" | "no" | "partial") =>
+                          setFormData({ ...formData, hasHD1080p: value })
+                        }
+                      >
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="yes" id="hd-yes" />
+                          <Label htmlFor="hd-yes" className="font-normal cursor-pointer">
+                            Yes, all content is HD 1080p
+                          </Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="partial" id="hd-partial" />
+                          <Label htmlFor="hd-partial" className="font-normal cursor-pointer">
+                            Partially, some content is HD 1080p
+                          </Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="no" id="hd-no" />
+                          <Label htmlFor="hd-no" className="font-normal cursor-pointer">
+                            No, content is in lower resolution
+                          </Label>
+                        </div>
+                      </RadioGroup>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="partial" id="hd-partial" />
-                      <Label htmlFor="hd-partial" className="font-normal cursor-pointer">
-                        Partially, some content is HD 1080p
-                      </Label>
+
+                    {/* Bug fix #3: MP4 format question was missing from UI but present in backend */}
+                    <div className="space-y-3">
+                      <Label>Is your content available in MP4 format? *</Label>
+                      <RadioGroup
+                        value={formData.hasMP4Format}
+                        onValueChange={(value: "yes" | "no" | "partial") =>
+                          setFormData({ ...formData, hasMP4Format: value })
+                        }
+                      >
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="yes" id="mp4-yes" />
+                          <Label htmlFor="mp4-yes" className="font-normal cursor-pointer">
+                            Yes, all content is in MP4
+                          </Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="partial" id="mp4-partial" />
+                          <Label htmlFor="mp4-partial" className="font-normal cursor-pointer">
+                            Partially, some content is in MP4
+                          </Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="no" id="mp4-no" />
+                          <Label htmlFor="mp4-no" className="font-normal cursor-pointer">
+                            No, content is in another format (e.g., MXF, ProRes)
+                          </Label>
+                        </div>
+                      </RadioGroup>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="no" id="hd-no" />
-                      <Label htmlFor="hd-no" className="font-normal cursor-pointer">
-                        No, content is in lower resolution
-                      </Label>
+
+                    <div className="space-y-3">
+                      <Label>Does your content have watermarks, subtitles burned-in, or overlays? *</Label>
+                      <RadioGroup
+                        value={formData.hasWatermarks}
+                        onValueChange={(value: "yes" | "no" | "some") =>
+                          setFormData({ ...formData, hasWatermarks: value })
+                        }
+                      >
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="no" id="watermark-no" />
+                          <Label htmlFor="watermark-no" className="font-normal cursor-pointer">
+                            No, content is clean (no burned-in overlays)
+                          </Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="some" id="watermark-some" />
+                          <Label htmlFor="watermark-some" className="font-normal cursor-pointer">
+                            Some content has watermarks or overlays
+                          </Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="yes" id="watermark-yes" />
+                          <Label htmlFor="watermark-yes" className="font-normal cursor-pointer">
+                            Yes, most/all content has watermarks or overlays
+                          </Label>
+                        </div>
+                      </RadioGroup>
                     </div>
-                  </RadioGroup>
+                  </>
+                )}
+
+                {/* AUDIO-SPECIFIC fields */}
+                {formData.contentType === "audio" && (
+                  <div className="space-y-2">
+                    <Label htmlFor="audioFormat">Primary Audio Format</Label>
+                    <Input
+                      id="audioFormat"
+                      value={formData.audioFormat}
+                      onChange={(e) => setFormData({ ...formData, audioFormat: e.target.value })}
+                      placeholder="e.g., MP3, WAV, FLAC, AAC"
+                    />
+                    <p className="text-sm text-muted-foreground">
+                      WAV or FLAC (lossless) files are preferred; MP3 at 128kbps or higher is acceptable.
+                    </p>
                   </div>
                 )}
 
+                {/* COMMON: Transcripts — shown for both types */}
                 <div className="space-y-3">
                   <Label>Do you have transcripts or subtitles for your content?</Label>
                   <RadioGroup
                     value={formData.hasTranscript}
-                    onValueChange={(value: "yes" | "no") => 
+                    onValueChange={(value: "yes" | "no") =>
                       setFormData({ ...formData, hasTranscript: value })
                     }
                   >
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="yes" id="transcript-yes" />
                       <Label htmlFor="transcript-yes" className="font-normal cursor-pointer">
-                        Yes, transcripts/subtitles available
+                        Yes, transcripts / subtitles available
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="no" id="transcript-no" />
                       <Label htmlFor="transcript-no" className="font-normal cursor-pointer">
-                        No transcripts/subtitles available
-                      </Label>
-                    </div>
-                  </RadioGroup>
-                </div>
-
-                <div className="space-y-3">
-                  <Label>Does your content have watermarks, subtitles, or overlays? *</Label>
-                  <RadioGroup
-                    value={formData.hasWatermarks}
-                    onValueChange={(value: "yes" | "no" | "some") => 
-                      setFormData({ ...formData, hasWatermarks: value })
-                    }
-                  >
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="no" id="watermark-no" />
-                      <Label htmlFor="watermark-no" className="font-normal cursor-pointer">
-                        No, content is clean
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="some" id="watermark-some" />
-                      <Label htmlFor="watermark-some" className="font-normal cursor-pointer">
-                        Some content has watermarks/overlays
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="yes" id="watermark-yes" />
-                      <Label htmlFor="watermark-yes" className="font-normal cursor-pointer">
-                        Yes, most/all content has watermarks/overlays
-                      </Label>
-                    </div>
-                  </RadioGroup>
-                </div>
-
-                <div className="space-y-3">
-                  <Label>Do you have transcripts or subtitles for your content?</Label>
-                  <RadioGroup
-                    value={formData.hasTranscript}
-                    onValueChange={(value: "yes" | "no") => 
-                      setFormData({ ...formData, hasTranscript: value })
-                    }
-                  >
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="yes" id="transcript-yes" />
-                      <Label htmlFor="transcript-yes" className="font-normal cursor-pointer">
-                        Yes, transcripts/subtitles available
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="no" id="transcript-no" />
-                      <Label htmlFor="transcript-no" className="font-normal cursor-pointer">
-                        No transcripts/subtitles available
+                        No transcripts / subtitles available
                       </Label>
                     </div>
                   </RadioGroup>
                   <p className="text-sm text-muted-foreground">
-                    Transcripts significantly increase content value for AI training
+                    Transcripts significantly increase content value for AI training.
                   </p>
                 </div>
+
               </CardContent>
             </Card>
 
@@ -425,16 +486,14 @@ export default function Questionnaire() {
             <Card>
               <CardHeader>
                 <CardTitle>Rights Confirmation</CardTitle>
-                <CardDescription>
-                  Verify your licensing authority
-                </CardDescription>
+                <CardDescription>Verify your licensing authority</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-3">
-                  <Label>Do you own or control the rights to license this content? *</Label>
+                  <Label>Do you own or control the rights to license this content for AI training? *</Label>
                   <RadioGroup
                     value={formData.rightsConfirmation}
-                    onValueChange={(value: "yes" | "no") => 
+                    onValueChange={(value: "yes" | "no") =>
                       setFormData({ ...formData, rightsConfirmation: value })
                     }
                   >
@@ -447,10 +506,15 @@ export default function Questionnaire() {
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="no" id="rights-no" />
                       <Label htmlFor="rights-no" className="font-normal cursor-pointer">
-                        No, I need to verify rights ownership
+                        No / I need to verify rights ownership first
                       </Label>
                     </div>
                   </RadioGroup>
+                  {formData.rightsConfirmation === "no" && (
+                    <p className="text-sm text-amber-600 bg-amber-50 px-3 py-2 rounded-md">
+                      Please verify your rights ownership before submitting. We can only proceed with content where rights are clearly established.
+                    </p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
@@ -459,18 +523,18 @@ export default function Questionnaire() {
                     id="additionalNotes"
                     value={formData.additionalNotes}
                     onChange={(e) => setFormData({ ...formData, additionalNotes: e.target.value })}
-                    placeholder="Any additional information you'd like to share..."
+                    placeholder="Any additional information you'd like to share — languages covered, production years, rights restrictions, etc."
                     rows={4}
                   />
                 </div>
               </CardContent>
             </Card>
 
-            {/* Submit Button */}
+            {/* Submit */}
             <div className="flex justify-center">
-              <Button 
-                type="submit" 
-                size="lg" 
+              <Button
+                type="submit"
+                size="lg"
                 disabled={submitMutation.isPending}
                 className="min-w-[200px] bg-secondary hover:bg-secondary/90 text-white"
               >
@@ -484,6 +548,7 @@ export default function Questionnaire() {
                 )}
               </Button>
             </div>
+
           </form>
         </div>
       </section>
